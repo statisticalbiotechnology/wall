@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+path {
+		stroke: #fff;
+}
+
+#tooltip {
+		position: absolute;
+		width: auto;
+		height: auto;
+		padding: 10px;
+		background-color: white;
+		pointer-events: none;
+}
+
+#tooltip.hidden {
+		display: none;
+}
+
+#tooltip p {
+		margin: 0;
+		font-family: sans-serif;
+		font-size: 16px;
+		line-height: 20px;
+}
+
+.line {
+    fill: none;
+    stroke-width: 2;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+</style>
+<body>
+
+		<div id="tooltip" class="hidden">
+				//<p><span id="value">100</span>%</p>
+		</div>
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script src="breadcrumb.js"></script>
+
+		<select id="json_sources" name="json_sources">
+				<option value ="" selected>---Select data---</option>
+				<option value ="clust_1.json">IntClust 1</option>
+				<option value ="clust_2.json">IntClust 2</option>
+				<option value ="clust_3.json">IntClust 3</option>
+				<option value ="clust_4ER+.json">IntClust 4ER+</option>
+				<option value ="clust_4ER-.json">IntClust 4ER-</option>
+				<option value ="clust_5.json">IntClust 5</option>
+				<option value ="clust_6.json">IntClust 6</option>
+				<option value ="clust_7.json">IntClust 7</option>
+				<option value ="clust_8.json">IntClust 8</option>
+				<option value ="clust_9.json">IntClust 9</option>
+				<option value ="clust_10.json">IntClust 10</option>
+				<option value ="ER_Status_qvalue.json">ER Receptor</option>
+				<option value ="PR_Status_qvalue.json">PR Receptor</option>
+				<option value ="HER2_Status_qvalue.json">HER2 Receptor</option>
+				<option value ="Triple_Neg_qvalue.json">Triple Negative</option>
+				<option value ="ER-_PR-_HER2+_qvalue.json">ER-/PR-/HER2+</option>
+
+		</select>​
+		<div id="factbox" class="hidden">
+
+		</div>
+		<script>
+
+
+var margin = {top: 20, right: 20, bottom: 20, left: 20}
+		, width = window.innerWidth - margin.left - margin.right // Use the window's width
+		, height = window.innerWidth/1.8 - margin.top - margin.bottom; // Use the window's height
+
+var radius = (Math.min(width, height) / 2) - 10;
+
+var charHight = 2*radius - 100
+var charWidth = width - 2*radius - margin.right
+
+var formatNumber = d3.format(",d");
+
+var x = d3.scaleLinear()
+		.range([0, 2 * Math.PI]);
+
+var y = d3.scaleSqrt()
+		.range([0, radius]);
+
+
+
+var color = d3.scaleLinear()
+		.domain([0.0, 3.0, 100])
+		.range(["white",'white', 'blue']);
+
+
+
+
+//['#ffffff', '#ffd1d1', '#ffc4c4', '#ffb3b3', '#ffa1a1', '#ff9696', '#ff7a7a', '#ff6666', '#ff4242' , '#ff0000']
+
+// var color = d3.scaleSequential(d3.interpolateRdBu).domain([0, 1])
+// var color = d3.scaleSequential(d3.interpolateViridis);
+// var colorScale = d3.scaleLinear().domain([0.05,1]).range([0.5,1])
+
+var partition = d3.partition();
+
+var arc = d3.arc()
+		.startAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x0))); })
+		.endAngle(function(d) { return Math.max(0, Math.min(2 * Math.PI, x(d.x1))); })
+		.innerRadius(function(d) { return Math.max(0, y(d.y0)); })
+		.outerRadius(function(d) { return Math.max(0, y(d.y1)); });
+
+
+var timeline_g = d3.line()
+    .x(function(d) { return xScale(d.timeline); }) // set the x values for the line generator
+    .y(function(d) { return yScale(d.series); }) // set the y values for the line generator
+		.curve(d3.curveLinear) // apply smoothing to the line
+
+
+var xScale = d3.scaleLinear()
+		.range([0, charWidth]); // output
+
+var yScale = d3.scaleLinear()
+		.domain([0,1])
+		.range([charHight, 0]); // output
+
+
+var svg = d3.select("body").append("svg")
+		.attr("width", width)
+		.attr("height", height)
+		.append("g")
+		.attr("id","container")
+		.attr("transform", "translate(" + radius + "," + (height / 2) + ")");
+
+
+var breadcrumb = d3.breadcrumb()
+		.container('svg').wrapWidth(width * 2/3)   // any element or selection
+
+var legend = d3.select('svg')
+    .append("g")
+    .selectAll("g")
+    .data(Array.apply(null, {length: 500}).map(Number.call, Number).map(function(x) { return x*30/500 }))
+    .enter()
+		//.innerHTML += 'legend'
+    .append('g')
+      .attr('class', 'legend')
+      .attr('transform', function(d, i) {
+        var height = legendRectSize;
+        var x = i * 1;
+        var y = 2*radius -10
+        return 'translate(' + x + ',' + y + ')';
+
+var legendtitle = d3.select(svg)
+	.append('legend')
+	.select('legend')
+	.text('Legend')
+    });
+
+var legendRectSize = 10
+var legendSpacing = 0.001
+
+d3.select("#json_sources").on('change', draw)
+
+function draw() {
+
+		source = d3.select("#json_sources").property('value')
+		svg.selectAll('path').remove()
+
+		d3.json(source, function(error, dataset)  {
+				if (error) throw error;
+
+				root = d3.hierarchy(dataset);
+				//<!-- root.each(d=> d.value = +d.data.ngenes); -->
+				//<!-- root.sum(function(d) { return d.children ? 0 : 1; }); -->
+				root.sum(function(d) { return d.children ? 0 : d.ngenes; });
+				var color_threshold = root.data.max_val
+
+				if (color_threshold > 20){
+					var color_start = color_threshold*0.1
+				} else {
+					var color_start = 2
+				}
+
+
+				console.log(color_threshold)
+				console.log(color_start)
+
+
+			var color = d3.scaleLinear()
+				.domain([0.0, color_start, color_threshold])
+				.range(["white",'white', 'red']);
+
+				svg.selectAll("path")
+						.data(partition(root).descendants())
+						.enter().append("path")
+						.attr("d", arc)
+						.style("fill", function(d) { return color(d.data.value); })
+						.style('stroke', 'black')
+					//	.style("stroke", function(d) { return d.data.value < 0.05 ? 'red' : 'white' } )
+					//	.attr('stroke-align', 'inset')
+						.attr('stroke-width', 1)
+						//.attr("stroke-opacity",  function(d) { return d.data.value < 0.05 ? '0.3' : '0.2' } )
+						.attr("stroke-opacity",  0.2)
+						//.style("stroke", "black").style("stroke-width", 0.5)
+						//.attr("fill-opacity", function(d) { return 1-d.data.significance; })
+						.on("mouseover", mouseover)
+						.on("mouseout", mouseout)
+						.on("click", click);
+			document.getElementById('factbox').innerHTML = "Maximum -log10(q-value) = " + color_threshold.toPrecision(5) + "</br>"
+			+ "Colored pathways have -log10(qvalue) > " + color_start.toPrecision(4) + "</br>";
+		})
+
+
+
+
+
+
+
+legend.append('rect')
+    .attr('width', legendRectSize)
+    .attr('height', legendRectSize)
+    .style('fill', color)
+    .style('stroke', color);
+
+<!-- legend.append('text') -->
+<!--     .attr('x', 0.05) -->
+<!--     .attr('y', 24) -->
+<!--     .text(function(d) { if (d == 0.05) {return d; }}); -->
+}
+
+
+function click(d) {
+
+		svg.selectAll(".axis").remove();
+		svg.selectAll(".grid").remove();
+
+
+		svg.transition()
+				.duration(500)
+				.tween("scale", function() {
+						var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
+								yd = d3.interpolate(y.domain(), [d.y0, 1]),
+								yr = d3.interpolate(y.range(), [d.y0 ? 20 : 0, radius]);
+						return function(t) { x.domain(xd(t)); y.domain(yd(t)).range(yr(t)); };
+				})
+				.selectAll("path")
+				.attrTween("d", function(d) { return function() { return arc(d); }; });
+
+		var sequenceArray = d.ancestors().reverse();
+		sequenceArray.forEach(function(a) { a.text = a.data.source; a.fill = "#cce0cc";  })
+		breadcrumb.show(sequenceArray);
+
+
+		timeline = d.data.timeline
+		series = d.data.series
+
+
+		var xMax = timeline[timeline.length - 1]
+		var xMin = timeline[0]
+
+		xScale.domain([xMin, xMax])
+
+		var yMax = d3.max(series)
+		var yMin = d3.min(series)
+		yScale.domain([yMin,yMax])
+
+
+		var dataset = timeline.map(function(d,i) {
+				return {'timeline' : d, 'series' : series[i]} ;
+		})
+
+
+		svg.append("path")
+				.data([dataset]) // 10. Binds data to the line
+				.attr("class", "line") // Assign a class for styling
+				.attr("transform", "translate(" + radius + "," + -charHight/2 + ")")
+				.attr("d", timeline_g) // 11. Calls the line generator
+				.style("stroke", "green");
+
+		var xAxis = d3.axisBottom(xScale);
+		var yAxis = d3.axisLeft(yScale);
+
+		svg.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(" + radius + "," + charHight/2 + ")")
+				.call(xAxis)
+				.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(" + 0 + "," + -charHight + ")")
+				.call(yAxis);
+
+
+		svg.append("text")
+				.attr("transform", "translate(" + (radius + charWidth/2) + " ," + (charHight/2 + 35) + ")")
+				.style("text-anchor", "middle")
+				.text("Timeline");
+
+
+		svg.append("g")
+				.attr("class", "grid")
+				.attr("transform", "translate(" + radius + "," + charHight/2 + ")")
+				.call(make_x_gridlines()
+						.tickSize(-charHight)
+						.tickFormat("")
+				);
+
+		svg.append("g")
+				.attr("class", "grid")
+				.attr("transform", "translate(" + radius + "," + -charHight/2 + ")")
+				.call(make_y_gridlines()
+						.tickSize(-width + 2*radius + margin.right)
+						.tickFormat("")
+				);
+
+
+}
+
+function mouseover(d) {
+
+		d3.select("#tooltip")
+				.style("left", d3.event.pageX + "px")
+				.style("top", d3.event.pageY + "px")
+				.style("opacity", .9)
+				// .html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>stage = " + d.data.value); -->
+				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>log10(q) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
+
+		d3.select("#tooltip").classed("hidden", false);
+}
+
+function mouseout(d) {
+		d3.select("#tooltip").classed("hidden", true);
+}
+
+
+
+// gridlines in x axis function
+function make_x_gridlines() {
+    return d3.axisBottom(xScale)
+        .ticks(10)
+}
+
+// gridlines in y axis function
+function make_y_gridlines() {
+    return d3.axisLeft(yScale)
+        .ticks(10)
+}
+
+d3.select(self.frameElement).style("height", height + "px");
+		</script>
