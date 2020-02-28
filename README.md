@@ -1,7 +1,4 @@
-# wall
-
-
-## Disposition
+# Disposition
 - Data folder
 	- Contains most of the data needed for the code, some files are too big to store on github
 - Src folder
