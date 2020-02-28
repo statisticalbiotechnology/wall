@@ -1,4 +1,5 @@
 # Disposition
+
 - Data folder
 	- Contains most of the data needed for the code, some files are too big to store on github
 - Src folder
@@ -26,17 +27,17 @@ Results are derived from statistical tests comparing each cluster to all the oth
 ## What is known about the clusters from the metabric paper
 | cluster  | p53 mutation frequency| driver gene|MATH score|Outcome|
 | ------------- |:-------------:| :---:|:---:|:---:|
-| 1|29%| GATA3, fewer alterations in Akt|-||
-| 2|24.1%|CCND1, PAK1 |Low||
-| 3|10.0% |Clonal PIK3CA, clonal inactivating MAP3K1, Subclonal inactivating MAP3K |-||
-|4ER+|21.1% |Clonal PIK3CA |-|| 
-|4ER-|50.5% | -|Low||
-| 5|64.2%| ERBB2 (HER2)|-||
-| 6|40.7% | ZNF703|-||
-| 7|14.0% | MAPK|Low||
-| 8|4.4% | GATA3|Low||
-| 9|44.7% | DNA Damage Response, Activating PIK3CA|-||
-| 10|84.6% | DNA Damage Response, Cell Cycle regulation, Ubiquitination|Highest||
+| 1|29%| GATA3, fewer alterations in Akt|-|4|
+| 2|24.1%|CCND1, PAK1 |Low|4|
+| 3|10.0% |Clonal PIK3CA, clonal inactivating MAP3K1, Subclonal inactivating MAP3K |-|1|
+|4ER+|21.1% |Clonal PIK3CA |-|1.5| 
+|4ER-|50.5% | -|Low|4|
+| 5|64.2%| ERBB2 (HER2)|-|8|
+| 6|40.7% | ZNF703|-|3|
+| 7|14.0% | MAPK|Low|1|
+| 8|4.4% | GATA3|Low|2|
+| 9|44.7% | DNA Damage Response, Activating PIK3CA|-|4|
+| 10|84.6% | DNA Damage Response, Cell Cycle regulation, Ubiquitination|Highest|6|
 
 
 
