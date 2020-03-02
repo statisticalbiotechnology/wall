@@ -5,6 +5,7 @@
 - Src folder
 	- Contains the code base, mostly with ipynb files for developing scripts but also py files for already completed scripts
 	- The sunburst folder contains all the files needed to view the sunburst which can be run through pythons http.server module
+
 ```bash
 #installing the module
 python3 -m pip install http.server
@@ -25,13 +26,13 @@ Results are derived from statistical tests comparing each cluster to all the oth
 
 
 ## What is known about the clusters from the metabric paper
-| cluster  | p53 mutation frequency| driver gene|MATH score|Outcome|
+| cluster | p53 mutation frequency| driver genes | MATH score |Outcome|
 | ------------- |:-------------:| :---:|:---:|:---:|
 | 1|29%| GATA3, fewer alterations in Akt|-|4|
 | 2|24.1%|CCND1, PAK1 |Low|4|
 | 3|10.0% |Clonal PIK3CA, clonal inactivating MAP3K1, Subclonal inactivating MAP3K |-|1|
-|4ER+|21.1% |Clonal PIK3CA |-|1.5| 
-|4ER-|50.5% | -|Low|4|
+| 4ER+|21.1% |Clonal PIK3CA |-|1.5|
+| 4ER-|50.5% | -|Low|4|
 | 5|64.2%| ERBB2 (HER2)|-|8|
 | 6|40.7% | ZNF703|-|3|
 | 7|14.0% | MAPK|Low|1|
@@ -45,16 +46,16 @@ Results are derived from statistical tests comparing each cluster to all the oth
 
 ## What the most differentially activated pathways tell us
 
-|Cluster|Pathways|
+| Cluster|Pathways|
 | ------- |:----:|
-|1|Epigenetic changes, senescence|
-|2|Insulin receptor, TRAIL Signaling|
-|3|Mitosis/cell cycle, alpha-linoleic(omega-3/omega-6) degradation|
-|4ER+|HDR, D loops|
-|4ER-|Akt Signaling, Cell-Cell Communication|
-|5|Hormones, especially amines (epinephrine/melatonin)|
-|6|FGFR, Wnt, IP3|
-|7|NMDA, Ca2+, ion channels, CaM|
-|8|Noncanonical activation of NOTCH3|
-|9|Retroviral genome, riboflavin metabolism |
-|10| Cell Cycle, CDK|
+| 1|Epigenetic changes, senescence|
+| 2|Insulin receptor, TRAIL Signaling|
+| 3|Mitosis/cell cycle, alpha-linoleic(omega-3/omega-6) degradation|
+| 4ER+|HDR, D loops|
+| 4ER-|Akt Signaling, Cell-Cell Communication|
+| 5|Hormones, especially amines (epinephrine/melatonin)|
+| 6|FGFR, Wnt, IP3|
+| 7|NMDA, Ca2+, ion channels, CaM|
+| 8|Noncanonical activation of NOTCH3|
+| 9|Retroviral genome, riboflavin metabolism |
+| 10| Cell Cycle, CDK|
