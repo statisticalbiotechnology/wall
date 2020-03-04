@@ -17,16 +17,16 @@ python -m http.server 8001
 localhost:8001/sunburst.html
 ```
 - Exp folder
-	- contains the experiments. The first version contains the csv files for the intclust qvalues and the receptor qvalues
+	- Contains the experiments. The first version contains the csv files for the intclust qvalues and the receptor qvalues
 - Porch
-	- porch is included especially for the use of the q-value function. As of the first version of wall, porch is not used ext
+	- Porch is included especially for the use of the q-value function. As of the first version of wall, porch is not used ext
 
 # Results
 Results are derived from statistical tests comparing each cluster to all the other clusters in the context of pathway activity
 
 
 ## What is known about the clusters from the metabric paper
-| cluster | p53 mutation frequency| driver genes | MATH score |Outcome|
+| Cluster | p53 Mutation Frequency| Driver Genes | MATH score |Outcome|
 | ------------- |:-------------:| :---:|:---:|:---:|
 | 1|29%| GATA3, fewer alterations in Akt|-|4|
 | 2|24.1%|CCND1, PAK1 |Low|4|
@@ -44,7 +44,7 @@ Results are derived from statistical tests comparing each cluster to all the oth
 
 
 
-## What the most differentially activated pathways tell us
+## What the 30 most differentially activated pathways tell us
 
 | Cluster|Pathways|
 | ------- |:----:|
@@ -59,3 +59,50 @@ Results are derived from statistical tests comparing each cluster to all the oth
 | 8|Noncanonical activation of NOTCH3|
 | 9|Retroviral genome, riboflavin metabolism |
 | 10| Cell Cycle, CDK|
+
+
+# Sunburst plots
+
+## Sunburst Plots Of Intclust vs Other Intclusts
+| Cluster | Pathways |
+|:---:|:---:|
+| 1| Cell Cycle, Base Excision Repair, DNA Double Strand Break Repair,  RNA Pol I transcription, Gene Silencing by RNA, Senescence, Rho GTPase Signaling, ESR Signaling, TCF complex|
+| 2| mTORC1, Iron Uptake and Transport, Insulin Receptor|
+| 3| Cell Cycle, DNA Replication, DNA Double Strand Break Repair, Mismatch Repair, DNA Damage Bypass, SUMOylation, Megakaryocyte Production|
+| 4ER+| Cell Cycle, DNA Double Strand Break Repair, Rho GTPase Signaling|
+| 4ER-| SLC Mediated Transport, Immune System, Neuronal System, Metabolism of Vitamins and Cofactors, DAG/IP3 Signaling, CaM Pathway|
+| 5| Cell Cycle, Metabolism of Amine Derived Hormones, Tryptophan Catabolism, Rho gtpases|
+| 6| IP Metabolism, Wnt|
+| 7| CaM Pathway, NMDA Receptors, Cilium Assembly, Metabolism of Vitamins/Cofactors, Metabolism of Nucleotides, Ion Channel Transport|
+| 8| Immune System, Transport of Small Molecules, Sphingolipid Metabolism, GPCR Signaling, DAG/IP3, Negative Regulation of Akt Network, Hemostasis|
+| 9| Cell Cycle, KSHRP/TTP/TRF1, Riboflavin Metabolism, Glutamine/Glutamate Metabolism|
+| 10| Cell Cycle, DNA Replication, Rho GTPases, Sphingolipid Metabolism, Nucleotide Metabolism|
+
+## Sunburst Plots Of Intclust vs Benign Tissue
+| Cluster | Pathways |
+|:---:|:---:|
+| 1| Cell Cycle, Signal Transduction, DNA repair, transport of small molecules, cell-cell communications, DNA replication, muscle contraction, neuronal system|
+| 2| Cell Cycle, Signal Transduction, DNA repair, transport of small molecules, cell-cell communications, DNA replication, muscle contraction, neuronal system, Hemostasis|
+| 3| Signal transduction, cell cycle, cell-cell communication, neuronal system|
+| 4ER-| Cell Cycle, signal transduction, DNA replication|
+| 4ER+| Cell Cycle, signal transduction, DNA replication, transport of small molecules, neuronal system, cell-cell communication|
+| 5| Cell cycle, transport of small molecules, signal transduction, DNA replication |
+| 6| Cell Cycle, Signal transduction, transport of small molecules, hemostasis, DNA repair, cell-cell communication, dna replication, neuronal system, muscle contraction |
+| 7| Signal trnasduction, transport of small molecules, neuronal system, cell cycle, cell-cell communication, hemostasis, muscle contraction |
+| 8| Signal transduction, hemostasis, transport of small molecules, muscle contraction, cell-cell communication, neuronal system|
+| 9| Cell Cycle, Signal Transduction, DNA repair, transport of small molecules, cell-cell communications, DNA replication, muscle contraction, neuronal system|
+| 10| Cell Cycle, Signal Transduction, DNA repair, transport of small molecules, cell-cell communications, DNA replication, muscle contraction, neuronal system, immune system|
+
+
+
+
+
+## Sunburst Plots For Receptors/Receptor Signatures
+
+| Cluster | Pathways |
+|:---:|:---:|
+| ER Receptor| Immune System, Cell Cycle, Neuronal System, Signal transduction, SLC mediated transport, Keratinization|
+| PR Receptor| Immune System, Cell Cycle, NMDA receptor, G protein mediated receptor, DAG, IP3, fatty acid metabolism|
+| HER2 Receptor| Cell Cycle, visual phototransduction, metabolism of amine derived hormones, tryptophan metabolism|
+| Triple Negative signature| Neuronal system, small molecule transport, lipid metabolism, IP metabolism, metabolism of cofactors, G protein modulated events, CaM pathway|
+| ER-/PR-/HER2+| metabolism of amine derived hormones, tryptophan metabolism, Cell Cycle, G1 phase|
