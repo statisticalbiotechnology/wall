@@ -58,10 +58,10 @@ def GSEA(cluster):
 
     gs_res = gseapy.gsea(data = expression_data,
                     gene_sets ='Reactome_2016',
-                    method = "t_test",
+                    method = "signal_to_noise",
                     permutation_num = 1000,
                     max_size = 10000,
-                    min_size = 2
+                    min_size = 2,
                     no_plot = True,
                     processes = 4,
                     cls = classes,
@@ -69,4 +69,5 @@ def GSEA(cluster):
                     outdir = destination_path)
 
 for cluster in new_clinical["Integrative Cluster"].unique().tolist():
-    GSEA(cluster)
+    if type(cluster) == str:
+        GSEA(cluster)
