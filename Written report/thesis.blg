@@ -1,0 +1,9 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'thesis.blg'
+[52] biber-darwin:315> INFO - === Wed Mar 11, 2020, 10:49:41
+[85] Biber.pm:371> INFO - Reading 'thesis.bcf'
+[217] Biber.pm:889> INFO - Found 2 citekeys in bib section 0
+[236] Biber.pm:4093> INFO - Processing section 0
+[278] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
+[466] Utils.pm:209> ERROR - Cannot find 'references.bib'!
+[466] Biber.pm:114> INFO - ERRORS: 1

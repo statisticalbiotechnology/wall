@@ -1,0 +1,18 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Research Question}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Breast Cancer}{1}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Background}{2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Methods}{3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Results}{4}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusions}{6}% 
