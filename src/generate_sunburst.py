@@ -120,14 +120,17 @@ def read_reactome(file_name, gene_name_start = "ENSG0"):
 
 
 def make_the_json_files():
-    cluster_df = pd.read_csv("../exp/mutations_with_high_q.csv", index_col = 0)
+    cluster_df = pd.read_csv("../exp/GSEA_qvalues.csv", index_col = 0)
     #clusterindex = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
     #cluster_df = cluster_df.iloc[:,[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]]
     reactome_ngenes = read_reactome("../data/Ensembl2Reactome_All_Levels.txt.gz")
 
     length_dict = {}
     for i in cluster_df.index:
-        nr_genes = len(reactome_ngenes.loc[i, "genes"])
+        if i in reactome_ngenes.index:
+            nr_genes = len(reactome_ngenes.loc[i, "genes"])
+        else:
+            print('shit')
         length_dict[i] = nr_genes
 
     cluster_df['ngenes'] = cluster_df.index.map(length_dict)
@@ -149,6 +152,6 @@ def make_the_json_files():
 
     for i in df_dict:
         clust = i.strip('cluster qva')
-        sunburst(df_dict[i], outname = f'sunburst/clust_{clust}.json')
+        sunburst(df_dict[i], outname = f'sunburst/GSEA_clust_{clust}.json')
 
 make_the_json_files()
