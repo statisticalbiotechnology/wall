@@ -1,9 +1,9 @@
-[0] Config.pm:304> INFO - This is Biber 2.12
-[1] Config.pm:307> INFO - Logfile is 'kththesis.blg'
-[61] biber-darwin:315> INFO - === Wed Mar 11, 2020, 11:15:35
-[90] Biber.pm:371> INFO - Reading 'kththesis.bcf'
-[200] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
-[209] Utils.pm:193> WARN - The file 'kththesis.bcf' does not contain any citations!
-[217] bbl.pm:636> INFO - Writing 'kththesis.bbl' with encoding 'UTF-8'
-[217] bbl.pm:739> INFO - Output to kththesis.bbl
-[218] Biber.pm:110> INFO - WARNINGS: 1
+[0] Config.pm:302> INFO - This is Biber 2.9
+[0] Config.pm:305> INFO - Logfile is 'kththesis.blg'
+[24] biber:313> INFO - === fre mar 13, 2020, 15:54:58
+[45] Biber.pm:371> INFO - Reading 'kththesis.bcf'
+[110] Biber.pm:857> INFO - Found 0 citekeys in bib section 0
+[117] Utils.pm:169> WARN - The file 'kththesis.bcf' does not contain any citations!
+[124] bbl.pm:617> INFO - Writing 'kththesis.bbl' with encoding 'UTF-8'
+[125] bbl.pm:720> INFO - Output to kththesis.bbl
+[125] Biber.pm:110> INFO - WARNINGS: 1

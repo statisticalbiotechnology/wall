@@ -21,7 +21,7 @@ new_clinical['ER-/PR-/HER2+'] = new_clinical.apply(lambda row: True if ((row['ER
 '''
 dtypedict = {}
 for i in expression_data.columns[1:]:
-    dtypedict[i] = 'float32'
+    dtypedict[i] = 'str'
 expression_data = expression_data.astype(dtypedict)
 
 genes = expression_data['Unnamed: 0'].values.tolist()
@@ -35,10 +35,6 @@ gp = gp.loc[gp['name'] != 'None']
 gp = gp.set_index('incoming')
 gprofiler_names = gp
 
-dtypedict = {}
-for i in expression_data.columns[1:]:
-    dtypedict[i] = 'float32'
-expression_data = expression_data.astype(dtypedict)
 
 expression_data.index = expression_data['Unnamed: 0']
 expression_data = expression_data.iloc[:,1:]
@@ -54,7 +50,7 @@ def GSEA(cluster):
     gseapatients = expression_data.columns.tolist()
     new_clinical_patients = new_clinical.loc[gseapatients]
     classes = ["cluster" if x == cluster else "no" for x in new_clinical_patients['Integrative Cluster']]
-    destination_path = 'GSEA_/' + cluster
+    destination_path = 'GSEA_/' + cluster + '/'
 
     gs_res = gseapy.gsea(data = expression_data,
                     gene_sets ='Reactome_2016',
@@ -63,7 +59,7 @@ def GSEA(cluster):
                     max_size = 10000,
                     min_size = 2,
                     no_plot = True,
-                    processes = 4,
+                    processes = 6,
                     cls = classes,
                     verbose = True,
                     outdir = destination_path)
