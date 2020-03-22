@@ -1,6 +1,8 @@
 \documentclass{kththesis}
 
-
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[fleqn]{amsmath}
 \usepackage{csquotes} % Recommended by biblatex
 \usepackage[style=numeric,sorting=none,backend=biber]{biblatex}
 \addbibresource{references.bib} % The file containing our references, in BibTeX format
@@ -40,26 +42,112 @@
 \chapter{Introduction}
 
     \section{Research Question}
-    This project was aimed to evaluate a method for pathway activity and to test it in the context of breast cancer. As gene expression by itself is often
+    This project was aimed to evaluate a method for pathway activity and to test it in the context of breast cancer. As gene expression by itself is often full of bias and noise,
+    a hypothesis was made that simply reducing the noise and looking at the points of highest variance would lower bias and give higher resolution results in the context of pathway analysis
 
 
 
     \section{Breast Cancer}
-    Breast cancer is the most common cancer among women (WHO), accounting for nearly 15\% of all cancer deaths among women.
+    Breast cancer is the most common cancer among women (WHO), accounting for nearly 15\% of all cancer deaths among women. While the mortality rate has slowly decreased in the last 30 years(https://www.cancerresearchuk.org/health-professional/cancer-statistics/statistics-by-cancer-type/breast-cancer/mortality#heading-Two), one will agree that major advances are needed in order to continue the trend. Furthermore, the field of oncology is not only about reducing mortality, it is also very important to ensure disease-free survival, as well as the overall physical and mental health of the patient and their family. Granted, most of these aspects can be mitigated by advances made in the disease treatment/prevention
+
     Breast cancer has been studied for a long time, with the earliest paper recorded in PubMed from 1789 to almost 25 000 papers in 2019. The sad truth is though giant leaps in detection and treatments have been made since 1789, we still cannot call breast cancer a cured disease.
 
 
 
-\chapter{Background}
+    \section{Cancer Subtyping}
+    Currently, the primary source of cancer phasing regards subtypes. Subtyping is a way of dividing a group of patients into subgroups based on a molecular or clinical aspect. The most common subtyping used in breast cancer is PAM50, a tumor profiling test that determines whether ER+/HER2- cancers are likely to metastasize. It is known that the PAM50 'Luminal A' subtype in breast cancer (https://www.ncbi.nlm.nih.gov/pubmed/31542876) has a higher hazard than do other subtypes.
+
+    Furthermore, in the context of breast cancer, receptor subtyping has been a major player in improving the overall survival of the disease, as more targeted treatments such as tamoxifen can be used for patients that have tumors with estrogen receptors, and need not be used on receptor negative patients.
+
+    Subtyping provides a great basis personalized treatments, however, could it also be used as a basis for targeted new treatments. Since cancer is such a heterogenic disease, subtyping allows us to phase biologically similar patients together to decide for treatment, prognosis and overall care. However, it might be a good idea to look at specific suptypes as individual diseases instead.
+
+    Maybe one of the reasons for the sluggish development of treatments for different cancers is that they are tested on very dissimilar patients. Taking Tamoxifen as an example, if it were tested on estrogen receptor positive as well as negative patients, the effect would be diminished if the subtypes were not identified.
+
+    \section{The bigger picture of cancer (this should be renamed)}
+
+
+    \section{Ethics and why we can only do certain analyses}
+    One concern of cancer research is the scarcity of longitudinal data. As tumors are instantly removed upon discovery, any genetic testing occurs only at one point in time. This could be somewhat mitigated by looking at recurring cases and thus have a two
+
+    \section{}
 
 
 \chapter{Methods}
 
+     Since the project did not require any wet lab, the materials are all computer based. The project is mostly based on the python programming language, with common packages numpy, pandas and scikit-learn being the most used. As for the methods, the project centered around PCA analysis and information mining from said analysis.
+
+     
+     \section{PCA}
+     To give some background to PCA, it is a dimensionality reduction method which simplifies high-dimensional data while keeping as much variability as possible. High-dimensional data, while common, can lead to misleading information as some dimensions can lead to noisy datasets that might give a type 2 error. However, too few dimensions can lead to loss of information, the extent of which is evaluated in this project
+
+     PCA analysis performs orthogonal transformation to create a linear function where the first component shows the largest possible variance between the samples. Each following component then shows the highest possible variance provided it is orthogonal to the previous component. Principal components are displayed as eigenvectors, which are explained by their eigenvalues
+
+
+     \section{PCA based pathway analysis}
+     Following the PCA transformation, pathways were defined using the reactome database and the available genes. Subsequently, comparisons between patient groups were made using Mann-whitney U tests for each pathway in a high-throughput manner. Beginning with the Intclusts defined in the metabric paper, each cluster was compared to all other clusters, in order to determine what separates them on a pathway basis. This was also done using benign breast tissue samples as an additional cluster, comparing each intclust to the normal samples to identify differences not outlined by the other malignant samples.
+
+     Additionaly, this comparison was also performed comparing hormone receptor subtypes, as well as comparing triple negative cancers with non-triple negative patients.
+
+     Lastly, there was an interest and a hypothesis that mutation data would give interesting results, and this was analysed as well. However, since there were more than 170 different mutations, and sunburst plotting is not yet optimized for a great number of
+
+     \section{Sunburst plotting}
+     Due to the large number of pathways, simply looking at tables of pathways ranked by q-value was not quite enough to get a good idea of the relationship between groups. Therefore, a way of visually displaying the pathways in a clearer manner had to be used. The sunburst plots were an excellent way of doing so. The plots were colored by q-value and the size of each cell is proportional to the number of genes in the pathway.
+
+
+
+     \section{GSEA based pathway analysis}
+
+
+
+
 
 \chapter{Results}
 
+     \section{PCA based pathway analysis}
+     Results from the pathway analysis can be seen in \ref{Sunburst-pathways}
+
+     \begin{table}[!ht]
+          \renewcommand{\arraystretch}{1.5}
+           Table \ref{Sunburst-pathways}: Results of the pathway analysis from looking at the sunburst plot
+
+          \centering
+          \begin{tabularx}{\textwidth}{lX}
+               \toprule
+               \bfseries Cluster & \bfseries Sunburst \\ \midrule
+              1 & Cell Cycle, Base Excision Repair, DNA Double Strand Break Repair, RNA Pol I transcription, Gene Silencing by RNA, Senescence, Rho GTPase Signaling, ESR Signaling, TCF complex \\
+             2 & mTORC1, Iron Uptake and Transport, Insulin Receptor \\
+             3 & Cell Cycle, DNA Replication, DNA Double Strand Break Repair, Mismatch Repair, DNA Damage Bypass, SUMOylation, Megakaryocyte Production \\
+             4ER+ & Cell Cycle, DNA Double Strand Break Repair, Rho GTPase Signaling \\
+             4ER- & SLC Mediated Transport, Immune System, Neuronal System, Metabolism of Vitamins and Cofactors, DAG/IP3 Signaling, CaM Pathway \\
+             5 & Cell Cycle, Metabolism of Amine Derived Hormones, Tryptophan Catabolism, Rho gtpases \\
+             6 & IP Metabolism, Wnt \\
+             7 & CaM Pathway, NMDA Receptors, Cilium Assembly, Metabolism of Vitamins/Cofactors, Metabolism of Nucleotides, Ion Channel Transport \\
+             8 & Immune System, Transport of Small Molecules, Sphingolipid Metabolism, GPCR Signaling, DAG/IP3, Negative Regulation of Akt Network, Hemostasis \\
+             9 & Cell Cycle, KSHRP/TTP/TRF1, Riboflavin Metabolism, Glutamine/Glutamate Metabolism \\
+             10 & Cell Cycle, DNA Replication, Rho GTPases, Sphingolipid Metabolism, Nucleotide Metabolism \\ \bottomrule
+     \end{tabularx}
+     \caption{Results of the pathway analysis from looking at the sunburst plot}
+     \label{Sunburst-pathways}
+     \end{table}
+
+
+
+
+
+
+
+     \section{Sunburst Plotting}
+
+
+     \section{GSEA Validation}
+
+
+
 
 \chapter{Discussion}
+
+     \section{PCA}
+
 
 
 \chapter{Conclusions}

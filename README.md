@@ -106,3 +106,24 @@ Results are derived from statistical tests comparing each cluster to all the oth
 | HER2 Receptor| Cell Cycle, visual phototransduction, metabolism of amine derived hormones, tryptophan metabolism|
 | Triple Negative signature| Neuronal system, small molecule transport, lipid metabolism, IP metabolism, metabolism of cofactors, G protein modulated events, CaM pathway|
 | ER-/PR-/HER2+| metabolism of amine derived hormones, tryptophan metabolism, Cell Cycle, G1 phase|
+
+
+
+## What the 30 most differently activated GSEA pathways tell us
+
+| Cluster | Pathways |
+|:----:|:----:|
+| 1 | Cell Cycle, Chromosome Maintenance, Mitochondrial Translation |
+| 2 | Collagen Formation, Chromosome Maintenance, Telomeres, Cell Cycle |
+| 3 | Cell Cycle, Chromosome Stability and Maintenance|
+| 4ER+ | Cell Cycle, Mitochondrial Translation, HDR, SUMOylation|
+| 4ER- | Mitochondrial Translation, Signal Transduction, Immune System, Intraflaggelar Transport |
+| 5 | Cell Cycle, Immune System, Metabolism (of Proteins) |
+| 6 | Cell Cycle, Complements, Chemokines, PD-1 signaling(Nobel 2018), Immunoregulatory Functions |
+| 7 | Cell Cycle, Immunoregulatory Between Lymphoid/Non-Lymphoid Cell |
+| 8 | Immune System, Parts of Cell Cycle |
+| 9 | Signal Transduction |
+| 10 | Cell Cycle, Metabolism of ncRNA, DNA Replication |
+
+
+Cluster 1, 4ER+  and 10 had more than 30 pathways with fdr == 0. 4ER+ had 72 for example
