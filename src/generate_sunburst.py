@@ -80,14 +80,29 @@ def sunburst(in_df, outname = 'sun_tree.json'):
     tree = nx.algorithms.dag.dag_to_branching(G)
 
     secondDict = nx.get_node_attributes(tree,'source')
-    #print(secondDict)
-
+    print(secondDict)
     thirdDict = {'value':{}, 'ngenes':{}, 'max_val': {}, 'rank': {}}
+    print(thirdDict)
+
     for key, value in secondDict.items():
-        thirdDict['value'].update({key : topDict['value'][value]})
-        thirdDict['ngenes'].update({key : topDict['ngenes'][value]})
-        thirdDict['max_val'].update({key : topDict['max_val'][value]})
-        thirdDict['rank'].update({key : topDict['rank'][value]})
+        #print(key, value)
+        value = value.rstrip()
+
+        if value in topDict['value'][value]:
+            thirdDict['value'].update({key : topDict['value'][value]})
+            thirdDict['ngenes'].update({key : topDict['ngenes'][value]})
+            thirdDict['max_val'].update({key : topDict['max_val'][value]})
+            thirdDict['rank'].update({key : topDict['rank'][value]})
+
+        '''
+        ['Neurotransmitter release cycle',
+        'Neurotransmitter receptors and postsynaptic signal transmission',
+        'Caspase activation via Death Receptors in the presence of ligand',
+        'Phase II - Conjugation of compounds', 'MyD88:MAL(TIRAP) cascade initiated on plasma membrane',
+        'Toll-like Receptor Cascades', 'DDX58/IFIH1-mediated induction of interferon-alpha/beta',
+        'Acetylcholine binding and downstream events', 'Signaling by NTRK1 (TRKA)', 'Signaling by WNT']:
+            pass
+        '''
 
     nx.set_node_attributes(tree, thirdDict['value'], name = 'value')
     nx.set_node_attributes(tree, thirdDict['ngenes'], name = 'ngenes')
@@ -125,8 +140,6 @@ def read_reactome(file_name, gene_name_start = "ENSG0"):
 
 def make_the_json_files():
     cluster_df = pd.read_csv("../exp/GSEA_qvalues.csv", index_col = 0)
-    #clusterindex = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
-    #cluster_df = cluster_df.iloc[:,[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]]
     reactome_ngenes = read_reactome("../data/Ensembl2Reactome_All_Levels.txt.gz")
 
     length_dict = {}

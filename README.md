@@ -127,3 +127,10 @@ Results are derived from statistical tests comparing each cluster to all the oth
 
 
 Cluster 1, 4ER+  and 10 had more than 30 pathways with fdr == 0. 4ER+ had 72 for example
+
+
+
+
+
+
+![picture]('src/gsea_wall_comparison.png')
