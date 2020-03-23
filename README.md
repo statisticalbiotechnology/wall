@@ -132,5 +132,7 @@ Cluster 1, 4ER+  and 10 had more than 30 pathways with fdr == 0. 4ER+ had 72 for
 
 
 
+### Comparing wall and GSEA significant pathways
+
 
 ![Comparing wall and GSEA significant pathways](/src/gsea_wall_comparison.png)
