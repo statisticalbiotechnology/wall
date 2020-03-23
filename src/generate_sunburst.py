@@ -32,8 +32,12 @@ def generate_tree(relation_file = relation_file):
     G = nx.DiGraph()
     G.add_edges_from(names.values)
     roots = [n for n,d in G.in_degree() if d==0]
+    print(roots)
+    print(type(roots))
 
-    roots_df = pd.DataFrame(columns = [['parentId', 'id']])
+    roots_df = pd.DataFrame(columns = ['parentId', 'id'])
+    print(roots_df)
+
     roots_df['id'] = roots
     roots_df['parentId'] = 'Human'
 
