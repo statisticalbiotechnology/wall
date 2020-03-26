@@ -1,17 +1,19 @@
 import gseapy
 import pandas as pd
-import numpy as np
 
 
-metabric_data = pd.read_csv('../data/expression_data_metabric.csv', index_col=0)
-new_clinical_patients = pd.read_csv('../data/GSEA_clinical.csv')
+metabric_data = pd.read_csv('../data/expression_data.csv', index_col=0)
+print(metabric_data.shape)
+clinical_data = pd.read_csv('../data/GSEA_clinical.csv', index_col=0)
+clinical_patients = clinical_data.index.tolist()
+
+metabric_data = metabric_data.T.loc[clinical_patients].T
 
 
 def GSEA(receptor, level):
-    classes = ['MUT' if x == level else 'WT' for x in new_clinical_patients[receptor]]
+    classes = ['MUT' if x == level else 'WT' for x in clinical_data[receptor]]
     destination_path = f'GSEA_/{receptor}/'
-    print(new_clinical_patients[receptor])
-    print(classes)
+
     gs_res = gseapy.gsea(data=metabric_data,
                          gene_sets='Reactome_2016',
                          method="signal_to_noise",

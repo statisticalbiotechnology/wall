@@ -53,9 +53,12 @@ gseapatients = []
 for i in expression_data.columns.tolist():
     if i in new_clinical.index:
         gseapatients.append(i)
-gseapatients
+
+
+expression_data.to_csv('../data/expression_data.csv')
+
 new_clinical_patients = new_clinical.loc[gseapatients]
-new_clinical.to_csv('../GSEA_clinical.csv')
+new_clinical_patients.to_csv('../data/GSEA_clinical.csv')
 
 
 def GSEA(receptor, level):

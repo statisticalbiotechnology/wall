@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+#Big files
+/data/metabric.csv.gz
+/data/metabric.csv
+/data/expression_data_metabric.csv
+/data/expression_data.csv
+/data/expression_data.csv.gz
