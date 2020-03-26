@@ -55,11 +55,11 @@ for i in expression_data.columns.tolist():
         gseapatients.append(i)
 gseapatients
 new_clinical_patients = new_clinical.loc[gseapatients]
-
+new_clinical.to_csv('../GSEA_clinical.csv')
 
 
 def GSEA(receptor, level):
-    classes = ['positive' if x == level else 'negative' for x in new_clinical_patients[receptor]]
+    classes = ['Positive' if x == level else 'Negative' for x in new_clinical_patients[receptor]]
     destination_path = f'GSEA_/{receptor}/'
 
     gs_res = gseapy.gsea(data=expression_data,
