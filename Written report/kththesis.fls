@@ -221,6 +221,11 @@ INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmex1
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 OUTPUT kththesis.toc
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qtmri.tfm
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qtmr-sc.tfm
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tex-gyre\t1qcr.fd
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tex-gyre\t1qcr.fd
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\tex-gyre\ec-qcrr.tfm
 INPUT kth-cover.pdf
 INPUT kth-cover.pdf
 INPUT .\kth-cover.pdf
@@ -254,6 +259,9 @@ INPUT kththesis.aux
 INPUT kththesis.run.xml
 OUTPUT kththesis.run.xml
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ec.enc
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\enc\dvips\tex-gyre\q-ec-sc.enc
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qcrr.pfb
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qcrr.pfb
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qhvb.pfb
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qhvb.pfb
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qhvr.pfb
@@ -262,3 +270,5 @@ INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gy
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qtmb.pfb
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qtmr.pfb
 INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qtmr.pfb
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qtmri.pfb
+INPUT C:\Users\patri\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\tex-gyre\qtmri.pfb
