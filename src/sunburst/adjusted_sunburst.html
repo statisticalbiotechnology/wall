@@ -52,45 +52,6 @@
 
 	<select id="json_sources" name="json_sources">
 		<option value="" selected>---Select data---</option>
-		<option value="clust_1.json">IntClust 1</option>
-		<option value="clust_2.json">IntClust 2</option>
-		<option value="clust_3.json">IntClust 3</option>
-		<option value="clust_4ER+.json">IntClust 4ER+</option>
-		<option value="clust_4ER-.json">IntClust 4ER-</option>
-		<option value="clust_5.json">IntClust 5</option>
-		<option value="clust_6.json">IntClust 6</option>
-		<option value="clust_7.json">IntClust 7</option>
-		<option value="clust_8.json">IntClust 8</option>
-		<option value="clust_9.json">IntClust 9</option>
-		<option value="clust_10.json">IntClust 10</option>
-		<option value="ER_Status_qvalue.json">ER Receptor</option>
-		<option value="PR_Status_qvalue.json">PR Receptor</option>
-		<option value="HER2_Status_qvalue.json">HER2 Receptor</option>
-		<option value="Triple_Neg_qvalue.json">Triple Negative</option>
-		<option value="ER-_PR-_HER2+_qvalue.json">ER-/PR-/HER2+</option>
-		<option value="cluster_1_qvalue.json">IntClust 1 vs Benign</option>
-		<option value="cluster_2_qvalue.json">IntClust 2 vs Benign</option>
-		<option value="cluster_3_qvalue.json">IntClust 3 vs Benign</option>
-		<option value="cluster_4ER-_qvalue.json">IntClust 4ER- vs Benign</option>
-		<option value="cluster_4ER+_qvalue.json">IntClust 4ER+ vs Benign</option>
-		<option value="cluster_5_qvalue.json">IntClust 5 vs Benign</option>
-		<option value="cluster_6_qvalue.json">IntClust 6 vs Benign</option>
-		<option value="cluster_7_qvalue.json">IntClust 7 vs Benign</option>
-		<option value="cluster_8_qvalue.json">IntClust 8 vs Benign</option>
-		<option value="cluster_9_qvalue.json">IntClust 9 vs Benign</option>
-		<option value="cluster_10_qvalue.json">IntClust 10 vs Benign</option>
-		<option value="clust_CBFB.json">CBFB</option>
-		<option value="clust_CDH1.json">CDH1</option>
-		<option value="clust_GATA3.json">GATA3</option>
-		<option value="clust_MAP3K1.json">MAP3K1</option>
-		<option value="clust_PIK3CA.json">PIK3CA</option>
-		<option value="clust_TP53.json">TP53</option>
-		<option value="clust_AKT1.json">AKT1</option>
-		<option value="clust_BRCA1.json">BRCA1</option>
-		<option value="clust_BRCA2.json">BRCA2</option>
-		<option value="clust_KMT2C.json">KMT2C</option>
-		<option value="clust_RB1.json">RB1</option>
-
 		<option value="adj_1.json">adj IntClust 1</option>
 		<option value="adj_2.json">adj IntClust 2</option>
 		<option value="adj_3.json">adj IntClust 3</option>
@@ -138,6 +99,8 @@
 			.endAngle(function(d) {return Math.max(0, Math.min(2 * Math.PI, x(d.x1)));})
 			.innerRadius(function(d) {return Math.max(0, y(d.y0));})
 			.outerRadius(function(d) {return Math.max(0, y(d.y1));});
+
+
 
 		var svg = d3.select("body").append("svg")
 			.attr("width", width)
@@ -211,6 +174,7 @@
 				document.getElementById('factbox').innerHTML = "Maximum -log10(q-value) = " + color_threshold.toPrecision(5) + "</br>" +
 					"Colored pathways have -log10(qvalue) > " + color_start.toPrecision(4) + "</br>";
 			})
+               console.log(d.x0)
 
 			legend.append('rect')
 				.attr('width', legendRectSize)
