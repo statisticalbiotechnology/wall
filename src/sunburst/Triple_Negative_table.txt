@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>SLC-mediated transmembrane transport</td><td>26.968504663417722</td></tr>
+<tr><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>23.280224522306924</td></tr>
+<tr><td>Sphingolipid metabolism</td><td>22.59900601876777</td></tr>
+<tr><td>Cyclin D associated events in G1</td><td>22.485266988974303</td></tr>
+<tr><td>G1 Phase</td><td>22.485266988974303</td></tr>
+<tr><td>Amino acid transport across the plasma membrane</td><td>21.57307257024035</td></tr>
+<tr><td>Transcriptional Regulation by MECP2</td><td>21.21316355735412</td></tr>
+<tr><td>Synthesis of substrates in N-glycan biosythesis</td><td>20.397982031134422</td></tr>
+<tr><td>G-protein mediated events</td><td>20.126117363535798</td></tr>
+<tr><td>PLC beta mediated events</td><td>19.999163748607273</td></tr>
+<tr><td>Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein</td><td>19.773649469216387</td></tr>
+<tr><td>Glycosphingolipid metabolism</td><td>19.766685830566228</td></tr>
+<tr><td>PKA-mediated phosphorylation of CREB</td><td>19.566395856821718</td></tr>
+<tr><td>TFAP2 (AP-2) family regulates transcription of growth factors and their receptors</td><td>19.484311823803214</td></tr>
+<tr><td>Sialic acid metabolism</td><td>19.445527182670048</td></tr>
+<tr><td>Ca-dependent events</td><td>19.42659986527454</td></tr>
+<tr><td>RHO GTPases Activate Rhotekin and Rhophilins</td><td>19.135795065557968</td></tr>
+<tr><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>19.066095435679348</td></tr>
+<tr><td>DAG and IP3 signaling</td><td>19.019886412171648</td></tr>
+<tr><td>Synthesis of PC</td><td>18.980599912377716</td></tr>
+<tr><td>CaM pathway</td><td>18.980599912377716</td></tr>
+<tr><td>Calmodulin induced events</td><td>18.980599912377716</td></tr>
+<tr><td>Transport of inorganic cations/anions and amino acids/oligopeptides</td><td>18.75005295238339</td></tr>
+<tr><td>Vitamin C (ascorbate) metabolism</td><td>18.41928667161781</td></tr>
+<tr><td>RET signaling</td><td>18.284203345652035</td></tr>
+<tr><td>Reversible hydration of carbon dioxide</td><td>18.20761069258882</td></tr>
+<tr><td>Evasion of Oxidative Stress Induced Senescence Due to p16INK4A Defects</td><td>17.751845710245963</td></tr>
+<tr><td>Evasion of Oncogene Induced Senescence Due to Defective p16INK4A binding to CDK4 and CDK6</td><td>17.751845710245963</td></tr>
+<tr><td>Evasion of Oxidative Stress Induced Senescence Due to Defective p16INK4A binding to CDK4 and CDK6</td><td>17.751845710245963</td></tr>
+<tr><td>Evasion of Oncogene Induced Senescence Due to p16INK4A Defects</td><td>17.751845710245963</td></tr>
+<tr><td>Diseases of Cellular Senescence</td><td>17.751845710245963</td></tr>
+<tr><td>Estrogen-dependent nuclear events downstream of ESR-membrane signaling</td><td>17.618894395876964</td></tr>
+<tr><td>Diseases associated with glycosylation precursor biosynthesis</td><td>17.30367705492324</td></tr>
+<tr><td>Fatty acid metabolism</td><td>16.903802518094658</td></tr>
+<tr><td>Activation of AMPK downstream of NMDARs</td><td>16.849483491159376</td></tr>
+<tr><td>Ion channel transport</td><td>16.670910699107424</td></tr>
+<tr><td>Defective NEU1 causes sialidosis</td><td>16.13879300346109</td></tr>
+<tr><td>Insulin-like Growth Factor-2 mRNA Binding Proteins (IGF2BPs/IMPs/VICKZs) bind RNA</td><td>15.891048993620153</td></tr>
+<tr><td>FBXW7 Mutants and NOTCH1 in Cancer</td><td>15.879891668710352</td></tr>
+<tr><td>Loss of Function of FBXW7 in Cancer and NOTCH1 Signaling</td><td>15.879891668710352</td></tr>
+<tr><td>Serine biosynthesis</td><td>15.748417375934306</td></tr>
+<tr><td>Stimuli-sensing channels</td><td>15.597495112033632</td></tr>
+<tr><td>Repression of WNT target genes</td><td>15.540932604124635</td></tr>
+<tr><td>Negative regulation of MET activity</td><td>15.52156288684236</td></tr>
+<tr><td>Intraflagellar transport</td><td>14.873095681270089</td></tr>
+<tr><td>Acyl chain remodelling of PE</td><td>14.626155570272283</td></tr>
+<tr><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>14.565408383209878</td></tr>
+<tr><td>GAB1 signalosome</td><td>13.985668576290516</td></tr>
+<tr><td>Cardiac conduction</td><td>13.804941257401431</td></tr>
+<tr><td>RUNX3 regulates WNT signaling</td><td>13.653207646387674</td></tr>
+</tbody> 
+</table>

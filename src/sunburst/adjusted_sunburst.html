@@ -8,10 +8,14 @@
 	#tooltip {
 		position: absolute;
 		width: auto;
-		height: auto;
-		padding: 10px;
+		height: 20%;
 		background-color: white;
 		pointer-events: none;
+		float: left;
+	}
+	#table{
+		width: auto;
+		float: right;
 	}
 
 	#tooltip.hidden {
@@ -43,15 +47,22 @@
 
 <body>
 
+
 	<div id="tooltip" class="hidden">
 		//<p><span id="value">150</span>%</p>
 	</div>
+	<div id="table"></div>
+
+
+
+
+
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 	<script src="breadcrumb.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-	<select id="json_sources" name="json_sources">
-		<option value="" selected>---Select data---</option>
+	<select id="json_sources" name="json_sources" content-type="text/plain">
 		<option value="adj_1.json">adj IntClust 1</option>
 		<option value="adj_2.json">adj IntClust 2</option>
 		<option value="adj_3.json">adj IntClust 3</option>
@@ -63,12 +74,14 @@
 		<option value="adj_8.json">adj IntClust 8</option>
 		<option value="adj_9.json">adj IntClust 9</option>
 		<option value="adj_10.json">adj IntClust 10</option>
-
+		<option value='{"data": "adj_ER.json", "table": "ER_table.txt"}'>adj ER Status</option>
+		<option value='{"data": "adj_PR.json", "table": "PR_table.txt"}'>adj PR Status</option>
+		<option value='{"data": "adj_HER2.json", "table": "HER2_table.txt"}'>adj HER2 Status</option>
+		<option value='{"data": "adj_Triple_Negative.json", "table": "Triple_Negative_table.txt"}'>adj Triple Neg Status</option>
 
 	</select>​
-	<div id="factbox" class="hidden">
+	<div id="factbox" class="hidden"></div>
 
-	</div>
 	<script>
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
 			width = window.innerWidth - margin.left - margin.right,
@@ -99,8 +112,6 @@
 			.endAngle(function(d) {return Math.max(0, Math.min(2 * Math.PI, x(d.x1)));})
 			.innerRadius(function(d) {return Math.max(0, y(d.y0));})
 			.outerRadius(function(d) {return Math.max(0, y(d.y1));});
-
-
 
 		var svg = d3.select("body").append("svg")
 			.attr("width", width)
@@ -140,14 +151,16 @@
 		var legendRectSize = 10
 		var legendSpacing = 0.001
 
+		var table = d3.select('#table');
+
 		d3.select("#json_sources").on('change', draw)
 
 	function draw() {
 			source = d3.select("#json_sources").property('value')
+			const obj = JSON.parse(source);
 			svg.selectAll('path').remove()
-			d3.json(source, function(error, dataset) {
+			d3.json(obj.data, function(error, dataset) {
 				if (error) throw error;
-
 
 				root = d3.hierarchy(dataset);
 
@@ -174,7 +187,6 @@
 				document.getElementById('factbox').innerHTML = "Maximum -log10(q-value) = " + color_threshold.toPrecision(5) + "</br>" +
 					"Colored pathways have -log10(qvalue) > " + color_start.toPrecision(4) + "</br>";
 			})
-               console.log(d.x0)
 
 			legend.append('rect')
 				.attr('width', legendRectSize)
@@ -183,6 +195,8 @@
 				.style('stroke', color);
 
 
+			jQuery("#table").load(obj.table)
+				//.html(obj.table)
 		}
 
 
