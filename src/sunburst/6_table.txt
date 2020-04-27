@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>Signaling by plasma membrane FGFR1 fusions</td><td>65.39232061410526</td></tr>
+<tr><td>FGFR1 mutant receptor activation</td><td>12.9767469590817</td></tr>
+<tr><td>TRAIL  signaling</td><td>2.8600795292673964</td></tr>
+<tr><td>FGFR1b ligand binding and activation</td><td>2.675622233964144</td></tr>
+<tr><td>FGFR1c and Klotho ligand binding and activation</td><td>2.017287705011966</td></tr>
+<tr><td>Repression of WNT target genes</td><td>0.9105851671176384</td></tr>
+<tr><td>Protein repair</td><td>0.8979013090577435</td></tr>
+<tr><td>RUNX3 regulates WNT signaling</td><td>0.6091415281040035</td></tr>
+<tr><td>Activated NTRK2 signals through CDK5</td><td>0.6091415281040035</td></tr>
+<tr><td>Sodium/Calcium exchangers</td><td>0.6091415281040035</td></tr>
+<tr><td>RUNX3 regulates CDKN1A transcription</td><td>0.395069469041425</td></tr>
+<tr><td>Mitophagy</td><td>0.3058816822504121</td></tr>
+<tr><td>Tachykinin receptors bind tachykinins</td><td>0.3058816822504121</td></tr>
+<tr><td>G alpha (z) signalling events</td><td>0.3058816822504121</td></tr>
+<tr><td>mitochondrial fatty acid beta-oxidation of unsaturated fatty acids</td><td>0.3058816822504121</td></tr>
+<tr><td>Long-term potentiation</td><td>0.3058816822504121</td></tr>
+<tr><td>Vitamins B6 activation to pyridoxal phosphate</td><td>0.3058816822504121</td></tr>
+<tr><td>Glycogen storage diseases</td><td>0.3058816822504121</td></tr>
+<tr><td>Immunoregulatory interactions between a Lymphoid and a non-Lymphoid cell</td><td>0.3058816822504121</td></tr>
+<tr><td>Resistance of ERBB2 KD mutants to AEE788</td><td>0.3058816822504121</td></tr>
+<tr><td>Signaling by SCF-KIT</td><td>0.3058816822504121</td></tr>
+<tr><td>InlA-mediated entry of Listeria monocytogenes into host cells</td><td>0.3058816822504121</td></tr>
+<tr><td>Localization of the PINCH-ILK-PARVIN complex to focal adhesions</td><td>0.3058816822504121</td></tr>
+<tr><td>Developmental Biology</td><td>0.3058816822504121</td></tr>
+<tr><td>Toxicity of botulinum toxin type C (BoNT/C)</td><td>0.3058816822504121</td></tr>
+<tr><td>Metabolism of cofactors</td><td>0.3058816822504121</td></tr>
+<tr><td>Acetylcholine Neurotransmitter Release Cycle</td><td>0.3058816822504121</td></tr>
+<tr><td>Diseases associated with N-glycosylation of proteins</td><td>0.3058816822504121</td></tr>
+<tr><td>PI3K/AKT Signaling in Cancer</td><td>0.3058816822504121</td></tr>
+<tr><td>Scavenging by Class F Receptors</td><td>0.3058816822504121</td></tr>
+<tr><td>ATF6 (ATF6-alpha) activates chaperones</td><td>0.3058816822504121</td></tr>
+<tr><td>MTF1 activates gene expression</td><td>0.3058816822504121</td></tr>
+<tr><td>Fructose biosynthesis</td><td>0.3058816822504121</td></tr>
+<tr><td>Defective GCLC causes Hemolytic anemia due to gamma-glutamylcysteine synthetase deficiency (HAGGSD)</td><td>0.3058816822504121</td></tr>
+<tr><td>Methylation</td><td>0.3058816822504121</td></tr>
+<tr><td>Defective SLC16A1 causes symptomatic deficiency in lactate transport (SDLT)</td><td>0.3058816822504121</td></tr>
+<tr><td>Infectious disease</td><td>0.3058816822504121</td></tr>
+<tr><td>AKT phosphorylates targets in the cytosol</td><td>0.3058816822504121</td></tr>
+<tr><td>Highly sodium permeable acetylcholine nicotinic receptors</td><td>0.3058816822504121</td></tr>
+<tr><td>Platelet sensitization by LDL</td><td>0.3058816822504121</td></tr>
+<tr><td>Regulation of actin dynamics for phagocytic cup formation</td><td>0.3058816822504121</td></tr>
+<tr><td>Metal sequestration by antimicrobial proteins</td><td>0.3058816822504121</td></tr>
+<tr><td>Vitamin B5 (pantothenate) metabolism</td><td>0.3058816822504121</td></tr>
+<tr><td>TP53 Regulates Transcription of Caspase Activators and Caspases</td><td>0.3058816822504121</td></tr>
+<tr><td>Post-translational modification: synthesis of GPI-anchored proteins</td><td>0.3058816822504121</td></tr>
+<tr><td>Organelle biogenesis and maintenance</td><td>0.3058816822504121</td></tr>
+<tr><td>Gamma-carboxylation, transport, and amino-terminal cleavage of proteins</td><td>0.3058816822504121</td></tr>
+<tr><td>FGFRL1 modulation of FGFR1 signaling</td><td>0.3058816822504121</td></tr>
+<tr><td>Beta oxidation of hexanoyl-CoA to butanoyl-CoA</td><td>0.3058816822504121</td></tr>
+<tr><td>Presynaptic nicotinic acetylcholine receptors</td><td>0.3058816822504121</td></tr>
+</tbody> 
+</table>

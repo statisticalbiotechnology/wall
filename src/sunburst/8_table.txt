@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>Noncanonical activation of NOTCH3</td><td>5.921994909126089</td></tr>
+<tr><td>HHAT G278V abrogates palmitoylation of Hh-Np</td><td>3.1161452773078517</td></tr>
+<tr><td>Intraflagellar transport</td><td>1.9467043304439409</td></tr>
+<tr><td>Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET)</td><td>1.7213725713166497</td></tr>
+<tr><td>Sphingolipid metabolism</td><td>1.6800929462945378</td></tr>
+<tr><td>Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein</td><td>1.6211298642155625</td></tr>
+<tr><td>GAB1 signalosome</td><td>1.6211298642155625</td></tr>
+<tr><td>Nucleobase catabolism</td><td>1.5828289611196062</td></tr>
+<tr><td>Regulation of Complement cascade</td><td>1.5828289611196062</td></tr>
+<tr><td>Phase I - Functionalization of compounds</td><td>1.5828289611196062</td></tr>
+<tr><td>Metabolism of vitamins and cofactors</td><td>1.5828289611196062</td></tr>
+<tr><td>Complement cascade</td><td>1.5828289611196062</td></tr>
+<tr><td>Synthesis of substrates in N-glycan biosythesis</td><td>1.5828289611196062</td></tr>
+<tr><td>Glycosphingolipid metabolism</td><td>1.5516964445333434</td></tr>
+<tr><td>SLC-mediated transmembrane transport</td><td>1.5260476677623511</td></tr>
+<tr><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>1.5260476677623511</td></tr>
+<tr><td>Ubiquinol biosynthesis</td><td>1.5061060989817543</td></tr>
+<tr><td>Nuclear signaling by ERBB4</td><td>1.5061060989817543</td></tr>
+<tr><td>Initial triggering of complement</td><td>1.5061060989817543</td></tr>
+<tr><td>RUNX1 regulates transcription of genes involved in WNT signaling</td><td>1.5061060989817543</td></tr>
+<tr><td>Sialic acid metabolism</td><td>1.5061060989817543</td></tr>
+<tr><td>Activation of AMPK downstream of NMDARs</td><td>1.5061060989817543</td></tr>
+<tr><td>Metallothioneins bind metals</td><td>1.5061060989817543</td></tr>
+<tr><td>Synthesis of PC</td><td>1.5061060989817543</td></tr>
+<tr><td>Dectin-2 family</td><td>1.4771959557141483</td></tr>
+<tr><td>Interleukin-12 signaling</td><td>1.4614805506128528</td></tr>
+<tr><td>Fcgamma receptor (FCGR) dependent phagocytosis</td><td>1.4527835083452083</td></tr>
+<tr><td>Alternative complement activation</td><td>1.4527835083452083</td></tr>
+<tr><td>Response to metal ions</td><td>1.4527835083452083</td></tr>
+<tr><td>Immune System</td><td>1.4527835083452083</td></tr>
+<tr><td>Carboxyterminal post-translational modifications of tubulin</td><td>1.4527835083452083</td></tr>
+<tr><td>Growth hormone receptor signaling</td><td>1.4527835083452083</td></tr>
+<tr><td>Biological oxidations</td><td>1.4497014587581227</td></tr>
+<tr><td>Defective NEU1 causes sialidosis</td><td>1.4497014587581227</td></tr>
+<tr><td>Organic cation transport</td><td>1.4497014587581227</td></tr>
+<tr><td>The activation of arylsulfatases</td><td>1.4497014587581227</td></tr>
+<tr><td>PLC beta mediated events</td><td>1.4497014587581227</td></tr>
+<tr><td>Hemostasis</td><td>1.4497014587581227</td></tr>
+<tr><td>Negative regulation of MET activity</td><td>1.4497014587581227</td></tr>
+<tr><td>Erythropoietin activates Phospholipase C gamma (PLCG)</td><td>1.4497014587581227</td></tr>
+<tr><td>Adaptive Immune System</td><td>1.4497014587581227</td></tr>
+<tr><td>FCGR activation</td><td>1.4497014587581227</td></tr>
+<tr><td>Signaling by the B Cell Receptor (BCR)</td><td>1.4497014587581227</td></tr>
+<tr><td>Negative regulation of the PI3K/AKT network</td><td>1.4497014587581227</td></tr>
+<tr><td>Post NMDA receptor activation events</td><td>1.4497014587581227</td></tr>
+<tr><td>DAP12 signaling</td><td>1.4497014587581227</td></tr>
+<tr><td>FCERI mediated MAPK activation</td><td>1.4497014587581227</td></tr>
+<tr><td>Diseases associated with glycosylation precursor biosynthesis</td><td>1.4497014587581227</td></tr>
+<tr><td>Antigen activates B Cell Receptor (BCR) leading to generation of second messengers</td><td>1.4497014587581227</td></tr>
+<tr><td>Immunoregulatory interactions between a Lymphoid and a non-Lymphoid cell</td><td>1.4497014587581227</td></tr>
+</tbody> 
+</table>

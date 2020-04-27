@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>Cyclin D associated events in G1</td><td>6.302943733477355</td></tr>
+<tr><td>G1 Phase</td><td>6.302943733477355</td></tr>
+<tr><td>Diseases of Cellular Senescence</td><td>6.102263114023867</td></tr>
+<tr><td>Evasion of Oxidative Stress Induced Senescence Due to Defective p16INK4A binding to CDK4 and CDK6</td><td>6.102263114023867</td></tr>
+<tr><td>Evasion of Oncogene Induced Senescence Due to p16INK4A Defects</td><td>6.102263114023867</td></tr>
+<tr><td>Evasion of Oncogene Induced Senescence Due to Defective p16INK4A binding to CDK4 and CDK6</td><td>6.102263114023867</td></tr>
+<tr><td>Evasion of Oxidative Stress Induced Senescence Due to p16INK4A Defects</td><td>6.102263114023867</td></tr>
+<tr><td>Transcriptional Regulation by MECP2</td><td>6.036710519580195</td></tr>
+<tr><td>SLC-mediated transmembrane transport</td><td>5.264229354273752</td></tr>
+<tr><td>Oncogene Induced Senescence</td><td>5.2466589563570505</td></tr>
+<tr><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>5.039330148340901</td></tr>
+<tr><td>SUMOylation of DNA replication proteins</td><td>4.935015110779719</td></tr>
+<tr><td>Metabolism of nucleotides</td><td>4.877972316111282</td></tr>
+<tr><td>RHO GTPases Activate Rhotekin and Rhophilins</td><td>4.877927094460445</td></tr>
+<tr><td>G2 Phase</td><td>4.8446180123130445</td></tr>
+<tr><td>SLC transporter disorders</td><td>4.672309930071232</td></tr>
+<tr><td>mRNA Splicing - Minor Pathway</td><td>4.672309930071232</td></tr>
+<tr><td>Serine biosynthesis</td><td>4.59237553220225</td></tr>
+<tr><td>SUMO E3 ligases SUMOylate target proteins</td><td>4.576028912807682</td></tr>
+<tr><td>Sphingolipid metabolism</td><td>4.556615801058071</td></tr>
+<tr><td>Synthesis of PC</td><td>4.556615801058071</td></tr>
+<tr><td>RHO GTPases Activate Formins</td><td>4.5340539234311015</td></tr>
+<tr><td>Glycosphingolipid metabolism</td><td>4.473216327154642</td></tr>
+<tr><td>Miscellaneous transport and binding events</td><td>4.460539542243616</td></tr>
+<tr><td>Insulin-like Growth Factor-2 mRNA Binding Proteins (IGF2BPs/IMPs/VICKZs) bind RNA</td><td>4.460539542243616</td></tr>
+<tr><td>RHO GTPase Effectors</td><td>4.460539542243616</td></tr>
+<tr><td>Regulation of TP53 Activity through Phosphorylation</td><td>4.460539542243616</td></tr>
+<tr><td>Purine catabolism</td><td>4.460539542243616</td></tr>
+<tr><td>Transport of Mature mRNA Derived from an Intronless Transcript</td><td>4.460539542243616</td></tr>
+<tr><td>Vpr-mediated nuclear import of PICs</td><td>4.460539542243616</td></tr>
+<tr><td>Nucleobase biosynthesis</td><td>4.453542839197305</td></tr>
+<tr><td>Transport of the SLBP independent Mature mRNA</td><td>4.434155846068262</td></tr>
+<tr><td>Cell Cycle, Mitotic</td><td>4.434155846068262</td></tr>
+<tr><td>SUMOylation of DNA damage response and repair proteins</td><td>4.434155846068262</td></tr>
+<tr><td>Cell Cycle</td><td>4.434155846068262</td></tr>
+<tr><td>SUMOylation</td><td>4.434155846068262</td></tr>
+<tr><td>Amino acid transport across the plasma membrane</td><td>4.4284467538613015</td></tr>
+<tr><td>G1/S-Specific Transcription</td><td>4.398554149835581</td></tr>
+<tr><td>Transcription of E2F targets under negative control by p107 (RBL1) and p130 (RBL2) in complex with HDAC1</td><td>4.341251401139958</td></tr>
+<tr><td>RNA Polymerase III Transcription Termination</td><td>4.324517915897413</td></tr>
+<tr><td>TFAP2 (AP-2) family regulates transcription of growth factors and their receptors</td><td>4.324517915897413</td></tr>
+<tr><td>Ubiquinol biosynthesis</td><td>4.324517915897413</td></tr>
+<tr><td>EML4 and NUDC in mitotic spindle formation</td><td>4.316479479523637</td></tr>
+<tr><td>Nuclear Pore Complex (NPC) Disassembly</td><td>4.316479479523637</td></tr>
+<tr><td>Regulation of Glucokinase by Glucokinase Regulatory Protein</td><td>4.316479479523637</td></tr>
+<tr><td>Nuclear Envelope Breakdown</td><td>4.316479479523637</td></tr>
+<tr><td>Mitotic G1 phase and G1/S transition</td><td>4.316479479523637</td></tr>
+<tr><td>NS1 Mediated Effects on Host Pathways</td><td>4.316479479523637</td></tr>
+<tr><td>Diseases of Programmed Cell Death</td><td>4.316479479523637</td></tr>
+<tr><td>PTK6 Regulates Cell Cycle</td><td>4.316479479523637</td></tr>
+</tbody> 
+</table>

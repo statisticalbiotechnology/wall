@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>Vitamin B2 (riboflavin) metabolism</td><td>18.94391663190128</td></tr>
+<tr><td>Membrane binding and targetting of GAG proteins</td><td>18.724188959555338</td></tr>
+<tr><td>Synthesis And Processing Of GAG, GAGPOL Polyproteins</td><td>18.724188959555338</td></tr>
+<tr><td>Glutamate and glutamine metabolism</td><td>13.831299297989082</td></tr>
+<tr><td>Synthesis of PS</td><td>13.218565446537893</td></tr>
+<tr><td>KSRP (KHSRP) binds and destabilizes mRNA</td><td>12.115637095765019</td></tr>
+<tr><td>Assembly Of The HIV Virion</td><td>11.828631724767964</td></tr>
+<tr><td>Tristetraprolin (TTP, ZFP36) binds and destabilizes mRNA</td><td>9.83267623203174</td></tr>
+<tr><td>Butyrate Response Factor 1 (BRF1) binds and destabilizes mRNA</td><td>9.58928698499732</td></tr>
+<tr><td>Protein repair</td><td>4.6386738712389155</td></tr>
+<tr><td>GDP-fucose biosynthesis</td><td>4.5659796740349625</td></tr>
+<tr><td>Sema3A PAK dependent Axon repulsion</td><td>3.757029046546805</td></tr>
+<tr><td>Processing of Intronless Pre-mRNAs</td><td>3.696614539228338</td></tr>
+<tr><td>Telomere Extension By Telomerase</td><td>3.6549155157875624</td></tr>
+<tr><td>Mitotic Telophase/Cytokinesis</td><td>3.0462133961333127</td></tr>
+<tr><td>HDR through MMEJ (alt-NHEJ)</td><td>2.6568974100916467</td></tr>
+<tr><td>RNA Polymerase III Chain Elongation</td><td>2.455965805727763</td></tr>
+<tr><td>Phosphorylation of proteins involved in G1/S transition by active Cyclin E:Cdk2 complexes</td><td>2.413359720000689</td></tr>
+<tr><td>Cooperation of Prefoldin and TriC/CCT  in actin and tubulin folding</td><td>2.4102573892748933</td></tr>
+<tr><td>Prefoldin mediated transfer of substrate  to CCT/TriC</td><td>2.4102573892748933</td></tr>
+<tr><td>APC/C:Cdc20 mediated degradation of Cyclin B</td><td>2.401449158727192</td></tr>
+<tr><td>Metabolism of fat-soluble vitamins</td><td>2.3817873843884776</td></tr>
+<tr><td>Retinoid metabolism and transport</td><td>2.3817873843884776</td></tr>
+<tr><td>CRMPs in Sema3A signaling</td><td>2.3817873843884776</td></tr>
+<tr><td>Cyclin A/B1/B2 associated events during G2/M transition</td><td>2.303499456275921</td></tr>
+<tr><td>Negative regulation of FGFR1 signaling</td><td>2.167602637702731</td></tr>
+<tr><td>Visual phototransduction</td><td>2.095028411349065</td></tr>
+<tr><td>Negative regulation of FGFR3 signaling</td><td>2.095028411349065</td></tr>
+<tr><td>Type I hemidesmosome assembly</td><td>2.0680105481128783</td></tr>
+<tr><td>Synthesis of active ubiquitin: roles of E1 and E2 enzymes</td><td>2.0680105481128783</td></tr>
+<tr><td>Phosphorylation of the APC/C</td><td>2.057050905066398</td></tr>
+<tr><td>Cell junction organization</td><td>2.038390442818112</td></tr>
+<tr><td>Cell-cell junction organization</td><td>2.0099539321842257</td></tr>
+<tr><td>Negative regulation of FGFR2 signaling</td><td>2.0049114338084766</td></tr>
+<tr><td>EGFR downregulation</td><td>2.0049114338084766</td></tr>
+<tr><td>G2/M DNA replication checkpoint</td><td>2.0049114338084766</td></tr>
+<tr><td>The NLRP3 inflammasome</td><td>2.0049114338084766</td></tr>
+<tr><td>Spry regulation of FGF signaling</td><td>2.0049114338084766</td></tr>
+<tr><td>Fanconi Anemia Pathway</td><td>2.0049114338084766</td></tr>
+<tr><td>RUNX1 regulates transcription of genes involved in BCR signaling</td><td>2.0049114338084766</td></tr>
+<tr><td>Abortive elongation of HIV-1 transcript in the absence of Tat</td><td>2.0049114338084766</td></tr>
+<tr><td>G0 and Early G1</td><td>2.0049114338084766</td></tr>
+<tr><td>Polo-like kinase mediated events</td><td>1.957760521811249</td></tr>
+<tr><td>Sulfur amino acid metabolism</td><td>1.950555682500129</td></tr>
+<tr><td>PERK regulates gene expression</td><td>1.950555682500129</td></tr>
+<tr><td>RNA Polymerase III Transcription Termination</td><td>1.9293920978411965</td></tr>
+<tr><td>RHO GTPases activate CIT</td><td>1.919646089624792</td></tr>
+<tr><td>Autointegration results in viral DNA circles</td><td>1.8918086097467384</td></tr>
+<tr><td>Unwinding of DNA</td><td>1.8918086097467384</td></tr>
+<tr><td>Integration of viral DNA into host genomic DNA</td><td>1.8918086097467384</td></tr>
+</tbody> 
+</table>

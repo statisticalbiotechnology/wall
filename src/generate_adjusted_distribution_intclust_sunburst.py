@@ -125,7 +125,22 @@ def read_reactome(file_name, gene_name_start = "ENSG0"):
 
     return out_df
 
+def make_html_table(df, outname, threshold=30):
+    series = df['value']
+    series = series.sort_values(ascending=False)
+    series = series.iloc[:threshold]
+    print(series)
+    full_table = []
+    full_table.append(series.index.to_list())
+    full_table.append(series.tolist())
+    tablefile = open(outname, 'w')
 
+    tablefile.write('<table> \n<tbody>\n')
+    for i in range(0, len(full_table[0])):
+        tablefile.write(f'<tr><td>{full_table[0][i]}</td><td>{full_table[1][i]}</td></tr>\n')
+    tablefile.write('</tbody> \n</table>')
+    tablefile.close()
+    print(outname)
 
 
 def make_the_json_files():
@@ -164,7 +179,7 @@ def make_the_json_files():
         if clust == '4ER':
             clust = '4ER-'
         sunburst(df_dict[i], outname = f'sunburst/adj_{clust}.json')
-
+        make_html_table(df_dict[i], threshold=50, outname=f"sunburst/{clust}_table.txt")
 
 
 make_the_json_files()

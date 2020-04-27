@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>Ion channel transport</td><td>6.141570040292085</td></tr>
+<tr><td>Cytosolic iron-sulfur cluster assembly</td><td>6.141570040292085</td></tr>
+<tr><td>Post NMDA receptor activation events</td><td>5.021904651581654</td></tr>
+<tr><td>Cargo trafficking to the periciliary membrane</td><td>5.021904651581654</td></tr>
+<tr><td>Activation of NMDA receptors and postsynaptic events</td><td>5.021904651581654</td></tr>
+<tr><td>Ubiquinol biosynthesis</td><td>5.021904651581654</td></tr>
+<tr><td>DAG and IP3 signaling</td><td>5.015737199730612</td></tr>
+<tr><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>5.015737199730612</td></tr>
+<tr><td>CaM pathway</td><td>4.858868540733222</td></tr>
+<tr><td>RAB geranylgeranylation</td><td>4.858868540733222</td></tr>
+<tr><td>Calmodulin induced events</td><td>4.858868540733222</td></tr>
+<tr><td>Ca-dependent events</td><td>4.842470890520244</td></tr>
+<tr><td>BBSome-mediated cargo-targeting to cilium</td><td>4.842470890520244</td></tr>
+<tr><td>Intraflagellar transport</td><td>4.842470890520244</td></tr>
+<tr><td>Amino acids regulate mTORC1</td><td>4.7472982508105375</td></tr>
+<tr><td>RUNX1 regulates transcription of genes involved in WNT signaling</td><td>4.7103758117704615</td></tr>
+<tr><td>PLC beta mediated events</td><td>4.7103758117704615</td></tr>
+<tr><td>G-protein mediated events</td><td>4.581743536736561</td></tr>
+<tr><td>Acyl chain remodelling of PE</td><td>4.5788775452422295</td></tr>
+<tr><td>Nuclear Receptor transcription pathway</td><td>4.187500116061681</td></tr>
+<tr><td>Carboxyterminal post-translational modifications of tubulin</td><td>4.167943464902951</td></tr>
+<tr><td>Metabolism of nucleotides</td><td>4.165829338515609</td></tr>
+<tr><td>Metabolism of vitamins and cofactors</td><td>4.165829338515609</td></tr>
+<tr><td>Signaling by Insulin receptor</td><td>4.1185868944174455</td></tr>
+<tr><td>Retinoid cycle disease events</td><td>4.116345100787422</td></tr>
+<tr><td>Cytosolic sulfonation of small molecules</td><td>4.0693157315279915</td></tr>
+<tr><td>Metabolism of cofactors</td><td>4.045969726320059</td></tr>
+<tr><td>Defective Mismatch Repair Associated With MSH6</td><td>4.0438737051237466</td></tr>
+<tr><td>Stimuli-sensing channels</td><td>4.0438737051237466</td></tr>
+<tr><td>Lipid particle organization</td><td>3.8542986255188567</td></tr>
+<tr><td>PKA-mediated phosphorylation of CREB</td><td>3.842756560222099</td></tr>
+<tr><td>ROS and RNS production in phagocytes</td><td>3.791532130623119</td></tr>
+<tr><td>Diseases associated with visual transduction</td><td>3.7653157021786905</td></tr>
+<tr><td>Iron uptake and transport</td><td>3.7550281484348407</td></tr>
+<tr><td>TP53 Regulates Transcription of Death Receptors and Ligands</td><td>3.7350445961706944</td></tr>
+<tr><td>Amino acid transport across the plasma membrane</td><td>3.6759745667006563</td></tr>
+<tr><td>NR1H2 & NR1H3 regulate gene expression linked to gluconeogenesis </td><td>3.6759745667006563</td></tr>
+<tr><td>MECP2 regulates neuronal receptors and channels</td><td>3.6759745667006563</td></tr>
+<tr><td>The NLRP1 inflammasome</td><td>3.6565230619345384</td></tr>
+<tr><td>Fatty acid metabolism</td><td>3.5936623015962224</td></tr>
+<tr><td>Cardiac conduction</td><td>3.576704185968215</td></tr>
+<tr><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>3.576704185968215</td></tr>
+<tr><td>Activation of AMPK downstream of NMDARs</td><td>3.5456896344915085</td></tr>
+<tr><td>PKA activation in glucagon signalling</td><td>3.5447973533556087</td></tr>
+<tr><td>Signaling by ERBB2</td><td>3.51507097771218</td></tr>
+<tr><td>Zinc influx into cells by the SLC39 gene family</td><td>3.50472453063379</td></tr>
+<tr><td>Transmission across Chemical Synapses</td><td>3.48010722131109</td></tr>
+<tr><td>Gastrin-CREB signalling pathway via PKC and MAPK</td><td>3.48010722131109</td></tr>
+<tr><td>CREB1 phosphorylation through NMDA receptor-mediated activation of RAS signaling</td><td>3.4747898291061814</td></tr>
+<tr><td>Glucose metabolism</td><td>3.4713342929134536</td></tr>
+</tbody> 
+</table>

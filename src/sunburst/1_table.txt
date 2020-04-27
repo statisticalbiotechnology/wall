@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>RMTs methylate histone arginines</td><td>11.007225929798537</td></tr>
+<tr><td>Cellular Senescence</td><td>10.077248761017568</td></tr>
+<tr><td>HDMs demethylate histones</td><td>10.077248761017568</td></tr>
+<tr><td>Senescence-Associated Secretory Phenotype (SASP)</td><td>10.077248761017568</td></tr>
+<tr><td>Deposition of new CENPA-containing nucleosomes at the centromere</td><td>9.987477695750279</td></tr>
+<tr><td>Nucleosome assembly</td><td>9.987477695750279</td></tr>
+<tr><td>Chromosome Maintenance</td><td>9.91064646021675</td></tr>
+<tr><td>Estrogen-dependent gene expression</td><td>9.853027648095988</td></tr>
+<tr><td>Meiosis</td><td>9.773526368166491</td></tr>
+<tr><td>Oxidative Stress Induced Senescence</td><td>9.773526368166491</td></tr>
+<tr><td>Telomere Maintenance</td><td>9.733080854399784</td></tr>
+<tr><td>Transcriptional regulation by small RNAs</td><td>9.733080854399784</td></tr>
+<tr><td>Meiotic recombination</td><td>9.733080854399784</td></tr>
+<tr><td>RHO GTPases activate PKNs</td><td>9.733080854399784</td></tr>
+<tr><td>HCMV Late Events</td><td>9.733080854399784</td></tr>
+<tr><td>Reproduction</td><td>9.733080854399784</td></tr>
+<tr><td>HCMV Early Events</td><td>9.6772983143029</td></tr>
+<tr><td>Activation of HOX genes during differentiation</td><td>9.6772983143029</td></tr>
+<tr><td>Activation of anterior HOX genes in hindbrain development during early embryogenesis</td><td>9.6772983143029</td></tr>
+<tr><td>Condensation of Prophase Chromosomes</td><td>9.610686920379058</td></tr>
+<tr><td>Transcriptional regulation of granulopoiesis</td><td>9.601519797321165</td></tr>
+<tr><td>Metalloprotease DUBs</td><td>9.550217576868627</td></tr>
+<tr><td>Base Excision Repair</td><td>9.531563624666463</td></tr>
+<tr><td>Gene Silencing by RNA</td><td>9.418640321993669</td></tr>
+<tr><td>DNA methylation</td><td>9.381180067353952</td></tr>
+<tr><td>Formation of the beta-catenin:TCF transactivating complex</td><td>9.381180067353952</td></tr>
+<tr><td>PRC2 methylates histones and DNA</td><td>9.381180067353952</td></tr>
+<tr><td>HDACs deacetylate histones</td><td>9.371041894335699</td></tr>
+<tr><td>RNA Polymerase I Promoter Opening</td><td>9.364424194509207</td></tr>
+<tr><td>SIRT1 negatively regulates rRNA expression</td><td>9.364424194509207</td></tr>
+<tr><td>ESR-mediated signaling</td><td>9.364424194509207</td></tr>
+<tr><td>Activated PKN1 stimulates transcription of AR (androgen receptor) regulated genes KLK2 and KLK3</td><td>9.364424194509207</td></tr>
+<tr><td>ERCC6 (CSB) and EHMT2 (G9a) positively regulate rRNA expression</td><td>9.35521608786933</td></tr>
+<tr><td>Amyloid fiber formation</td><td>9.342950285367808</td></tr>
+<tr><td>RUNX1 regulates genes involved in megakaryocyte differentiation and platelet function</td><td>9.342950285367808</td></tr>
+<tr><td>DNA Double Strand Break Response</td><td>9.24916931856126</td></tr>
+<tr><td>Pre-NOTCH Expression and Processing</td><td>9.145757483721123</td></tr>
+<tr><td>Pre-NOTCH Transcription and Translation</td><td>9.145757483721123</td></tr>
+<tr><td>RNA Polymerase I Promoter Escape</td><td>9.078557008445102</td></tr>
+<tr><td>Interleukin-7 signaling</td><td>9.070907556781187</td></tr>
+<tr><td>DNA Damage/Telomere Stress Induced Senescence</td><td>9.050110494917881</td></tr>
+<tr><td>Recognition and association of DNA glycosylase with site containing an affected pyrimidine</td><td>9.050110494917881</td></tr>
+<tr><td>Cleavage of the damaged pyrimidine </td><td>9.050110494917881</td></tr>
+<tr><td>Depyrimidination</td><td>9.050110494917881</td></tr>
+<tr><td>Base-Excision Repair, AP Site Formation</td><td>9.03843575931445</td></tr>
+<tr><td>Meiotic synapsis</td><td>9.01779804762898</td></tr>
+<tr><td>B-WICH complex positively regulates rRNA expression</td><td>9.006795889151856</td></tr>
+<tr><td>Recognition and association of DNA glycosylase with site containing an affected purine</td><td>8.94842314589692</td></tr>
+<tr><td>Cleavage of the damaged purine</td><td>8.94842314589692</td></tr>
+<tr><td>Mitotic Prophase</td><td>8.94842314589692</td></tr>
+</tbody> 
+</table>

@@ -5,16 +5,22 @@
 		stroke: #fff;
 	}
 
+	#full-canvas{
+		position: fixed;
+		z-index: -1
+	}
+
 	#tooltip {
-		position: absolute;
+		position: fixed;
 		width: auto;
 		height: 20%;
 		background-color: white;
 		pointer-events: none;
 		float: left;
+		z-index: 1
 	}
 	#table{
-		width: auto;
+		width: 20%;
 		float: right;
 	}
 
@@ -47,13 +53,15 @@
 
 <body>
 
+<div class="sunburst-and-table">
+
 
 	<div id="tooltip" class="hidden">
 		//<p><span id="value">150</span>%</p>
 	</div>
 	<div id="table"></div>
 
-
+</div>
 
 
 
@@ -63,17 +71,18 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 	<select id="json_sources" name="json_sources" content-type="text/plain">
-		<option value="adj_1.json">adj IntClust 1</option>
-		<option value="adj_2.json">adj IntClust 2</option>
-		<option value="adj_3.json">adj IntClust 3</option>
-		<option value="adj_4ER+.json">adj IntClust 4ER+</option>
-		<option value="adj_4ER-.json">adj IntClust 4ER-</option>
-		<option value="adj_5.json">adj IntClust 5</option>
-		<option value="adj_6.json">adj IntClust 6</option>
-		<option value="adj_7.json">adj IntClust 7</option>
-		<option value="adj_8.json">adj IntClust 8</option>
-		<option value="adj_9.json">adj IntClust 9</option>
-		<option value="adj_10.json">adj IntClust 10</option>
+		<option value="" selected>---Select data---</option>
+		<option value='{"data": "adj_1.json", "table": "1_table.txt"}'>adj IntClust 1</option>
+		<option value='{"data": "adj_2.json", "table": "2_table.txt"}'>adj IntClust 2</option>
+		<option value='{"data": "adj_3.json", "table": "3_table.txt"}'>adj IntClust 3</option>
+		<option value='{"data": "adj_4ER+.json", "table": "4ER+_table.txt"}'>adj IntClust 4ER+</option>
+		<option value='{"data": "adj_4ER-.json", "table": "4ER-_table.txt"}'>adj IntClust 4ER-</option>
+		<option value='{"data": "adj_5.json", "table": "5_table.txt"}'>adj IntClust 5</option>
+		<option value='{"data": "adj_6.json", "table": "6_table.txt"}'>adj IntClust 6</option>
+		<option value='{"data": "adj_7.json", "table": "7_table.txt"}'>adj IntClust 7</option>
+		<option value='{"data": "adj_8.json", "table": "8_table.txt"}'>adj IntClust 8</option>
+		<option value='{"data": "adj_9.json", "table": "9_table.txt"}'>adj IntClust 9</option>
+		<option value='{"data": "adj_10.json", "table": "10_table.txt"}'>adj IntClust 10</option>
 		<option value='{"data": "adj_ER.json", "table": "ER_table.txt"}'>adj ER Status</option>
 		<option value='{"data": "adj_PR.json", "table": "PR_table.txt"}'>adj PR Status</option>
 		<option value='{"data": "adj_HER2.json", "table": "HER2_table.txt"}'>adj HER2 Status</option>
@@ -116,6 +125,7 @@
 		var svg = d3.select("body").append("svg")
 			.attr("width", width)
 			.attr("height", height)
+			.attr("id", "full-canvas")
 			.append("g")
 			.attr("id", "container")
 			.attr("transform", "translate(" + radius + "," + (height / 2) + ")");
@@ -177,6 +187,7 @@
 					.data(partition(root).descendants())
 					.enter().append("path")
 					.attr("d", arc)
+					.attr("id", "sunburst")
 					.style("fill", function(d) {return color(d.data.value); })
 					.style('stroke', 'black')
 					.attr('stroke-width', 1)
@@ -184,8 +195,12 @@
 					.on("mouseover", mouseover)
 					.on("mouseout", mouseout)
 					.on("click", click);
+
+				jQuery("#table").load(obj.table).attr('id', 'table')
+
 				document.getElementById('factbox').innerHTML = "Maximum -log10(q-value) = " + color_threshold.toPrecision(5) + "</br>" +
 					"Colored pathways have -log10(qvalue) > " + color_start.toPrecision(4) + "</br>";
+
 			})
 
 			legend.append('rect')
@@ -195,8 +210,8 @@
 				.style('stroke', color);
 
 
-			jQuery("#table").load(obj.table)
-				//.html(obj.table)
+
+
 		}
 
 
@@ -229,6 +244,7 @@
 				.style("left", d3.event.pageX + "px")
 				.style("top", d3.event.pageY + "px")
 				.style("opacity", .9)
+				.style("position", "absolute")
 				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>log10(q) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
 
 			d3.select("#tooltip").classed("hidden", false);

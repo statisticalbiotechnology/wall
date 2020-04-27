@@ -1,0 +1,54 @@
+<table> 
+<tbody>
+<tr><td>Metabolism of amine-derived hormones</td><td>16.470576066019824</td></tr>
+<tr><td>Catecholamine biosynthesis</td><td>16.340676109427303</td></tr>
+<tr><td>Synthesis of PIPs in the nucleus</td><td>15.034031791058108</td></tr>
+<tr><td>GRB7 events in ERBB2 signaling</td><td>13.59933018389872</td></tr>
+<tr><td>PI5P Regulates TP53 Acetylation</td><td>13.59933018389872</td></tr>
+<tr><td>Fertilization</td><td>12.622973040283064</td></tr>
+<tr><td>Sperm Motility And Taxes</td><td>11.342112646606926</td></tr>
+<tr><td>Tryptophan catabolism</td><td>9.335447325598414</td></tr>
+<tr><td>Metal sequestration by antimicrobial proteins</td><td>8.427641480490022</td></tr>
+<tr><td>Activation of gene expression by SREBF (SREBP)</td><td>7.1621325053490725</td></tr>
+<tr><td>Proline catabolism</td><td>6.605198863821673</td></tr>
+<tr><td>p130Cas linkage to MAPK signaling for integrins</td><td>6.528093346078882</td></tr>
+<tr><td>BH3-only proteins associate with and inactivate anti-apoptotic BCL-2 members</td><td>6.487449302920632</td></tr>
+<tr><td>Cholesterol biosynthesis</td><td>5.933991275033518</td></tr>
+<tr><td>GRB2:SOS provides linkage to MAPK signaling for Integrins </td><td>5.921107550491272</td></tr>
+<tr><td>Manipulation of host energy metabolism</td><td>5.340074100736072</td></tr>
+<tr><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>5.124140824579572</td></tr>
+<tr><td>Signaling by Leptin</td><td>4.9943863621219995</td></tr>
+<tr><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>4.492296970246937</td></tr>
+<tr><td>Linoleic acid (LA) metabolism</td><td>4.204788547537598</td></tr>
+<tr><td>Activation of AMPK downstream of NMDARs</td><td>4.180260242446005</td></tr>
+<tr><td>alpha-linolenic acid (ALA) metabolism</td><td>4.097646175707529</td></tr>
+<tr><td>alpha-linolenic (omega3) and linoleic (omega6) acid metabolism</td><td>4.097646175707529</td></tr>
+<tr><td>Visual phototransduction</td><td>4.097646175707529</td></tr>
+<tr><td>N-glycan antennae elongation in the medial/trans-Golgi</td><td>4.040430321248824</td></tr>
+<tr><td>IRS activation</td><td>3.8439451969081384</td></tr>
+<tr><td>Activation of caspases through apoptosome-mediated cleavage</td><td>3.8183469825694223</td></tr>
+<tr><td>PI3K Cascade</td><td>3.8183469825694223</td></tr>
+<tr><td>Metabolism of folate and pterines</td><td>3.7332482366594273</td></tr>
+<tr><td>Reactions specific to the complex N-glycan synthesis pathway</td><td>3.7332482366594273</td></tr>
+<tr><td>Estrogen biosynthesis</td><td>3.7301894943733327</td></tr>
+<tr><td>Glutathione synthesis and recycling</td><td>3.5825340786907183</td></tr>
+<tr><td>ABC transporters in lipid homeostasis</td><td>3.5825340786907183</td></tr>
+<tr><td>Tandem of pore domain in a weak inwardly rectifying K+ channels (TWIK)</td><td>3.5776731732521467</td></tr>
+<tr><td>Response of EIF2AK1 (HRI) to heme deficiency</td><td>3.5776731732521467</td></tr>
+<tr><td>Interaction With Cumulus Cells And The Zona Pellucida</td><td>3.4794704452045395</td></tr>
+<tr><td>Metabolism of ingested H2SeO4 and H2SeO3 into H2Se</td><td>3.3580794493915294</td></tr>
+<tr><td>Calcitonin-like ligand receptors</td><td>3.284140656651385</td></tr>
+<tr><td>Golgi Cisternae Pericentriolar Stack Reorganization</td><td>3.222157262549377</td></tr>
+<tr><td>Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET)</td><td>3.2077674499277933</td></tr>
+<tr><td>GDP-fucose biosynthesis</td><td>3.080651144049089</td></tr>
+<tr><td>Choline catabolism</td><td>3.061866866192844</td></tr>
+<tr><td>betaKlotho-mediated ligand binding</td><td>3.0610445666333583</td></tr>
+<tr><td>Metabolism of cofactors</td><td>3.0566691659980814</td></tr>
+<tr><td>Cholesterol biosynthesis via desmosterol</td><td>2.9897524032921337</td></tr>
+<tr><td>Cholesterol biosynthesis via lathosterol</td><td>2.9897524032921337</td></tr>
+<tr><td>Activated NTRK3 signals through PI3K</td><td>2.9476893090454395</td></tr>
+<tr><td>The fatty acid cycling model</td><td>2.9263999307496014</td></tr>
+<tr><td>The proton buffering model</td><td>2.9263999307496014</td></tr>
+<tr><td>Mitochondrial Uncoupling Proteins</td><td>2.9263999307496014</td></tr>
+</tbody> 
+</table>
