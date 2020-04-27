@@ -7,13 +7,15 @@
 
 	#full-canvas{
 		position: fixed;
-		z-index: -1
+		height: auto;
+		width: auto;
+		z-index: -1;
 	}
 
 	#tooltip {
 		position: fixed;
 		width: auto;
-		height: 20%;
+		height: auto;
 		background-color: white;
 		pointer-events: none;
 		float: left;
@@ -94,7 +96,7 @@
 	<script>
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
 			width = window.innerWidth - margin.left - margin.right,
-			height = window.innerWidth / 1.8 - margin.top - margin.bottom; // Use the window's height
+			height = 0.95*(window.innerHeight) - margin.top - margin.bottom; // Use the window's height
 
 		var radius = (Math.min(width, height) / 2) - 10;
 
