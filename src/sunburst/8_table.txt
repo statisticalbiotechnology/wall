@@ -1,54 +1,55 @@
 <table> 
 <tbody>
-<tr><td>Noncanonical activation of NOTCH3</td><td>5.921994909126089</td></tr>
-<tr><td>HHAT G278V abrogates palmitoylation of Hh-Np</td><td>3.1161452773078517</td></tr>
-<tr><td>Intraflagellar transport</td><td>1.9467043304439409</td></tr>
-<tr><td>Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET)</td><td>1.7213725713166497</td></tr>
-<tr><td>Sphingolipid metabolism</td><td>1.6800929462945378</td></tr>
-<tr><td>Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein</td><td>1.6211298642155625</td></tr>
-<tr><td>GAB1 signalosome</td><td>1.6211298642155625</td></tr>
-<tr><td>Nucleobase catabolism</td><td>1.5828289611196062</td></tr>
-<tr><td>Regulation of Complement cascade</td><td>1.5828289611196062</td></tr>
-<tr><td>Phase I - Functionalization of compounds</td><td>1.5828289611196062</td></tr>
-<tr><td>Metabolism of vitamins and cofactors</td><td>1.5828289611196062</td></tr>
-<tr><td>Complement cascade</td><td>1.5828289611196062</td></tr>
-<tr><td>Synthesis of substrates in N-glycan biosythesis</td><td>1.5828289611196062</td></tr>
-<tr><td>Glycosphingolipid metabolism</td><td>1.5516964445333434</td></tr>
-<tr><td>SLC-mediated transmembrane transport</td><td>1.5260476677623511</td></tr>
-<tr><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>1.5260476677623511</td></tr>
-<tr><td>Ubiquinol biosynthesis</td><td>1.5061060989817543</td></tr>
-<tr><td>Nuclear signaling by ERBB4</td><td>1.5061060989817543</td></tr>
-<tr><td>Initial triggering of complement</td><td>1.5061060989817543</td></tr>
-<tr><td>RUNX1 regulates transcription of genes involved in WNT signaling</td><td>1.5061060989817543</td></tr>
-<tr><td>Sialic acid metabolism</td><td>1.5061060989817543</td></tr>
-<tr><td>Activation of AMPK downstream of NMDARs</td><td>1.5061060989817543</td></tr>
-<tr><td>Metallothioneins bind metals</td><td>1.5061060989817543</td></tr>
-<tr><td>Synthesis of PC</td><td>1.5061060989817543</td></tr>
-<tr><td>Dectin-2 family</td><td>1.4771959557141483</td></tr>
-<tr><td>Interleukin-12 signaling</td><td>1.4614805506128528</td></tr>
-<tr><td>Fcgamma receptor (FCGR) dependent phagocytosis</td><td>1.4527835083452083</td></tr>
-<tr><td>Alternative complement activation</td><td>1.4527835083452083</td></tr>
-<tr><td>Response to metal ions</td><td>1.4527835083452083</td></tr>
-<tr><td>Immune System</td><td>1.4527835083452083</td></tr>
-<tr><td>Carboxyterminal post-translational modifications of tubulin</td><td>1.4527835083452083</td></tr>
-<tr><td>Growth hormone receptor signaling</td><td>1.4527835083452083</td></tr>
-<tr><td>Biological oxidations</td><td>1.4497014587581227</td></tr>
-<tr><td>Defective NEU1 causes sialidosis</td><td>1.4497014587581227</td></tr>
-<tr><td>Organic cation transport</td><td>1.4497014587581227</td></tr>
-<tr><td>The activation of arylsulfatases</td><td>1.4497014587581227</td></tr>
-<tr><td>PLC beta mediated events</td><td>1.4497014587581227</td></tr>
-<tr><td>Hemostasis</td><td>1.4497014587581227</td></tr>
-<tr><td>Negative regulation of MET activity</td><td>1.4497014587581227</td></tr>
-<tr><td>Erythropoietin activates Phospholipase C gamma (PLCG)</td><td>1.4497014587581227</td></tr>
-<tr><td>Adaptive Immune System</td><td>1.4497014587581227</td></tr>
-<tr><td>FCGR activation</td><td>1.4497014587581227</td></tr>
-<tr><td>Signaling by the B Cell Receptor (BCR)</td><td>1.4497014587581227</td></tr>
-<tr><td>Negative regulation of the PI3K/AKT network</td><td>1.4497014587581227</td></tr>
-<tr><td>Post NMDA receptor activation events</td><td>1.4497014587581227</td></tr>
-<tr><td>DAP12 signaling</td><td>1.4497014587581227</td></tr>
-<tr><td>FCERI mediated MAPK activation</td><td>1.4497014587581227</td></tr>
-<tr><td>Diseases associated with glycosylation precursor biosynthesis</td><td>1.4497014587581227</td></tr>
-<tr><td>Antigen activates B Cell Receptor (BCR) leading to generation of second messengers</td><td>1.4497014587581227</td></tr>
-<tr><td>Immunoregulatory interactions between a Lymphoid and a non-Lymphoid cell</td><td>1.4497014587581227</td></tr>
+<tr><th>Rank</th><th>Pathway</th><th>-log10(p-value)</th></tr>
+<tr><td>1</td><td>Noncanonical activation of NOTCH3</td><td>5.921994909126089</td></tr>
+<tr><td>2</td><td>HHAT G278V abrogates palmitoylation of Hh-Np</td><td>3.1161452773078517</td></tr>
+<tr><td>3</td><td>Intraflagellar transport</td><td>1.9467043304439409</td></tr>
+<tr><td>4</td><td>Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET)</td><td>1.7213725713166497</td></tr>
+<tr><td>5</td><td>Sphingolipid metabolism</td><td>1.6800929462945378</td></tr>
+<tr><td>6</td><td>Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein</td><td>1.6211298642155625</td></tr>
+<tr><td>7</td><td>GAB1 signalosome</td><td>1.6211298642155625</td></tr>
+<tr><td>8</td><td>Regulation of Complement cascade</td><td>1.5828289611196062</td></tr>
+<tr><td>9</td><td>Phase I - Functionalization of compounds</td><td>1.5828289611196062</td></tr>
+<tr><td>10</td><td>Metabolism of vitamins and cofactors</td><td>1.5828289611196062</td></tr>
+<tr><td>11</td><td>Complement cascade</td><td>1.5828289611196062</td></tr>
+<tr><td>12</td><td>Synthesis of substrates in N-glycan biosythesis</td><td>1.5828289611196062</td></tr>
+<tr><td>13</td><td>Nucleobase catabolism</td><td>1.5828289611196062</td></tr>
+<tr><td>14</td><td>Glycosphingolipid metabolism</td><td>1.5516964445333434</td></tr>
+<tr><td>15</td><td>SLC-mediated transmembrane transport</td><td>1.5260476677623511</td></tr>
+<tr><td>16</td><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>1.5260476677623511</td></tr>
+<tr><td>17</td><td>Ubiquinol biosynthesis</td><td>1.5061060989817543</td></tr>
+<tr><td>18</td><td>Nuclear signaling by ERBB4</td><td>1.5061060989817543</td></tr>
+<tr><td>19</td><td>Initial triggering of complement</td><td>1.5061060989817543</td></tr>
+<tr><td>20</td><td>RUNX1 regulates transcription of genes involved in WNT signaling</td><td>1.5061060989817543</td></tr>
+<tr><td>21</td><td>Sialic acid metabolism</td><td>1.5061060989817543</td></tr>
+<tr><td>22</td><td>Activation of AMPK downstream of NMDARs</td><td>1.5061060989817543</td></tr>
+<tr><td>23</td><td>Metallothioneins bind metals</td><td>1.5061060989817543</td></tr>
+<tr><td>24</td><td>Synthesis of PC</td><td>1.5061060989817543</td></tr>
+<tr><td>25</td><td>Dectin-2 family</td><td>1.4771959557141483</td></tr>
+<tr><td>26</td><td>Interleukin-12 signaling</td><td>1.4614805506128528</td></tr>
+<tr><td>27</td><td>Growth hormone receptor signaling</td><td>1.4527835083452083</td></tr>
+<tr><td>28</td><td>Immune System</td><td>1.4527835083452083</td></tr>
+<tr><td>29</td><td>Carboxyterminal post-translational modifications of tubulin</td><td>1.4527835083452083</td></tr>
+<tr><td>30</td><td>Fcgamma receptor (FCGR) dependent phagocytosis</td><td>1.4527835083452083</td></tr>
+<tr><td>31</td><td>Response to metal ions</td><td>1.4527835083452083</td></tr>
+<tr><td>32</td><td>Alternative complement activation</td><td>1.4527835083452083</td></tr>
+<tr><td>33</td><td>Cell surface interactions at the vascular wall</td><td>1.4497014587581227</td></tr>
+<tr><td>34</td><td>Cytokine Signaling in Immune system</td><td>1.4497014587581227</td></tr>
+<tr><td>35</td><td>Cytochrome P450 - arranged by substrate type</td><td>1.4497014587581227</td></tr>
+<tr><td>36</td><td>Ca-dependent events</td><td>1.4497014587581227</td></tr>
+<tr><td>37</td><td>DAG and IP3 signaling</td><td>1.4497014587581227</td></tr>
+<tr><td>38</td><td>PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling</td><td>1.4497014587581227</td></tr>
+<tr><td>39</td><td>RUNX3 Regulates Immune Response and Cell Migration</td><td>1.4497014587581227</td></tr>
+<tr><td>40</td><td>Activation of NMDA receptors and postsynaptic events</td><td>1.4497014587581227</td></tr>
+<tr><td>41</td><td>Fatty acid metabolism</td><td>1.4497014587581227</td></tr>
+<tr><td>42</td><td>FCERI mediated Ca+2 mobilization</td><td>1.4497014587581227</td></tr>
+<tr><td>43</td><td>Beta-oxidation of very long chain fatty acids</td><td>1.4497014587581227</td></tr>
+<tr><td>44</td><td>G alpha (i) signalling events</td><td>1.4497014587581227</td></tr>
+<tr><td>45</td><td>Organic cation/anion/zwitterion transport</td><td>1.4497014587581227</td></tr>
+<tr><td>46</td><td>PI3K/AKT Signaling in Cancer</td><td>1.4497014587581227</td></tr>
+<tr><td>47</td><td>CaM pathway</td><td>1.4497014587581227</td></tr>
+<tr><td>48</td><td>APEX1-Independent Resolution of AP Sites via the Single Nucleotide Replacement Pathway</td><td>1.4497014587581227</td></tr>
+<tr><td>49</td><td>Gene and protein expression by JAK-STAT signaling after Interleukin-12 stimulation</td><td>1.4497014587581227</td></tr>
+<tr><td>50</td><td>Interleukin-12 family signaling</td><td>1.4497014587581227</td></tr>
 </tbody> 
 </table>

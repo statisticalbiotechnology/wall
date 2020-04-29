@@ -1,54 +1,55 @@
 <table> 
 <tbody>
-<tr><td>Iron uptake and transport</td><td>3.5793220696144203</td></tr>
-<tr><td>Insulin receptor recycling</td><td>3.5793220696144203</td></tr>
-<tr><td>Signaling by Insulin receptor</td><td>3.5793220696144203</td></tr>
-<tr><td>Transferrin endocytosis and recycling</td><td>3.5793220696144203</td></tr>
-<tr><td>Amino acids regulate mTORC1</td><td>3.498895595365596</td></tr>
-<tr><td>ROS and RNS production in phagocytes</td><td>3.333731201280125</td></tr>
-<tr><td>RUNX3 regulates WNT signaling</td><td>3.2049222455102298</td></tr>
-<tr><td>Ephrin signaling</td><td>3.097529713339588</td></tr>
-<tr><td>TRAIL  signaling</td><td>2.7127242840664545</td></tr>
-<tr><td>Ca2+ activated K+ channels</td><td>2.6345324360108244</td></tr>
-<tr><td>Estrogen-dependent nuclear events downstream of ESR-membrane signaling</td><td>2.1512396217168104</td></tr>
-<tr><td>Activation of SMO</td><td>2.1126085293724817</td></tr>
-<tr><td>Repression of WNT target genes</td><td>2.1126085293724817</td></tr>
-<tr><td>Ion channel transport</td><td>2.1126085293724817</td></tr>
-<tr><td>Enzymatic degradation of dopamine by COMT</td><td>1.8257513115051232</td></tr>
-<tr><td>Dopamine clearance from the synaptic cleft</td><td>1.8257513115051232</td></tr>
-<tr><td>NOSIP mediated eNOS trafficking</td><td>1.610204622191721</td></tr>
-<tr><td>TGFBR1 KD Mutants in Cancer</td><td>1.4351867368392095</td></tr>
-<tr><td>SMAD2/3 Phosphorylation Motif Mutants in Cancer</td><td>1.4351867368392095</td></tr>
-<tr><td>RUNX3 regulates CDKN1A transcription</td><td>1.4098981773384809</td></tr>
-<tr><td>Phase 4 - resting membrane potential</td><td>1.2382013029336365</td></tr>
-<tr><td>Amine Oxidase reactions</td><td>1.2382013029336365</td></tr>
-<tr><td>Intracellular metabolism of fatty acids regulates insulin secretion</td><td>1.2050354574082274</td></tr>
-<tr><td>Metabolism of porphyrins</td><td>1.0950377771587994</td></tr>
-<tr><td>Organic cation transport</td><td>1.0530929473806139</td></tr>
-<tr><td>Assembly of the pre-replicative complex</td><td>1.0530929473806139</td></tr>
-<tr><td>EGFR downregulation</td><td>1.0530929473806139</td></tr>
-<tr><td>Fanconi Anemia Pathway</td><td>1.0530929473806139</td></tr>
-<tr><td>Chylomicron remodeling</td><td>1.0469745782627364</td></tr>
-<tr><td>Defective ABCC8 can cause hypoglycemias and hyperglycemias</td><td>1.044299525814588</td></tr>
-<tr><td>Sodium-coupled phosphate cotransporters</td><td>1.0362987784022308</td></tr>
-<tr><td>vRNP Assembly</td><td>1.0161680515499365</td></tr>
-<tr><td>PAOs oxidise polyamines to amines</td><td>1.0161680515499365</td></tr>
-<tr><td>The citric acid (TCA) cycle and respiratory electron transport</td><td>1.0118680386453138</td></tr>
-<tr><td>Cell junction organization</td><td>1.0118680386453138</td></tr>
-<tr><td>Cell-Cell communication</td><td>0.9906850191388272</td></tr>
-<tr><td>RNA Polymerase I Promoter Clearance</td><td>0.9897043482796474</td></tr>
-<tr><td>Organic cation/anion/zwitterion transport</td><td>0.9897043482796474</td></tr>
-<tr><td>E2F-enabled inhibition of pre-replication complex formation</td><td>0.9897043482796474</td></tr>
-<tr><td>Metabolism of vitamin K</td><td>0.9897043482796474</td></tr>
-<tr><td>Defective AVP does not bind AVPR2 and causes neurohypophyseal diabetes insipidus (NDI)</td><td>0.9897043482796474</td></tr>
-<tr><td>RUNX2 regulates osteoblast differentiation</td><td>0.9897043482796474</td></tr>
-<tr><td>RNA polymerase II transcribes snRNA genes</td><td>0.9674975239409704</td></tr>
-<tr><td>Muscle contraction</td><td>0.9674975239409704</td></tr>
-<tr><td>Neddylation</td><td>0.9674975239409704</td></tr>
-<tr><td>Scavenging by Class A Receptors</td><td>0.9652238352966772</td></tr>
-<tr><td>MASTL Facilitates Mitotic Progression</td><td>0.9652238352966772</td></tr>
-<tr><td>Interferon gamma signaling</td><td>0.9652238352966772</td></tr>
-<tr><td>Defects in cobalamin (B12) metabolism</td><td>0.9652238352966772</td></tr>
-<tr><td>Regulation of RUNX2 expression and activity</td><td>0.9594651340712236</td></tr>
+<tr><th>Rank</th><th>Pathway</th><th>-log10(p-value)</th></tr>
+<tr><td>1</td><td>Iron uptake and transport</td><td>3.5793220696144203</td></tr>
+<tr><td>2</td><td>Insulin receptor recycling</td><td>3.5793220696144203</td></tr>
+<tr><td>3</td><td>Signaling by Insulin receptor</td><td>3.5793220696144203</td></tr>
+<tr><td>4</td><td>Transferrin endocytosis and recycling</td><td>3.5793220696144203</td></tr>
+<tr><td>5</td><td>Amino acids regulate mTORC1</td><td>3.498895595365596</td></tr>
+<tr><td>6</td><td>ROS and RNS production in phagocytes</td><td>3.333731201280125</td></tr>
+<tr><td>7</td><td>RUNX3 regulates WNT signaling</td><td>3.2049222455102298</td></tr>
+<tr><td>8</td><td>Ephrin signaling</td><td>3.097529713339588</td></tr>
+<tr><td>9</td><td>TRAIL  signaling</td><td>2.7127242840664545</td></tr>
+<tr><td>10</td><td>Ca2+ activated K+ channels</td><td>2.6345324360108244</td></tr>
+<tr><td>11</td><td>Estrogen-dependent nuclear events downstream of ESR-membrane signaling</td><td>2.1512396217168104</td></tr>
+<tr><td>12</td><td>Activation of SMO</td><td>2.1126085293724817</td></tr>
+<tr><td>13</td><td>Repression of WNT target genes</td><td>2.1126085293724817</td></tr>
+<tr><td>14</td><td>Ion channel transport</td><td>2.1126085293724817</td></tr>
+<tr><td>15</td><td>Enzymatic degradation of dopamine by COMT</td><td>1.8257513115051232</td></tr>
+<tr><td>16</td><td>Dopamine clearance from the synaptic cleft</td><td>1.8257513115051232</td></tr>
+<tr><td>17</td><td>NOSIP mediated eNOS trafficking</td><td>1.610204622191721</td></tr>
+<tr><td>18</td><td>TGFBR1 KD Mutants in Cancer</td><td>1.4351867368392095</td></tr>
+<tr><td>19</td><td>SMAD2/3 Phosphorylation Motif Mutants in Cancer</td><td>1.4351867368392095</td></tr>
+<tr><td>20</td><td>RUNX3 regulates CDKN1A transcription</td><td>1.4098981773384809</td></tr>
+<tr><td>21</td><td>Phase 4 - resting membrane potential</td><td>1.2382013029336365</td></tr>
+<tr><td>22</td><td>Amine Oxidase reactions</td><td>1.2382013029336365</td></tr>
+<tr><td>23</td><td>Intracellular metabolism of fatty acids regulates insulin secretion</td><td>1.2050354574082274</td></tr>
+<tr><td>24</td><td>Metabolism of porphyrins</td><td>1.0950377771587994</td></tr>
+<tr><td>25</td><td>Organic cation transport</td><td>1.0530929473806139</td></tr>
+<tr><td>26</td><td>Assembly of the pre-replicative complex</td><td>1.0530929473806139</td></tr>
+<tr><td>27</td><td>EGFR downregulation</td><td>1.0530929473806139</td></tr>
+<tr><td>28</td><td>Fanconi Anemia Pathway</td><td>1.0530929473806139</td></tr>
+<tr><td>29</td><td>Chylomicron remodeling</td><td>1.0469745782627364</td></tr>
+<tr><td>30</td><td>Defective ABCC8 can cause hypoglycemias and hyperglycemias</td><td>1.044299525814588</td></tr>
+<tr><td>31</td><td>Sodium-coupled phosphate cotransporters</td><td>1.0362987784022308</td></tr>
+<tr><td>32</td><td>vRNP Assembly</td><td>1.0161680515499365</td></tr>
+<tr><td>33</td><td>PAOs oxidise polyamines to amines</td><td>1.0161680515499365</td></tr>
+<tr><td>34</td><td>Cell junction organization</td><td>1.0118680386453138</td></tr>
+<tr><td>35</td><td>The citric acid (TCA) cycle and respiratory electron transport</td><td>1.0118680386453138</td></tr>
+<tr><td>36</td><td>Cell-Cell communication</td><td>0.9906850191388272</td></tr>
+<tr><td>37</td><td>RNA Polymerase I Promoter Clearance</td><td>0.9897043482796474</td></tr>
+<tr><td>38</td><td>Organic cation/anion/zwitterion transport</td><td>0.9897043482796474</td></tr>
+<tr><td>39</td><td>E2F-enabled inhibition of pre-replication complex formation</td><td>0.9897043482796474</td></tr>
+<tr><td>40</td><td>Metabolism of vitamin K</td><td>0.9897043482796474</td></tr>
+<tr><td>41</td><td>Defective AVP does not bind AVPR2 and causes neurohypophyseal diabetes insipidus (NDI)</td><td>0.9897043482796474</td></tr>
+<tr><td>42</td><td>RUNX2 regulates osteoblast differentiation</td><td>0.9897043482796474</td></tr>
+<tr><td>43</td><td>RNA polymerase II transcribes snRNA genes</td><td>0.9674975239409704</td></tr>
+<tr><td>44</td><td>Muscle contraction</td><td>0.9674975239409704</td></tr>
+<tr><td>45</td><td>Neddylation</td><td>0.9674975239409704</td></tr>
+<tr><td>46</td><td>Defects in cobalamin (B12) metabolism</td><td>0.9652238352966772</td></tr>
+<tr><td>47</td><td>MASTL Facilitates Mitotic Progression</td><td>0.9652238352966772</td></tr>
+<tr><td>48</td><td>Interferon gamma signaling</td><td>0.9652238352966772</td></tr>
+<tr><td>49</td><td>Scavenging by Class A Receptors</td><td>0.9652238352966772</td></tr>
+<tr><td>50</td><td>Regulation of RUNX2 expression and activity</td><td>0.9594651340712236</td></tr>
 </tbody> 
 </table>

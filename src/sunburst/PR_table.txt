@@ -1,54 +1,55 @@
 <table> 
 <tbody>
-<tr><td>Activation of AMPK downstream of NMDARs</td><td>22.911138495980936</td></tr>
-<tr><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>19.55399498432161</td></tr>
-<tr><td>G-protein mediated events</td><td>14.523864918972697</td></tr>
-<tr><td>Cyclin D associated events in G1</td><td>14.523864918972697</td></tr>
-<tr><td>G1 Phase</td><td>14.523864918972697</td></tr>
-<tr><td>PLC beta mediated events</td><td>14.523864918972697</td></tr>
-<tr><td>DAG and IP3 signaling</td><td>14.312582364554315</td></tr>
-<tr><td>Intraflagellar transport</td><td>14.209837197062873</td></tr>
-<tr><td>PKA-mediated phosphorylation of CREB</td><td>13.658670372765437</td></tr>
-<tr><td>alpha-linolenic acid (ALA) metabolism</td><td>13.658670372765437</td></tr>
-<tr><td>Transcriptional Regulation by MECP2</td><td>13.658670372765437</td></tr>
-<tr><td>alpha-linolenic (omega3) and linoleic (omega6) acid metabolism</td><td>13.658670372765437</td></tr>
-<tr><td>Post NMDA receptor activation events</td><td>13.613684788799805</td></tr>
-<tr><td>GAB1 signalosome</td><td>13.578611097371464</td></tr>
-<tr><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>13.367423106435654</td></tr>
-<tr><td>Activation of NMDA receptors and postsynaptic events</td><td>13.300304068917008</td></tr>
-<tr><td>SLC-mediated transmembrane transport</td><td>13.252255032357704</td></tr>
-<tr><td>Negative regulation of MET activity</td><td>13.232933475593104</td></tr>
-<tr><td>Fatty acid metabolism</td><td>13.221097617265956</td></tr>
-<tr><td>Beta-oxidation of very long chain fatty acids</td><td>12.70142270859485</td></tr>
-<tr><td>Purine salvage</td><td>12.424491379264973</td></tr>
-<tr><td>Ca-dependent events</td><td>12.354656619054394</td></tr>
-<tr><td>CaM pathway</td><td>12.222680153815082</td></tr>
-<tr><td>Calmodulin induced events</td><td>12.222680153815082</td></tr>
-<tr><td>Nucleotide salvage</td><td>12.011589026285641</td></tr>
-<tr><td>Serine biosynthesis</td><td>11.678002080067522</td></tr>
-<tr><td>Amino acid transport across the plasma membrane</td><td>11.678002080067522</td></tr>
-<tr><td>Tryptophan catabolism</td><td>11.487422148413565</td></tr>
-<tr><td>Transport of inorganic cations/anions and amino acids/oligopeptides</td><td>10.919730357489057</td></tr>
-<tr><td>Ubiquinol biosynthesis</td><td>10.69941203673097</td></tr>
-<tr><td>Activation of C3 and C5</td><td>10.613013396179467</td></tr>
-<tr><td>Reversible hydration of carbon dioxide</td><td>10.586982563839443</td></tr>
-<tr><td>Microtubule-dependent trafficking of connexons from Golgi to the plasma membrane</td><td>10.586982563839443</td></tr>
-<tr><td>Vitamin C (ascorbate) metabolism</td><td>10.473548242863206</td></tr>
-<tr><td>Peroxisomal lipid metabolism</td><td>10.463302415066478</td></tr>
-<tr><td>Estrogen-dependent nuclear events downstream of ESR-membrane signaling</td><td>10.179106762176502</td></tr>
-<tr><td>BH3-only proteins associate with and inactivate anti-apoptotic BCL-2 members</td><td>10.096230964684882</td></tr>
-<tr><td>BBSome-mediated cargo-targeting to cilium</td><td>10.043162851366242</td></tr>
-<tr><td>Metabolism of nucleotides</td><td>9.976221171917867</td></tr>
-<tr><td>Purine catabolism</td><td>9.913088000869797</td></tr>
-<tr><td>Phase 4 - resting membrane potential</td><td>9.894219714126233</td></tr>
-<tr><td>Carboxyterminal post-translational modifications of tubulin</td><td>9.892958148781354</td></tr>
-<tr><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>9.880555636699981</td></tr>
-<tr><td>Oncogene Induced Senescence</td><td>9.880555636699981</td></tr>
-<tr><td>Acyl chain remodelling of PE</td><td>9.8185881531687</td></tr>
-<tr><td>Basigin interactions</td><td>9.739820493100275</td></tr>
-<tr><td>Linoleic acid (LA) metabolism</td><td>9.737968873776683</td></tr>
-<tr><td>Visual phototransduction</td><td>9.608286246135119</td></tr>
-<tr><td>Growth hormone receptor signaling</td><td>9.56023930069601</td></tr>
-<tr><td>ABC transporters in lipid homeostasis</td><td>9.447737902283489</td></tr>
+<tr><th>Rank</th><th>Pathway</th><th>-log10(p-value)</th></tr>
+<tr><td>1</td><td>Activation of AMPK downstream of NMDARs</td><td>22.911138495980936</td></tr>
+<tr><td>2</td><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>19.55399498432161</td></tr>
+<tr><td>3</td><td>G-protein mediated events</td><td>14.523864918972697</td></tr>
+<tr><td>4</td><td>Cyclin D associated events in G1</td><td>14.523864918972697</td></tr>
+<tr><td>5</td><td>G1 Phase</td><td>14.523864918972697</td></tr>
+<tr><td>6</td><td>PLC beta mediated events</td><td>14.523864918972697</td></tr>
+<tr><td>7</td><td>DAG and IP3 signaling</td><td>14.312582364554315</td></tr>
+<tr><td>8</td><td>Intraflagellar transport</td><td>14.209837197062873</td></tr>
+<tr><td>9</td><td>PKA-mediated phosphorylation of CREB</td><td>13.658670372765437</td></tr>
+<tr><td>10</td><td>alpha-linolenic acid (ALA) metabolism</td><td>13.658670372765437</td></tr>
+<tr><td>11</td><td>Transcriptional Regulation by MECP2</td><td>13.658670372765437</td></tr>
+<tr><td>12</td><td>alpha-linolenic (omega3) and linoleic (omega6) acid metabolism</td><td>13.658670372765437</td></tr>
+<tr><td>13</td><td>Post NMDA receptor activation events</td><td>13.613684788799805</td></tr>
+<tr><td>14</td><td>GAB1 signalosome</td><td>13.578611097371464</td></tr>
+<tr><td>15</td><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>13.367423106435654</td></tr>
+<tr><td>16</td><td>Activation of NMDA receptors and postsynaptic events</td><td>13.300304068917008</td></tr>
+<tr><td>17</td><td>SLC-mediated transmembrane transport</td><td>13.252255032357704</td></tr>
+<tr><td>18</td><td>Negative regulation of MET activity</td><td>13.232933475593104</td></tr>
+<tr><td>19</td><td>Fatty acid metabolism</td><td>13.221097617265956</td></tr>
+<tr><td>20</td><td>Beta-oxidation of very long chain fatty acids</td><td>12.70142270859485</td></tr>
+<tr><td>21</td><td>Purine salvage</td><td>12.424491379264973</td></tr>
+<tr><td>22</td><td>Ca-dependent events</td><td>12.354656619054394</td></tr>
+<tr><td>23</td><td>CaM pathway</td><td>12.222680153815082</td></tr>
+<tr><td>24</td><td>Calmodulin induced events</td><td>12.222680153815082</td></tr>
+<tr><td>25</td><td>Nucleotide salvage</td><td>12.011589026285641</td></tr>
+<tr><td>26</td><td>Serine biosynthesis</td><td>11.678002080067522</td></tr>
+<tr><td>27</td><td>Amino acid transport across the plasma membrane</td><td>11.678002080067522</td></tr>
+<tr><td>28</td><td>Tryptophan catabolism</td><td>11.487422148413565</td></tr>
+<tr><td>29</td><td>Transport of inorganic cations/anions and amino acids/oligopeptides</td><td>10.919730357489057</td></tr>
+<tr><td>30</td><td>Ubiquinol biosynthesis</td><td>10.69941203673097</td></tr>
+<tr><td>31</td><td>Activation of C3 and C5</td><td>10.613013396179467</td></tr>
+<tr><td>32</td><td>Reversible hydration of carbon dioxide</td><td>10.586982563839443</td></tr>
+<tr><td>33</td><td>Microtubule-dependent trafficking of connexons from Golgi to the plasma membrane</td><td>10.586982563839443</td></tr>
+<tr><td>34</td><td>Vitamin C (ascorbate) metabolism</td><td>10.473548242863206</td></tr>
+<tr><td>35</td><td>Peroxisomal lipid metabolism</td><td>10.463302415066478</td></tr>
+<tr><td>36</td><td>Estrogen-dependent nuclear events downstream of ESR-membrane signaling</td><td>10.179106762176502</td></tr>
+<tr><td>37</td><td>BH3-only proteins associate with and inactivate anti-apoptotic BCL-2 members</td><td>10.096230964684882</td></tr>
+<tr><td>38</td><td>BBSome-mediated cargo-targeting to cilium</td><td>10.043162851366242</td></tr>
+<tr><td>39</td><td>Metabolism of nucleotides</td><td>9.976221171917867</td></tr>
+<tr><td>40</td><td>Purine catabolism</td><td>9.913088000869797</td></tr>
+<tr><td>41</td><td>Phase 4 - resting membrane potential</td><td>9.894219714126233</td></tr>
+<tr><td>42</td><td>Carboxyterminal post-translational modifications of tubulin</td><td>9.892958148781354</td></tr>
+<tr><td>43</td><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>9.880555636699981</td></tr>
+<tr><td>44</td><td>Oncogene Induced Senescence</td><td>9.880555636699981</td></tr>
+<tr><td>45</td><td>Acyl chain remodelling of PE</td><td>9.8185881531687</td></tr>
+<tr><td>46</td><td>Basigin interactions</td><td>9.739820493100275</td></tr>
+<tr><td>47</td><td>Linoleic acid (LA) metabolism</td><td>9.737968873776683</td></tr>
+<tr><td>48</td><td>Visual phototransduction</td><td>9.608286246135119</td></tr>
+<tr><td>49</td><td>Growth hormone receptor signaling</td><td>9.56023930069601</td></tr>
+<tr><td>50</td><td>ABC transporters in lipid homeostasis</td><td>9.447737902283489</td></tr>
 </tbody> 
 </table>

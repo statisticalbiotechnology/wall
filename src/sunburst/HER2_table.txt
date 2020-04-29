@@ -1,54 +1,55 @@
 <table> 
 <tbody>
-<tr><td>Metabolism of amine-derived hormones</td><td>17.983476497942885</td></tr>
-<tr><td>Catecholamine biosynthesis</td><td>17.945931530188393</td></tr>
-<tr><td>GRB7 events in ERBB2 signaling</td><td>12.454372849540928</td></tr>
-<tr><td>Fertilization</td><td>12.134179433513058</td></tr>
-<tr><td>Synthesis of PIPs in the nucleus</td><td>10.976269969926234</td></tr>
-<tr><td>Sperm Motility And Taxes</td><td>10.663207109289683</td></tr>
-<tr><td>Tryptophan catabolism</td><td>10.128613909837952</td></tr>
-<tr><td>PI5P Regulates TP53 Acetylation</td><td>9.67335673365833</td></tr>
-<tr><td>Metal sequestration by antimicrobial proteins</td><td>7.163617483895342</td></tr>
-<tr><td>Proline catabolism</td><td>6.9729939863683095</td></tr>
-<tr><td>BH3-only proteins associate with and inactivate anti-apoptotic BCL-2 members</td><td>6.488040909184197</td></tr>
-<tr><td>Activation of gene expression by SREBF (SREBP)</td><td>6.478522452142607</td></tr>
-<tr><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>5.212956883845075</td></tr>
-<tr><td>Visual phototransduction</td><td>5.076714512997229</td></tr>
-<tr><td>PI3K Cascade</td><td>4.959918906569742</td></tr>
-<tr><td>Cholesterol biosynthesis</td><td>4.859979580788667</td></tr>
-<tr><td>Manipulation of host energy metabolism</td><td>4.490302971359043</td></tr>
-<tr><td>p130Cas linkage to MAPK signaling for integrins</td><td>4.3373522607495545</td></tr>
-<tr><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>4.235988027892152</td></tr>
-<tr><td>Activation of AMPK downstream of NMDARs</td><td>4.075774574489255</td></tr>
-<tr><td>Signaling by Leptin</td><td>4.037708521364782</td></tr>
-<tr><td>GRB2:SOS provides linkage to MAPK signaling for Integrins </td><td>4.01823554442361</td></tr>
-<tr><td>IRS activation</td><td>4.01823554442361</td></tr>
-<tr><td>Activation of caspases through apoptosome-mediated cleavage</td><td>3.958922470691885</td></tr>
-<tr><td>betaKlotho-mediated ligand binding</td><td>3.8756539881877936</td></tr>
-<tr><td>Estrogen biosynthesis</td><td>3.798261979945212</td></tr>
-<tr><td>alpha-linolenic (omega3) and linoleic (omega6) acid metabolism</td><td>3.6765990222009775</td></tr>
-<tr><td>alpha-linolenic acid (ALA) metabolism</td><td>3.6765990222009775</td></tr>
-<tr><td>Linoleic acid (LA) metabolism</td><td>3.6223658469735485</td></tr>
-<tr><td>Metabolism of fat-soluble vitamins</td><td>3.5892892416585096</td></tr>
-<tr><td>Caspase activation via Dependence Receptors in the absence of ligand</td><td>3.4912495722709513</td></tr>
-<tr><td>Interaction With Cumulus Cells And The Zona Pellucida</td><td>3.4912495722709513</td></tr>
-<tr><td>Alpha-oxidation of phytanate</td><td>3.474774854930036</td></tr>
-<tr><td>Retinoid metabolism and transport</td><td>3.4729253517696885</td></tr>
-<tr><td>Metabolism of folate and pterines</td><td>3.299846768618872</td></tr>
-<tr><td>Response of EIF2AK1 (HRI) to heme deficiency</td><td>3.299846768618872</td></tr>
-<tr><td>The proton buffering model</td><td>3.2763260041222817</td></tr>
-<tr><td>Mitochondrial Uncoupling Proteins</td><td>3.2763260041222817</td></tr>
-<tr><td>The fatty acid cycling model</td><td>3.2763260041222817</td></tr>
-<tr><td>Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET)</td><td>3.2642801693735928</td></tr>
-<tr><td>Metabolism of ingested H2SeO4 and H2SeO3 into H2Se</td><td>3.2617720677500106</td></tr>
-<tr><td>Choline catabolism</td><td>3.2448479377883173</td></tr>
-<tr><td>Activated NTRK3 signals through PI3K</td><td>3.1050821748183304</td></tr>
-<tr><td>ABC transporters in lipid homeostasis</td><td>3.0937823494152923</td></tr>
-<tr><td>Glutathione synthesis and recycling</td><td>2.998606202375809</td></tr>
-<tr><td>GDP-fucose biosynthesis</td><td>2.843458954123569</td></tr>
-<tr><td>N-glycan antennae elongation in the medial/trans-Golgi</td><td>2.839421268995068</td></tr>
-<tr><td>Tandem of pore domain in a weak inwardly rectifying K+ channels (TWIK)</td><td>2.83057650020524</td></tr>
-<tr><td>Metabolism of cofactors</td><td>2.752723098608468</td></tr>
-<tr><td>Antimicrobial peptides</td><td>2.7194334188991833</td></tr>
+<tr><th>Rank</th><th>Pathway</th><th>-log10(p-value)</th></tr>
+<tr><td>1</td><td>Metabolism of amine-derived hormones</td><td>17.983476497942885</td></tr>
+<tr><td>2</td><td>Catecholamine biosynthesis</td><td>17.945931530188393</td></tr>
+<tr><td>3</td><td>GRB7 events in ERBB2 signaling</td><td>12.454372849540928</td></tr>
+<tr><td>4</td><td>Fertilization</td><td>12.134179433513058</td></tr>
+<tr><td>5</td><td>Synthesis of PIPs in the nucleus</td><td>10.976269969926234</td></tr>
+<tr><td>6</td><td>Sperm Motility And Taxes</td><td>10.663207109289683</td></tr>
+<tr><td>7</td><td>Tryptophan catabolism</td><td>10.128613909837952</td></tr>
+<tr><td>8</td><td>PI5P Regulates TP53 Acetylation</td><td>9.67335673365833</td></tr>
+<tr><td>9</td><td>Metal sequestration by antimicrobial proteins</td><td>7.163617483895342</td></tr>
+<tr><td>10</td><td>Proline catabolism</td><td>6.9729939863683095</td></tr>
+<tr><td>11</td><td>BH3-only proteins associate with and inactivate anti-apoptotic BCL-2 members</td><td>6.488040909184197</td></tr>
+<tr><td>12</td><td>Activation of gene expression by SREBF (SREBP)</td><td>6.478522452142607</td></tr>
+<tr><td>13</td><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>5.212956883845075</td></tr>
+<tr><td>14</td><td>Visual phototransduction</td><td>5.076714512997229</td></tr>
+<tr><td>15</td><td>PI3K Cascade</td><td>4.959918906569742</td></tr>
+<tr><td>16</td><td>Cholesterol biosynthesis</td><td>4.859979580788667</td></tr>
+<tr><td>17</td><td>Manipulation of host energy metabolism</td><td>4.490302971359043</td></tr>
+<tr><td>18</td><td>p130Cas linkage to MAPK signaling for integrins</td><td>4.3373522607495545</td></tr>
+<tr><td>19</td><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>4.235988027892152</td></tr>
+<tr><td>20</td><td>Activation of AMPK downstream of NMDARs</td><td>4.075774574489255</td></tr>
+<tr><td>21</td><td>Signaling by Leptin</td><td>4.037708521364782</td></tr>
+<tr><td>22</td><td>GRB2:SOS provides linkage to MAPK signaling for Integrins </td><td>4.01823554442361</td></tr>
+<tr><td>23</td><td>IRS activation</td><td>4.01823554442361</td></tr>
+<tr><td>24</td><td>Activation of caspases through apoptosome-mediated cleavage</td><td>3.958922470691885</td></tr>
+<tr><td>25</td><td>betaKlotho-mediated ligand binding</td><td>3.8756539881877936</td></tr>
+<tr><td>26</td><td>Estrogen biosynthesis</td><td>3.798261979945212</td></tr>
+<tr><td>27</td><td>alpha-linolenic (omega3) and linoleic (omega6) acid metabolism</td><td>3.6765990222009775</td></tr>
+<tr><td>28</td><td>alpha-linolenic acid (ALA) metabolism</td><td>3.6765990222009775</td></tr>
+<tr><td>29</td><td>Linoleic acid (LA) metabolism</td><td>3.6223658469735485</td></tr>
+<tr><td>30</td><td>Metabolism of fat-soluble vitamins</td><td>3.5892892416585096</td></tr>
+<tr><td>31</td><td>Interaction With Cumulus Cells And The Zona Pellucida</td><td>3.4912495722709513</td></tr>
+<tr><td>32</td><td>Caspase activation via Dependence Receptors in the absence of ligand</td><td>3.4912495722709513</td></tr>
+<tr><td>33</td><td>Alpha-oxidation of phytanate</td><td>3.474774854930036</td></tr>
+<tr><td>34</td><td>Retinoid metabolism and transport</td><td>3.4729253517696885</td></tr>
+<tr><td>35</td><td>Metabolism of folate and pterines</td><td>3.299846768618872</td></tr>
+<tr><td>36</td><td>Response of EIF2AK1 (HRI) to heme deficiency</td><td>3.299846768618872</td></tr>
+<tr><td>37</td><td>The proton buffering model</td><td>3.2763260041222817</td></tr>
+<tr><td>38</td><td>Mitochondrial Uncoupling Proteins</td><td>3.2763260041222817</td></tr>
+<tr><td>39</td><td>The fatty acid cycling model</td><td>3.2763260041222817</td></tr>
+<tr><td>40</td><td>Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET)</td><td>3.2642801693735928</td></tr>
+<tr><td>41</td><td>Metabolism of ingested H2SeO4 and H2SeO3 into H2Se</td><td>3.2617720677500106</td></tr>
+<tr><td>42</td><td>Choline catabolism</td><td>3.2448479377883173</td></tr>
+<tr><td>43</td><td>Activated NTRK3 signals through PI3K</td><td>3.1050821748183304</td></tr>
+<tr><td>44</td><td>ABC transporters in lipid homeostasis</td><td>3.0937823494152923</td></tr>
+<tr><td>45</td><td>Glutathione synthesis and recycling</td><td>2.998606202375809</td></tr>
+<tr><td>46</td><td>GDP-fucose biosynthesis</td><td>2.843458954123569</td></tr>
+<tr><td>47</td><td>N-glycan antennae elongation in the medial/trans-Golgi</td><td>2.839421268995068</td></tr>
+<tr><td>48</td><td>Tandem of pore domain in a weak inwardly rectifying K+ channels (TWIK)</td><td>2.83057650020524</td></tr>
+<tr><td>49</td><td>Metabolism of cofactors</td><td>2.752723098608468</td></tr>
+<tr><td>50</td><td>Antimicrobial peptides</td><td>2.7194334188991833</td></tr>
 </tbody> 
 </table>

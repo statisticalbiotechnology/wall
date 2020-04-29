@@ -74,8 +74,6 @@ def sunburst(in_df, outname = 'sun_tree.json'):
     G.add_edges_from(sub_rel_df.values)
 
     tree = nx.algorithms.dag.dag_to_branching(G)
-    print(tree)
-    print('here')
     secondDict = nx.get_node_attributes(tree,'source')
 
     for i in pathways:
@@ -126,18 +124,17 @@ def read_reactome(file_name, gene_name_start = "ENSG0"):
     return out_df
 
 def make_html_table(df, outname, threshold=30):
-    series = df['value']
-    series = series.sort_values(ascending=False)
+    series = df.sort_values(by='rank', ascending=True)
     series = series.iloc[:threshold]
-    print(series)
     full_table = []
     full_table.append(series.index.to_list())
-    full_table.append(series.tolist())
+    full_table.append(series['value'].tolist())
+    full_table.append(series['rank'].tolist())
     tablefile = open(outname, 'w')
-
     tablefile.write('<table> \n<tbody>\n')
+    tablefile.write('<tr><th>Rank</th><th>Pathway</th><th>-log10(p-value)</th></tr>\n')
     for i in range(0, len(full_table[0])):
-        tablefile.write(f'<tr><td>{full_table[0][i]}</td><td>{full_table[1][i]}</td></tr>\n')
+        tablefile.write(f'<tr><td>{full_table[2][i]}</td><td>{full_table[0][i]}</td><td>{full_table[1][i]}</td></tr>\n')
     tablefile.write('</tbody> \n</table>')
     tablefile.close()
     print(outname)
@@ -183,3 +180,27 @@ def make_the_json_files():
 
 
 make_the_json_files()
+
+
+
+from threading import Timer
+import webbrowser
+def run_server():
+    try:
+        # Python 2
+        from SimpleHTTPServer import test, SimpleHTTPRequestHandler
+    except ImportError:
+        # Python 3
+        from http.server import test, SimpleHTTPRequestHandler
+        test(SimpleHTTPRequestHandler)
+
+
+def open_localhost():
+    webbrowser.open_new("http://localhost:8000/sunburst/adjusted_sunburst.html")
+
+
+def run_sunburst():
+    Timer(1, open_localhost).start();
+    run_server()
+
+run_sunburst()
