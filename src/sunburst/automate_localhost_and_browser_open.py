@@ -1,40 +1,31 @@
-'''
-import tkinter as tk
-from tkinterhtml import HtmlFrame
-from tk_html_widgets import HTMLLabel
-
-
-root = tk.Tk()
-root.title("Sunburst plotting")
-screen_width = root.winfo_screenwidth()*0.75
-screen_height = root.winfo_screenheight()*0.75
-print(screen_width)
-print(type(screen_width))
-root.geometry(f'{int(screen_width)}x{int(screen_height)}')#widthxheight
-
-
-html_label = HTMLLabel(root, html='<h1 style="color: red; text-align: center"> Hello World </H1>')
-html_label.pack(fill="both", expand=True)
-html_label.fit_height()
-'''
+import http.server
+import socketserver
 from threading import Timer
 import webbrowser
-def run_server():
-    try:
-        # Python 2
-        from SimpleHTTPServer import test, SimpleHTTPRequestHandler
-    except ImportError:
-        # Python 3
-        from http.server import test, SimpleHTTPRequestHandler
-        test(SimpleHTTPRequestHandler)
 
 
-def open_localhost():
-    webbrowser.open_new("http://localhost:8000/sunburst/adjusted_sunburst.html")
+def is_port_in_use(port):
+    import socket
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        return s.connect_ex(('localhost', port)) == 0
 
+def check_port():
+    for i in range(8000, 8100):
+            if is_port_in_use(i) == False:
+                port = i
+                break
+    return i
 
-def run_sunburst():
-    Timer(1, open_localhost).start();
-    run_server()
+def run_server(PORT):
+    Handler = http.server.SimpleHTTPRequestHandler
+    with socketserver.TCPServer(("", PORT), Handler) as httpd:
+        print("serving at port", PORT)
+        httpd.serve_forever()
 
-run_sunburst()
+def open_localhost(port, path):
+    webbrowser.open_new(f"http://localhost:{port}/{path}")
+
+def run_sunburst(path='sunburst/'):
+    port = check_port()
+    Timer(1, open_localhost, args=[port, path]).start();
+    run_server(port)

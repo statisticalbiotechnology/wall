@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html><head><meta charset="utf-8"/>
 <style>
 	path {
 		stroke: #fff;
@@ -40,75 +40,72 @@
 		stroke-width: 0;
 	}
 </style>
-
-<body>
-
-	<div id="tooltip" class="hidden">
+</head><body>
+<div class="hidden" id="tooltip">
 		//<p><span id="value">150</span>%</p>
-	</div>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-	<script src="breadcrumb.js"></script>
-
-	<select id="json_sources" name="json_sources">
-		<option value="" selected>---Select data---</option>
-		<option value="clust_1.json">IntClust 1</option>
-		<option value="clust_2.json">IntClust 2</option>
-		<option value="clust_3.json">IntClust 3</option>
-		<option value="clust_4ER+.json">IntClust 4ER+</option>
-		<option value="clust_4ER-.json">IntClust 4ER-</option>
-		<option value="clust_5.json">IntClust 5</option>
-		<option value="clust_6.json">IntClust 6</option>
-		<option value="clust_7.json">IntClust 7</option>
-		<option value="clust_8.json">IntClust 8</option>
-		<option value="clust_9.json">IntClust 9</option>
-		<option value="clust_10.json">IntClust 10</option>
-		<option value="ER_Status_qvalue.json">ER Receptor</option>
-		<option value="PR_Status_qvalue.json">PR Receptor</option>
-		<option value="HER2_Status_qvalue.json">HER2 Receptor</option>
-		<option value="Triple_Neg_qvalue.json">Triple Negative</option>
-		<option value="ER-_PR-_HER2+_qvalue.json">ER-/PR-/HER2+</option>
-		<option value="cluster_1_qvalue.json">IntClust 1 vs Benign</option>
-		<option value="cluster_2_qvalue.json">IntClust 2 vs Benign</option>
-		<option value="cluster_3_qvalue.json">IntClust 3 vs Benign</option>
-		<option value="cluster_4ER-_qvalue.json">IntClust 4ER- vs Benign</option>
-		<option value="cluster_4ER+_qvalue.json">IntClust 4ER+ vs Benign</option>
-		<option value="cluster_5_qvalue.json">IntClust 5 vs Benign</option>
-		<option value="cluster_6_qvalue.json">IntClust 6 vs Benign</option>
-		<option value="cluster_7_qvalue.json">IntClust 7 vs Benign</option>
-		<option value="cluster_8_qvalue.json">IntClust 8 vs Benign</option>
-		<option value="cluster_9_qvalue.json">IntClust 9 vs Benign</option>
-		<option value="cluster_10_qvalue.json">IntClust 10 vs Benign</option>
-		<option value="clust_CBFB.json">CBFB</option>
-		<option value="clust_CDH1.json">CDH1</option>
-		<option value="clust_GATA3.json">GATA3</option>
-		<option value="clust_MAP3K1.json">MAP3K1</option>
-		<option value="clust_PIK3CA.json">PIK3CA</option>
-		<option value="clust_TP53.json">TP53</option>
-		<option value="clust_AKT1.json">AKT1</option>
-		<option value="clust_BRCA1.json">BRCA1</option>
-		<option value="clust_BRCA2.json">BRCA2</option>
-		<option value="clust_KMT2C.json">KMT2C</option>
-		<option value="clust_RB1.json">RB1</option>
-
-		<option value="adj_1.json">adj IntClust 1</option>
-		<option value="adj_2.json">adj IntClust 2</option>
-		<option value="adj_3.json">adj IntClust 3</option>
-		<option value="adj_4ER+.json">adj IntClust 4ER+</option>
-		<option value="adj_4ER-.json">adj IntClust 4ER-</option>
-		<option value="adj_5.json">adj IntClust 5</option>
-		<option value="adj_6.json">adj IntClust 6</option>
-		<option value="adj_7.json">adj IntClust 7</option>
-		<option value="adj_8.json">adj IntClust 8</option>
-		<option value="adj_9.json">adj IntClust 9</option>
-		<option value="adj_10.json">adj IntClust 10</option>
-
-
-	</select>​
-	<div id="factbox" class="hidden">
-
-	</div>
-	<script>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="breadcrumb.js"></script>
+<select id="json_sources" name="json_sources">
+<option selected="" value="">---Select data---</option>
+<option value="clust_1.json">IntClust 1</option>
+<option value="clust_2.json">IntClust 2</option>
+<option value="clust_3.json">IntClust 3</option>
+<option value="clust_4ER+.json">IntClust 4ER+</option>
+<option value="clust_4ER-.json">IntClust 4ER-</option>
+<option value="clust_5.json">IntClust 5</option>
+<option value="clust_6.json">IntClust 6</option>
+<option value="clust_7.json">IntClust 7</option>
+<option value="clust_8.json">IntClust 8</option>
+<option value="clust_9.json">IntClust 9</option>
+<option value="clust_10.json">IntClust 10</option>
+<option value="ER_Status_qvalue.json">ER Receptor</option>
+<option value="PR_Status_qvalue.json">PR Receptor</option>
+<option value="HER2_Status_qvalue.json">HER2 Receptor</option>
+<option value="Triple_Neg_qvalue.json">Triple Negative</option>
+<option value="ER-_PR-_HER2+_qvalue.json">ER-/PR-/HER2+</option>
+<option value="cluster_1_qvalue.json">IntClust 1 vs Benign</option>
+<option value="cluster_2_qvalue.json">IntClust 2 vs Benign</option>
+<option value="cluster_3_qvalue.json">IntClust 3 vs Benign</option>
+<option value="cluster_4ER-_qvalue.json">IntClust 4ER- vs Benign</option>
+<option value="cluster_4ER+_qvalue.json">IntClust 4ER+ vs Benign</option>
+<option value="cluster_5_qvalue.json">IntClust 5 vs Benign</option>
+<option value="cluster_6_qvalue.json">IntClust 6 vs Benign</option>
+<option value="cluster_7_qvalue.json">IntClust 7 vs Benign</option>
+<option value="cluster_8_qvalue.json">IntClust 8 vs Benign</option>
+<option value="cluster_9_qvalue.json">IntClust 9 vs Benign</option>
+<option value="cluster_10_qvalue.json">IntClust 10 vs Benign</option>
+<option value="clust_CBFB.json">CBFB</option>
+<option value="clust_CDH1.json">CDH1</option>
+<option value="clust_GATA3.json">GATA3</option>
+<option value="clust_MAP3K1.json">MAP3K1</option>
+<option value="clust_PIK3CA.json">PIK3CA</option>
+<option value="clust_TP53.json">TP53</option>
+<option value="clust_AKT1.json">AKT1</option>
+<option value="clust_BRCA1.json">BRCA1</option>
+<option value="clust_BRCA2.json">BRCA2</option>
+<option value="clust_KMT2C.json">KMT2C</option>
+<option value="clust_RB1.json">RB1</option>
+<option value="adj_1.json">adj IntClust 1</option>
+<option value="adj_2.json">adj IntClust 2</option>
+<option value="adj_3.json">adj IntClust 3</option>
+<option value="adj_4ER+.json">adj IntClust 4ER+</option>
+<option value="adj_4ER-.json">adj IntClust 4ER-</option>
+<option value="adj_5.json">adj IntClust 5</option>
+<option value="adj_6.json">adj IntClust 6</option>
+<option value="adj_7.json">adj IntClust 7</option>
+<option value="adj_8.json">adj IntClust 8</option>
+<option value="adj_9.json">adj IntClust 9</option>
+<option value="adj_10.json">adj IntClust 10</option>
+<option value='{"data": "adj_ER.json", "table": "ER_table.txt"}'>adj_ER</option>
+<option value='{"data": "adj_PR.json", "table": "PR_table.txt"}'>adj_PR</option>
+<option value='{"data": "adj_HER2.json", "table": "HER2_table.txt"}'>adj_HER2</option>
+<option value='{"data": "adj_Triple_Negative.json", "table": "Triple_Negative_table.txt"}'>adj_Triple_Negative</option>
+</select>
+<div class="hidden" id="factbox">
+</div>
+<script>
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
 			width = window.innerWidth - margin.left - margin.right,
 			height = window.innerWidth / 1.8 - margin.top - margin.bottom; // Use the window's height
@@ -275,3 +272,5 @@
 	</script>
 <!-- Transition: <input type="number" id="transitionValue" value="-1.5"> <button onclick="draw()">change</button>
 -->
+</body>
+</html>

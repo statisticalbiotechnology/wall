@@ -124,7 +124,7 @@ def make_html_table(df, outname, threshold=30):
     series = series.iloc[:threshold]
     print(series)
     full_table = []
-    full_table.append(series.index.to_list())
+    full_table.append(series.index.tolist())
     full_table.append(series['value'].tolist())
     full_table.append(series['rank'].tolist())
     print(full_table)
@@ -170,39 +170,62 @@ def make_the_json_files():
         #print(df)
         df_dict[i] = df
 
-    #print(df_dict)
+
+
+    import bs4
+    with open("sunburst/sunburst.html") as inf:
+        txt = inf.read()
+        soup = bs4.BeautifulSoup(txt)
+
+    json = soup.find("select", {"id": "json_sources"})
+    print(json)
+    print('done')
+
     for i in df_dict:
         if i == 'Triple Neg log adjusted q-value':
             clust = 'Triple_Negative'
         elif i != 'Triple Neg':
             clust = i.strip('Status Neg log adjusted cluster q-value')
+
+        options = []
+        for option in json.find_all('option'):
+            options.append(option['value'])
+        print(options)
+
+        print(clust)
+        print(type(clust))
+        def new_json(clust):
+            datafile = f'adj_{clust}.json'
+
+            tablefile = f'{clust}_table.txt'
+            dict = {'data': str(datafile), 'table': str(tablefile)}
+            print(dict)
+            value = json.dumps(dict)
+            return value
+
+        print(new_json(clust))
+        value = json.dumps(new_json(clust))
+        new_link = soup.new_tag("option", value=value)
+        new_link.string = 'adj_' + clust
+
+        if '{{"data": "adj_{}.json", "table": "{}_table.txt"}}'.format(clust, clust) in options:
+            pass
+        else:
+            json.append(new_link)
+            json.append("\n")
+        print(json)
+
         sunburst(df_dict[i], outname = f'sunburst/adj_{clust}.json')
         make_html_table(df_dict[i], threshold=50, outname=f"sunburst/{clust}_table.txt")
 
+
+    with open("sunburst/sunburst.html", 'w') as outf:
+        outf.write(str(soup))
 
 
 
 make_the_json_files()
 
-from threading import Timer
-import webbrowser
-def run_server():
-    try:
-        # Python 2
-        from SimpleHTTPServer import test, SimpleHTTPRequestHandler
-    except ImportError:
-        # Python 3
-        from http.server import test, SimpleHTTPRequestHandler
-        test(SimpleHTTPRequestHandler)
-
-
-def open_localhost():
-    webbrowser.open_new("http://localhost:8000/sunburst/adjusted_sunburst.html")
-
-
-def run_sunburst():
-    Timer(1, open_localhost).start();
-    run_server()
-
+from sunburst.automate_localhost_and_browser_open import run_sunburst
 
 run_sunburst()
