@@ -96,7 +96,7 @@ def sunburst(in_df, outname = 'sun_tree.json'):
     with open(outname, 'w') as outfile:
         print(outname)
         json.dump(out_json, outfile, default=default)
-
+        outfile.close()
 
 def read_reactome(file_name, gene_name_start = "ENSG0"):
     df = pd.read_csv(file_name, sep='\t', header=None)
@@ -173,13 +173,11 @@ def make_the_json_files():
 
 
     import bs4
-    with open("sunburst/sunburst.html") as inf:
+    with open("sunburst/adjusted_sunburst.html") as inf:
         txt = inf.read()
         soup = bs4.BeautifulSoup(txt)
 
-    json = soup.find("select", {"id": "json_sources"})
-    print(json)
-    print('done')
+    json_soup = soup.find("select", {"id": "json_sources"})
 
     for i in df_dict:
         if i == 'Triple Neg log adjusted q-value':
@@ -188,38 +186,27 @@ def make_the_json_files():
             clust = i.strip('Status Neg log adjusted cluster q-value')
 
         options = []
-        for option in json.find_all('option'):
+        for option in json_soup.find_all('option'):
             options.append(option['value'])
-        print(options)
 
-        print(clust)
-        print(type(clust))
-        def new_json(clust):
-            datafile = f'adj_{clust}.json'
+        datafile = "adj_{}.json".format(clust)
+        tablefile = "{}_table.txt".format(clust)
 
-            tablefile = f'{clust}_table.txt'
-            dict = {'data': str(datafile), 'table': str(tablefile)}
-            print(dict)
-            value = json.dumps(dict)
-            return value
+        new_link = soup.new_tag("option", value=json.dumps({"data": datafile, "table": tablefile}))
+        new_link.string = clust + " Status"
 
-        print(new_json(clust))
-        value = json.dumps(new_json(clust))
-        new_link = soup.new_tag("option", value=value)
-        new_link.string = 'adj_' + clust
-
-        if '{{"data": "adj_{}.json", "table": "{}_table.txt"}}'.format(clust, clust) in options:
+        if json.dumps({"data": datafile, "table": tablefile}) in options:
             pass
         else:
-            json.append(new_link)
-            json.append("\n")
-        print(json)
+            json_soup.append(new_link)
+            json_soup.append("\n")
+        print(json_soup)
 
         sunburst(df_dict[i], outname = f'sunburst/adj_{clust}.json')
         make_html_table(df_dict[i], threshold=50, outname=f"sunburst/{clust}_table.txt")
 
 
-    with open("sunburst/sunburst.html", 'w') as outf:
+    with open("sunburst/adjusted_sunburst.html", 'w') as outf:
         outf.write(str(soup))
 
 

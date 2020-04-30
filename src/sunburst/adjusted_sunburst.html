@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html><head><meta charset="utf-8"/>
 <style>
 	path {
 		stroke: #fff;
@@ -58,48 +58,37 @@
 		stroke-width: 0;
 	}
 </style>
-
-<body>
-
+</head><body>
 <div class="sunburst-and-table">
-
-
-	<div id="tooltip" class="hidden">
+<div class="hidden" id="tooltip">
 		//<p><span id="value">150</span>%</p>
-	</div>
-	<div id="table"></div>
-
 </div>
-
-
-
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-	<script src="breadcrumb.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-	<select id="json_sources" name="json_sources" content-type="text/plain">
-		<option value="" selected>---Select data---</option>
-		<option value='{"data": "adj_1.json", "table": "1_table.txt"}'>adj IntClust 1</option>
-		<option value='{"data": "adj_2.json", "table": "2_table.txt"}'>adj IntClust 2</option>
-		<option value='{"data": "adj_3.json", "table": "3_table.txt"}'>adj IntClust 3</option>
-		<option value='{"data": "adj_4ER+.json", "table": "4ER+_table.txt"}'>adj IntClust 4ER+</option>
-		<option value='{"data": "adj_4ER-.json", "table": "4ER-_table.txt"}'>adj IntClust 4ER-</option>
-		<option value='{"data": "adj_5.json", "table": "5_table.txt"}'>adj IntClust 5</option>
-		<option value='{"data": "adj_6.json", "table": "6_table.txt"}'>adj IntClust 6</option>
-		<option value='{"data": "adj_7.json", "table": "7_table.txt"}'>adj IntClust 7</option>
-		<option value='{"data": "adj_8.json", "table": "8_table.txt"}'>adj IntClust 8</option>
-		<option value='{"data": "adj_9.json", "table": "9_table.txt"}'>adj IntClust 9</option>
-		<option value='{"data": "adj_10.json", "table": "10_table.txt"}'>adj IntClust 10</option>
-		<option value='{"data": "adj_ER.json", "table": "ER_table.txt"}'>adj ER Status</option>
-		<option value='{"data": "adj_PR.json", "table": "PR_table.txt"}'>adj PR Status</option>
-		<option value='{"data": "adj_HER2.json", "table": "HER2_table.txt"}'>adj HER2 Status</option>
-		<option value='{"data": "adj_Triple_Negative.json", "table": "Triple_Negative_table.txt"}'>adj Triple Neg Status</option>
-
-	</select>​
-	<div id="factbox" class="hidden"></div>
-
-	<script>
+<div id="table"></div>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="breadcrumb.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<select content-type="text/plain" id="json_sources" name="json_sources">
+<option selected="" value="">---Select data---</option>
+<option value='{"data": "adj_1.json", "table": "1_table.txt"}'>adj IntClust 1</option>
+<option value='{"data": "adj_2.json", "table": "2_table.txt"}'>adj IntClust 2</option>
+<option value='{"data": "adj_3.json", "table": "3_table.txt"}'>adj IntClust 3</option>
+<option value='{"data": "adj_4ER+.json", "table": "4ER+_table.txt"}'>adj IntClust 4ER+</option>
+<option value='{"data": "adj_4ER-.json", "table": "4ER-_table.txt"}'>adj IntClust 4ER-</option>
+<option value='{"data": "adj_5.json", "table": "5_table.txt"}'>adj IntClust 5</option>
+<option value='{"data": "adj_6.json", "table": "6_table.txt"}'>adj IntClust 6</option>
+<option value='{"data": "adj_7.json", "table": "7_table.txt"}'>adj IntClust 7</option>
+<option value='{"data": "adj_8.json", "table": "8_table.txt"}'>adj IntClust 8</option>
+<option value='{"data": "adj_9.json", "table": "9_table.txt"}'>adj IntClust 9</option>
+<option value='{"data": "adj_10.json", "table": "10_table.txt"}'>adj IntClust 10</option>
+<option value='{"data": "adj_ER.json", "table": "ER_table.txt"}'>ERStatus</option>
+<option value='{"data": "adj_PR.json", "table": "PR_table.txt"}'>PRStatus</option>
+<option value='{"data": "adj_HER2.json", "table": "HER2_table.txt"}'>HER2Status</option>
+<option value='{"data": "adj_Triple_Negative.json", "table": "Triple_Negative_table.txt"}'>Triple_NegativeStatus</option>
+</select>​
+	<div class="hidden" id="factbox"></div>
+<script>
 		var margin = {top: 20, right: 20, bottom: 20, left: 20},
 			width = window.innerWidth - margin.left - margin.right,
 			height = 0.95*(window.innerHeight) - margin.top - margin.bottom; // Use the window's height
@@ -277,3 +266,4 @@
 	</script>
 <!-- Transition: <input type="number" id="transitionValue" value="-1.5"> <button onclick="draw()">change</button>
 -->
+</body></html>
