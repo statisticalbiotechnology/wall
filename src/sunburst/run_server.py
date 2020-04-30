@@ -2,7 +2,15 @@ import http.server
 import socketserver
 from threading import Timer
 import webbrowser
+"""
+This script finds the first open port between 8000 and 8100
+and starts a http server and then opens a new browser tab with localhost
+Code from:
+https://docs.python.org/3/library/webbrowser.html
+https://codereview.stackexchange.com/questions/116450/find-available-ports-on-localhost
+https://docs.python.org/3/library/http.server.html
 
+"""
 
 def is_port_in_use(port):
     import socket

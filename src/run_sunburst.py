@@ -3,6 +3,21 @@ import numpy as np
 import networkx as nx
 from networkx.readwrite import json_graph
 import json
+from sunburst.run_server import run_sunburst
+import bs4
+import sys
+import argparse
+
+parser = argparse.ArgumentParser(
+    description="""To use this tool you simply need to provide the path to the csv file for the -log10(q-values).
+    Currently the script assumes that every column of the csv file is being used and every column name is
+    ~ cluster 1 q-value""",
+    epilog = """Example use: python sun_sunburst.py --csv ../exp/data.csv""")
+parser.add_argument('--csv', type=argparse.FileType('r'), default=sys.argv[1])
+args= parser.parse_args()
+
+
+
 
 relation_file = "../data/ReactomePathwaysRelationHuman.txt"
 pathway_name = "../data/ReactomePathwaysHuman.txt"
@@ -98,6 +113,7 @@ def sunburst(in_df, outname = 'sun_tree.json'):
         json.dump(out_json, outfile, default=default)
         outfile.close()
 
+
 def read_reactome(file_name, gene_name_start = "ENSG0"):
     df = pd.read_csv(file_name, sep='\t', header=None)
 
@@ -118,19 +134,17 @@ def read_reactome(file_name, gene_name_start = "ENSG0"):
 
 
 
-def make_html_table(df, outname, threshold=30):
-    print(df)
+def make_html_table_txt_file(df, outname, threshold=30):
     series = df.sort_values(by='rank', ascending=True)
     series = series.iloc[:threshold]
-    print(series)
     full_table = []
     full_table.append(series.index.tolist())
+    series['value'] = np.power(10, -1*(series['value']))
     full_table.append(series['value'].tolist())
     full_table.append(series['rank'].tolist())
-    print(full_table)
     tablefile = open(outname, 'w')
     tablefile.write('<table> \n<tbody>\n')
-    tablefile.write('<tr><th>Rank</th><th>Pathway</th><th>-log10(p-value)</th></tr>\n')
+    tablefile.write('<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>\n')
     for i in range(0, len(full_table[0])):
         tablefile.write(f'<tr><td>{full_table[2][i]}</td><td>{full_table[0][i]}</td><td>{full_table[1][i]}</td></tr>\n')
     tablefile.write('</tbody> \n</table>')
@@ -141,7 +155,7 @@ def make_html_table(df, outname, threshold=30):
 
 
 def make_the_json_files():
-    cluster_df = pd.read_csv("../exp/adjusted_distributions_receptors.csv", index_col = 0)
+    cluster_df = pd.read_csv(args.csv, index_col = 0)
     reactome_ngenes = read_reactome("../data/Ensembl2Reactome_All_Levels.txt.gz")
 
     length_dict = {}
@@ -172,10 +186,10 @@ def make_the_json_files():
 
 
 
-    import bs4
+    ###### scrapes the html file to see that duplicates are not added and then adds the <option> tag
     with open("sunburst/adjusted_sunburst.html") as inf:
         txt = inf.read()
-        soup = bs4.BeautifulSoup(txt)
+        soup = bs4.BeautifulSoup(txt, features='lxml')
 
     json_soup = soup.find("select", {"id": "json_sources"})
 
@@ -200,19 +214,16 @@ def make_the_json_files():
         else:
             json_soup.append(new_link)
             json_soup.append("\n")
-        print(json_soup)
 
         sunburst(df_dict[i], outname = f'sunburst/adj_{clust}.json')
-        make_html_table(df_dict[i], threshold=50, outname=f"sunburst/{clust}_table.txt")
+        make_html_table_txt_file(df_dict[i], threshold=50, outname=f"sunburst/{clust}_table.txt")
 
 
     with open("sunburst/adjusted_sunburst.html", 'w') as outf:
         outf.write(str(soup))
 
 
-
 make_the_json_files()
 
-from sunburst.automate_localhost_and_browser_open import run_sunburst
 
 run_sunburst()
