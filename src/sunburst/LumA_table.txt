@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>RHO GTPases Activate Formins</td><td>0.00010874505249927818</td></tr>
+<tr><td>2</td><td>COPI-dependent Golgi-to-ER retrograde traffic</td><td>0.00010874505249927818</td></tr>
+<tr><td>3</td><td>Factors involved in megakaryocyte development and platelet production</td><td>0.00010874505249927818</td></tr>
+<tr><td>4</td><td>Mitotic Anaphase</td><td>0.00010874505249927818</td></tr>
+<tr><td>5</td><td>Phosphorylation of Emi1</td><td>0.00010874505249927818</td></tr>
+<tr><td>6</td><td>Separation of Sister Chromatids</td><td>0.00010874505249927818</td></tr>
+<tr><td>7</td><td>Signaling by Rho GTPases</td><td>0.00010874505249927818</td></tr>
+<tr><td>8</td><td>M Phase</td><td>0.00010874505249927818</td></tr>
+<tr><td>9</td><td>Mitotic Metaphase and Anaphase</td><td>0.00010874505249927818</td></tr>
+<tr><td>10</td><td>Cell Cycle, Mitotic</td><td>0.00010874505249927818</td></tr>
+<tr><td>11</td><td>Cell Cycle</td><td>0.00010874505249927818</td></tr>
+<tr><td>12</td><td>Cyclin A/B1/B2 associated events during G2/M transition</td><td>0.00010874505249927818</td></tr>
+<tr><td>13</td><td>Amplification of signal from the kinetochores</td><td>0.00010874505249927818</td></tr>
+<tr><td>14</td><td>Mitotic Spindle Checkpoint</td><td>0.00010874505249927818</td></tr>
+<tr><td>15</td><td>Resolution of Sister Chromatid Cohesion</td><td>0.00010874505249927818</td></tr>
+<tr><td>16</td><td>Kinesins</td><td>0.00010874505249927818</td></tr>
+<tr><td>17</td><td>RHO GTPase Effectors</td><td>0.00010874505249927818</td></tr>
+<tr><td>18</td><td>EML4 and NUDC in mitotic spindle formation</td><td>0.00010874505249927818</td></tr>
+<tr><td>19</td><td>Amplification  of signal from unattached  kinetochores via a MAD2  inhibitory signal</td><td>0.00010874505249927818</td></tr>
+<tr><td>20</td><td>Cell Cycle Checkpoints</td><td>0.000111824818556102</td></tr>
+<tr><td>21</td><td>Metabolism of nucleotides</td><td>0.00011710009118576875</td></tr>
+<tr><td>22</td><td>Mitotic Prometaphase</td><td>0.00011710009118576875</td></tr>
+<tr><td>23</td><td>alpha-linolenic (omega3) and linoleic (omega6) acid metabolism</td><td>0.00012135286205936675</td></tr>
+<tr><td>24</td><td>alpha-linolenic acid (ALA) metabolism</td><td>0.00012135286205936675</td></tr>
+<tr><td>25</td><td>G1/S-Specific Transcription</td><td>0.00012427560065076288</td></tr>
+<tr><td>26</td><td>Activation of NIMA Kinases NEK9, NEK6, NEK7</td><td>0.00012427560065076288</td></tr>
+<tr><td>27</td><td>Golgi Cisternae Pericentriolar Stack Reorganization</td><td>0.00017789708869073905</td></tr>
+<tr><td>28</td><td>Mitotic G2-G2/M phases</td><td>0.00017860876586298452</td></tr>
+<tr><td>29</td><td>Activation of AMPK downstream of NMDARs</td><td>0.00017860876586298452</td></tr>
+<tr><td>30</td><td>Mitotic Metaphase/Anaphase Transition</td><td>0.0002522368391477652</td></tr>
+<tr><td>31</td><td>G2/M Transition</td><td>0.0002537458767108804</td></tr>
+<tr><td>32</td><td>DNA Replication</td><td>0.0002636789454022189</td></tr>
+<tr><td>33</td><td>G2/M DNA replication checkpoint</td><td>0.0002760203703733471</td></tr>
+<tr><td>34</td><td>SLC-mediated transmembrane transport</td><td>0.0002760203703733471</td></tr>
+<tr><td>35</td><td>Mitotic G1 phase and G1/S transition</td><td>0.0002760203703733471</td></tr>
+<tr><td>36</td><td>Phosphorylation of proteins involved in the G2/M transition by Cyclin A:Cdc2 complexes</td><td>0.0002760203703733471</td></tr>
+<tr><td>37</td><td>Purine catabolism</td><td>0.00028709321160556216</td></tr>
+<tr><td>38</td><td>Activation of ATR in response to replication stress</td><td>0.00028709321160556216</td></tr>
+<tr><td>39</td><td>CDC6 association with the ORC:origin complex</td><td>0.0003188848420435205</td></tr>
+<tr><td>40</td><td>Polo-like kinase mediated events</td><td>0.0003188848420435205</td></tr>
+<tr><td>41</td><td>Mitotic Telophase/Cytokinesis</td><td>0.0003282444300315105</td></tr>
+<tr><td>42</td><td>Ubiquinol biosynthesis</td><td>0.0003607279498299081</td></tr>
+<tr><td>43</td><td>Caspase-mediated cleavage of cytoskeletal proteins</td><td>0.0003607279498299081</td></tr>
+<tr><td>44</td><td>Cyclin D associated events in G1</td><td>0.0003607279498299081</td></tr>
+<tr><td>45</td><td>G1 Phase</td><td>0.0003607279498299081</td></tr>
+<tr><td>46</td><td>TP53 Regulates Transcription of Genes Involved in G2 Cell Cycle Arrest</td><td>0.00038774511690194336</td></tr>
+<tr><td>47</td><td>S Phase</td><td>0.0003949404077568446</td></tr>
+<tr><td>48</td><td>Unwinding of DNA</td><td>0.00041928670814879004</td></tr>
+<tr><td>49</td><td>TP53 Regulates Transcription of Genes Involved in G1 Cell Cycle Arrest</td><td>0.000448255705389682</td></tr>
+<tr><td>50</td><td>Activation of the pre-replicative complex</td><td>0.0004599506088102495</td></tr>
+</tbody> 
+</table>

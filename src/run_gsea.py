@@ -3,12 +3,26 @@ import pandas as pd
 
 
 metabric_data = pd.read_csv('../data/expression_data.csv', index_col=0)
-print(metabric_data.shape)
+#print(metabric_data.shape)
+
 clinical_data = pd.read_csv('../data/GSEA_clinical.csv', index_col=0)
-print(clinical_data)
+#print(clinical_data)
 clinical_patients = clinical_data.index.tolist()
+print(clinical_patients)
+
+print(metabric_data.T.loc["MB-0002"])
+
+
+
+clinical_patients = [item for item in clinical_data.index.tolist() if item in metabric_data.columns.tolist()]
+print(clinical_patients)
+
+
 
 metabric_data = metabric_data.T.loc[clinical_patients].T
+print(metabric_data)
+
+
 
 
 def GSEA(receptor, level):
@@ -21,11 +35,11 @@ def GSEA(receptor, level):
                          permutation_num=1000,
                          max_size=10000,
                          min_size=2,
-                         processes=4,
+                         processes=1,
                          cls=classes,
                          verbose=True,
                          outdir=destination_path)
 
 
-GSEA('Triple Neg', 'Triple Neg')
-GSEA('ER-/PR-/HER2+', 'ER-PR-HER2+')
+GSEA('Integrative Cluster', '1')
+#GSEA('ER-/PR-/HER2+', 'ER-PR-HER2+')

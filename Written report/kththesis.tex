@@ -98,12 +98,13 @@
      One observed effect of the multiple hypothesis testing was that the p-values did not follow a null distribution when converted to Z-values. This suggests that there were confounders that needed to be accounted for. One way of doing this was explained by (((SOURCE))) wherein a truncated gaussian distribution would be fitted to the Z-values and deriving new p-values from that. This was done using the scipy modules norm and truncnorm.
 
      \section{Sunburst plotting}
-     Due to the large number of pathways, simply looking at tables of pathways ranked by q-value was not quite enough to get a good idea of the relationship between groups. Therefore, a way of visually displaying the pathways in a clearer manner had to be used. The sunburst plots were an excellent way of doing so. The plots were colored by q-value and the size of each cell is proportional to the number of genes in the pathway.
+     Due to the large number of pathways, simply looking at tables of pathways ranked by q-value was not quite sufficient to get a good idea of the relationship between groups. Therefore, a way of visually displaying the pathways in a clearer manner had to be used. The sunburst plots were an excellent way of doing so. The plots were colored by q-value and the size of each cell is proportional to the number of genes in the pathway.
 
 
 
      \section{GSEA based pathway analysis}
-
+     As a way of benchmarking this new method of pathway analysis, GSEA was performed. Primarily, one downside of GSEA, and in particular the python version of gseapy, is that it was relatively difficult to get to work. Aside from the particularity of the input dataframe, which reminds one of trying to get a cat into a bath, it was impossible to run in the windows and linux operating system. It was possible, however, to run on the OSX operating system.
+     In hindsight, the difficulty of running it on linux and windows is most likely due to some errors regarding multiprocessing, and would not work even though one specified one process.
 
 
 
@@ -154,6 +155,20 @@
 \chapter{Discussion}
 
      \section{PCA}
+
+     \section{PCA based pathway analysis}
+
+
+
+     \section{Sunburst Plotting}
+     Sunburst plotting together with the q-value analysis described above became an excellent combination of analyses as the table provides very specific information of the pathways and the sunburst plots provide a broader picture of the pathway relationships of the tumor cells.
+
+     One aspect where the advantage of using sunburst plotting became undeniable was when analysing parent child pathway relationships. As can be seen in ((((((figure)))))) the activity of ((((parent)))) differs from the activity of the (((((child))))). This thus becomes somewhat of a barcoding analysis where a straight line of parent child pathways with low q-value is quite convincing evidence for a difference in pathway activity.
+
+     This relatively novel method of analysis has resulted in a few points of benchmarking and what the underlying biology might be.
+          \begin{itemize}
+               \item A parent pathway with relatively medium q-value and several child-pathways where at least one of them has very low q-value is a good indicator that the parent pathway q-value might be affected by the significant child pathway.
+               \item A significant pathway with no children should be an interesting pathway to study as it has been broken down as much as possible and still poses a significant difference in activity compared to other clusters.
 
 
 

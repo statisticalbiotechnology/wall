@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Type I hemidesmosome assembly</td><td>3.9259716794884476e-11</td></tr>
+<tr><td>2</td><td>Regulation of commissural axon pathfinding by SLIT and ROBO</td><td>1.0107490004819402e-07</td></tr>
+<tr><td>3</td><td>Cell junction organization</td><td>4.931524456164582e-07</td></tr>
+<tr><td>4</td><td>RHO GTPases activate CIT</td><td>1.8749287408900223e-06</td></tr>
+<tr><td>5</td><td>RHO GTPases activate PAKs</td><td>4.654156463947102e-06</td></tr>
+<tr><td>6</td><td>Transport of gamma-carboxylated protein precursors from the endoplasmic reticulum to the Golgi apparatus</td><td>2.667268330198219e-05</td></tr>
+<tr><td>7</td><td>Tight junction interactions</td><td>2.9517379769694593e-05</td></tr>
+<tr><td>8</td><td>Gamma-carboxylation of protein precursors</td><td>2.9517379769694593e-05</td></tr>
+<tr><td>9</td><td>RHO GTPases Activate ROCKs</td><td>4.380649920116465e-05</td></tr>
+<tr><td>10</td><td>Removal of aminoterminal propeptides from gamma-carboxylated proteins</td><td>4.4047299917097085e-05</td></tr>
+<tr><td>11</td><td>Gamma-carboxylation, transport, and amino-terminal cleavage of proteins</td><td>4.530341797665928e-05</td></tr>
+<tr><td>12</td><td>Sema4D induced cell migration and growth-cone collapse</td><td>7.774038913128982e-05</td></tr>
+<tr><td>13</td><td>Presynaptic phase of homologous DNA pairing and strand exchange</td><td>0.0001330645991274091</td></tr>
+<tr><td>14</td><td>Homologous DNA Pairing and Strand Exchange</td><td>0.00014835367653140202</td></tr>
+<tr><td>15</td><td>HDR through Single Strand Annealing (SSA)</td><td>0.0001859560136290287</td></tr>
+<tr><td>16</td><td>Phosphorylation of the APC/C</td><td>0.00023736117680491072</td></tr>
+<tr><td>17</td><td>Sema4D in semaphorin signaling</td><td>0.0002585088810413421</td></tr>
+<tr><td>18</td><td>Ligand-receptor interactions</td><td>0.0002585088810413421</td></tr>
+<tr><td>19</td><td>Resolution of D-loop Structures through Synthesis-Dependent Strand Annealing (SDSA)</td><td>0.0002585088810413421</td></tr>
+<tr><td>20</td><td>GLI proteins bind promoters of Hh responsive genes to promote transcription</td><td>0.0002585088810413421</td></tr>
+<tr><td>21</td><td>TP53 Regulates Transcription of Genes Involved in Cytochrome C Release</td><td>0.0002688894393103493</td></tr>
+<tr><td>22</td><td>HDR through Homologous Recombination (HRR)</td><td>0.0002688894393103493</td></tr>
+<tr><td>23</td><td>Extrinsic Pathway of Fibrin Clot Formation</td><td>0.0002688894393103493</td></tr>
+<tr><td>24</td><td>Golgi Cisternae Pericentriolar Stack Reorganization</td><td>0.0002688894393103493</td></tr>
+<tr><td>25</td><td>Resolution of D-loop Structures through Holliday Junction Intermediates</td><td>0.0002688894393103493</td></tr>
+<tr><td>26</td><td>Resolution of D-Loop Structures</td><td>0.0002688894393103493</td></tr>
+<tr><td>27</td><td>Smooth Muscle Contraction</td><td>0.0002688894393103493</td></tr>
+<tr><td>28</td><td>Activated NTRK2 signals through PLCG1</td><td>0.00027147899970473275</td></tr>
+<tr><td>29</td><td>Cell-Cell communication</td><td>0.0003020224610467492</td></tr>
+<tr><td>30</td><td>Cell-cell junction organization</td><td>0.0003042864209429659</td></tr>
+<tr><td>31</td><td>Cell Cycle Checkpoints</td><td>0.0003139145827490089</td></tr>
+<tr><td>32</td><td>NTF4 activates NTRK2 (TRKB) signaling</td><td>0.00032689817994671036</td></tr>
+<tr><td>33</td><td>cGMP effects</td><td>0.000330943073279532</td></tr>
+<tr><td>34</td><td>Mitotic Anaphase</td><td>0.00043230427117284015</td></tr>
+<tr><td>35</td><td>Homology Directed Repair</td><td>0.00043230427117284015</td></tr>
+<tr><td>36</td><td>Activation of NIMA Kinases NEK9, NEK6, NEK7</td><td>0.00043230427117284015</td></tr>
+<tr><td>37</td><td>APC/C:Cdc20 mediated degradation of Cyclin B</td><td>0.00043230427117284015</td></tr>
+<tr><td>38</td><td>Separation of Sister Chromatids</td><td>0.00043230427117284015</td></tr>
+<tr><td>39</td><td>G2/M DNA replication checkpoint</td><td>0.0004330544150484834</td></tr>
+<tr><td>40</td><td>Mitotic Metaphase and Anaphase</td><td>0.0004330544150484834</td></tr>
+<tr><td>41</td><td>HDR through Homologous Recombination (HRR) or Single Strand Annealing (SSA)</td><td>0.0004472876403698262</td></tr>
+<tr><td>42</td><td>Mitotic Spindle Checkpoint</td><td>0.0004891477932525448</td></tr>
+<tr><td>43</td><td>G2/M Checkpoints</td><td>0.0005486739306460487</td></tr>
+<tr><td>44</td><td>Amplification of signal from the kinetochores</td><td>0.0005486739306460487</td></tr>
+<tr><td>45</td><td>Abacavir transmembrane transport</td><td>0.0005486739306460487</td></tr>
+<tr><td>46</td><td>Amplification  of signal from unattached  kinetochores via a MAD2  inhibitory signal</td><td>0.0005486739306460487</td></tr>
+<tr><td>47</td><td>DNA Double-Strand Break Repair</td><td>0.0005486739306460487</td></tr>
+<tr><td>48</td><td>Resolution of Sister Chromatid Cohesion</td><td>0.0005486739306460487</td></tr>
+<tr><td>49</td><td>Polo-like kinase mediated events</td><td>0.0005678886754162382</td></tr>
+<tr><td>50</td><td>M Phase</td><td>0.0005737078561790205</td></tr>
+</tbody> 
+</table>

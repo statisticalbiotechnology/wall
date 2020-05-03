@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Cyclin D associated events in G1</td><td>3.4502161967486844e-09</td></tr>
+<tr><td>2</td><td>G1 Phase</td><td>3.4502161967486844e-09</td></tr>
+<tr><td>3</td><td>Evasion of Oncogene Induced Senescence Due to p16INK4A Defects</td><td>2.3372667194438597e-08</td></tr>
+<tr><td>4</td><td>Oncogene Induced Senescence</td><td>2.3372667194438597e-08</td></tr>
+<tr><td>5</td><td>Evasion of Oxidative Stress Induced Senescence Due to Defective p16INK4A binding to CDK4 and CDK6</td><td>2.3372667194438597e-08</td></tr>
+<tr><td>6</td><td>Evasion of Oncogene Induced Senescence Due to Defective p16INK4A binding to CDK4 and CDK6</td><td>2.3372667194438597e-08</td></tr>
+<tr><td>7</td><td>Evasion of Oxidative Stress Induced Senescence Due to p16INK4A Defects</td><td>2.3372667194438597e-08</td></tr>
+<tr><td>8</td><td>Transcriptional Regulation by MECP2</td><td>2.3372667194438597e-08</td></tr>
+<tr><td>9</td><td>Diseases of Cellular Senescence</td><td>2.3372667194438597e-08</td></tr>
+<tr><td>10</td><td>TFAP2 (AP-2) family regulates transcription of growth factors and their receptors</td><td>1.2786296026460854e-07</td></tr>
+<tr><td>11</td><td>Serine biosynthesis</td><td>2.1411531872116583e-07</td></tr>
+<tr><td>12</td><td>Transport of bile salts and organic acids, metal ions and amine compounds</td><td>2.1411531872116583e-07</td></tr>
+<tr><td>13</td><td>Reversible hydration of carbon dioxide</td><td>7.350553755853201e-07</td></tr>
+<tr><td>14</td><td>SLC-mediated transmembrane transport</td><td>7.350553755853201e-07</td></tr>
+<tr><td>15</td><td>Synthesis of PC</td><td>1.4379670033872625e-06</td></tr>
+<tr><td>16</td><td>RHO GTPases Activate Rhotekin and Rhophilins</td><td>1.4379670033872625e-06</td></tr>
+<tr><td>17</td><td>mRNA Splicing - Minor Pathway</td><td>2.2036600216325463e-06</td></tr>
+<tr><td>18</td><td>Formation of the cornified envelope</td><td>2.61456768055261e-06</td></tr>
+<tr><td>19</td><td>Glycosphingolipid metabolism</td><td>2.61456768055261e-06</td></tr>
+<tr><td>20</td><td>Repression of WNT target genes</td><td>2.61456768055261e-06</td></tr>
+<tr><td>21</td><td>G2 Phase</td><td>3.7484052984852473e-06</td></tr>
+<tr><td>22</td><td>RNA Polymerase III Transcription Termination</td><td>3.7753941653343512e-06</td></tr>
+<tr><td>23</td><td>Keratinization</td><td>3.77814546243699e-06</td></tr>
+<tr><td>24</td><td>RHO GTPases Activate Formins</td><td>3.77814546243699e-06</td></tr>
+<tr><td>25</td><td>Regulation of TP53 Activity through Phosphorylation</td><td>3.894513547956435e-06</td></tr>
+<tr><td>26</td><td>SUMOylation of DNA replication proteins</td><td>4.380464442376765e-06</td></tr>
+<tr><td>27</td><td>Sphingolipid metabolism</td><td>4.63997316485514e-06</td></tr>
+<tr><td>28</td><td>PTK6 Regulates Cell Cycle</td><td>5.020728169360702e-06</td></tr>
+<tr><td>29</td><td>Activation of ATR in response to replication stress</td><td>5.716298027578514e-06</td></tr>
+<tr><td>30</td><td>Purine catabolism</td><td>6.87265281290083e-06</td></tr>
+<tr><td>31</td><td>Mitotic Prometaphase</td><td>8.361272271006668e-06</td></tr>
+<tr><td>32</td><td>Metabolism of nucleotides</td><td>8.72589573463994e-06</td></tr>
+<tr><td>33</td><td>Cell Cycle</td><td>8.797373039865412e-06</td></tr>
+<tr><td>34</td><td>Cell Cycle, Mitotic</td><td>8.797373039865412e-06</td></tr>
+<tr><td>35</td><td>G1/S-Specific Transcription</td><td>1.1696453582418074e-05</td></tr>
+<tr><td>36</td><td>EML4 and NUDC in mitotic spindle formation</td><td>1.1696453582418074e-05</td></tr>
+<tr><td>37</td><td>Evasion of Oxidative Stress Induced Senescence Due to Defective p16INK4A binding to CDK4</td><td>1.1696453582418074e-05</td></tr>
+<tr><td>38</td><td>Insulin-like Growth Factor-2 mRNA Binding Proteins (IGF2BPs/IMPs/VICKZs) bind RNA</td><td>1.1696453582418074e-05</td></tr>
+<tr><td>39</td><td>Evasion of Oncogene Induced Senescence Due to Defective p16INK4A binding to CDK4</td><td>1.1696453582418074e-05</td></tr>
+<tr><td>40</td><td>PKA-mediated phosphorylation of CREB</td><td>1.2152125908224766e-05</td></tr>
+<tr><td>41</td><td>DAG and IP3 signaling</td><td>1.5704481743493137e-05</td></tr>
+<tr><td>42</td><td>Amplification of signal from the kinetochores</td><td>1.6124695891797474e-05</td></tr>
+<tr><td>43</td><td>Diseases associated with glycosylation precursor biosynthesis</td><td>1.6124695891797474e-05</td></tr>
+<tr><td>44</td><td>Amplification  of signal from unattached  kinetochores via a MAD2  inhibitory signal</td><td>1.6124695891797474e-05</td></tr>
+<tr><td>45</td><td>CDC6 association with the ORC:origin complex</td><td>1.643200874233285e-05</td></tr>
+<tr><td>46</td><td>Factors involved in megakaryocyte development and platelet production</td><td>1.643200874233285e-05</td></tr>
+<tr><td>47</td><td>EGFR interacts with phospholipase C-gamma</td><td>1.643200874233285e-05</td></tr>
+<tr><td>48</td><td>FBXW7 Mutants and NOTCH1 in Cancer</td><td>1.6477181402707547e-05</td></tr>
+<tr><td>49</td><td>Loss of Function of FBXW7 in Cancer and NOTCH1 Signaling</td><td>1.6477181402707547e-05</td></tr>
+<tr><td>50</td><td>Amino acid transport across the plasma membrane</td><td>1.6477181402707547e-05</td></tr>
+</tbody> 
+</table>

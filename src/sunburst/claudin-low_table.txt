@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>PI3K/AKT Signaling in Cancer</td><td>9.585157429414729e-26</td></tr>
+<tr><td>2</td><td>Rho GTPase cycle</td><td>5.711267811882847e-25</td></tr>
+<tr><td>3</td><td>Hemostasis</td><td>6.322618056061031e-25</td></tr>
+<tr><td>4</td><td>Class A/1 (Rhodopsin-like receptors)</td><td>1.0824672486964275e-24</td></tr>
+<tr><td>5</td><td>Constitutive Signaling by Aberrant PI3K in Cancer</td><td>1.743292250430807e-24</td></tr>
+<tr><td>6</td><td>Interleukin-4 and Interleukin-13 signaling</td><td>2.069686839977146e-24</td></tr>
+<tr><td>7</td><td>G alpha (z) signalling events</td><td>2.069686839977146e-24</td></tr>
+<tr><td>8</td><td>Signaling by SCF-KIT</td><td>2.5801476201116393e-24</td></tr>
+<tr><td>9</td><td>CD209 (DC-SIGN) signaling</td><td>3.994630774057813e-24</td></tr>
+<tr><td>10</td><td>G alpha (i) signalling events</td><td>5.361068227527127e-24</td></tr>
+<tr><td>11</td><td>Interleukin-3, Interleukin-5 and GM-CSF signaling</td><td>1.7297113518424792e-23</td></tr>
+<tr><td>12</td><td>Negative regulation of the PI3K/AKT network</td><td>2.443707932133118e-23</td></tr>
+<tr><td>13</td><td>Lysosphingolipid and LPA receptors</td><td>2.452571181530356e-23</td></tr>
+<tr><td>14</td><td>RHO GTPases Activate NADPH Oxidases</td><td>2.452571181530356e-23</td></tr>
+<tr><td>15</td><td>Reelin signalling pathway</td><td>4.4777134481677116e-23</td></tr>
+<tr><td>16</td><td>Immune System</td><td>4.524397711282925e-23</td></tr>
+<tr><td>17</td><td>GPCR ligand binding</td><td>5.770514822199083e-23</td></tr>
+<tr><td>18</td><td>Inflammasomes</td><td>8.351064143046857e-23</td></tr>
+<tr><td>19</td><td>PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling</td><td>9.675789898935309e-23</td></tr>
+<tr><td>20</td><td>PECAM1 interactions</td><td>1.247174996374879e-22</td></tr>
+<tr><td>21</td><td>Arachidonic acid metabolism</td><td>1.693416192670574e-22</td></tr>
+<tr><td>22</td><td>G alpha (q) signalling events</td><td>1.693416192670574e-22</td></tr>
+<tr><td>23</td><td>Innate Immune System</td><td>1.7851405290079752e-22</td></tr>
+<tr><td>24</td><td>Diseases associated with the TLR signaling cascade</td><td>1.7912051348580708e-22</td></tr>
+<tr><td>25</td><td>Diseases of Immune System</td><td>1.7912051348580708e-22</td></tr>
+<tr><td>26</td><td>Trafficking and processing of endosomal TLR</td><td>2.1195450139542186e-22</td></tr>
+<tr><td>27</td><td>Signal regulatory protein family interactions</td><td>2.152932619653391e-22</td></tr>
+<tr><td>28</td><td>Regulation of signaling by CBL</td><td>2.152932619653391e-22</td></tr>
+<tr><td>29</td><td>GPCR downstream signalling</td><td>2.6421628773675933e-22</td></tr>
+<tr><td>30</td><td>Signaling by GPCR</td><td>3.496096560039188e-22</td></tr>
+<tr><td>31</td><td>Signaling by Erythropoietin</td><td>3.587900896716192e-22</td></tr>
+<tr><td>32</td><td>Signaling by Interleukins</td><td>4.307057848085293e-22</td></tr>
+<tr><td>33</td><td>Regulation of KIT signaling</td><td>4.9735988935433445e-22</td></tr>
+<tr><td>34</td><td>Dectin-2 family</td><td>4.9735988935433445e-22</td></tr>
+<tr><td>35</td><td>Interleukin receptor SHC signaling</td><td>5.402064617741033e-22</td></tr>
+<tr><td>36</td><td>Cross-presentation of particulate exogenous antigens (phagosomes)</td><td>6.920033612501358e-22</td></tr>
+<tr><td>37</td><td>CD28 co-stimulation</td><td>7.298699737206266e-22</td></tr>
+<tr><td>38</td><td>Surfactant metabolism</td><td>9.87483463920667e-22</td></tr>
+<tr><td>39</td><td>Nef and signal transduction</td><td>1.0169168364365024e-21</td></tr>
+<tr><td>40</td><td>The role of Nef in HIV-1 replication and disease pathogenesis</td><td>1.3127606570926663e-21</td></tr>
+<tr><td>41</td><td>Peptide ligand-binding receptors</td><td>1.7318589038797877e-21</td></tr>
+<tr><td>42</td><td>IRAK4 deficiency (TLR2/4)</td><td>2.267371605596997e-21</td></tr>
+<tr><td>43</td><td>MyD88 deficiency (TLR2/4)</td><td>2.395129326228526e-21</td></tr>
+<tr><td>44</td><td>Interleukin-2 family signaling</td><td>2.765987549520903e-21</td></tr>
+<tr><td>45</td><td>Neutrophil degranulation</td><td>2.9517912965007028e-21</td></tr>
+<tr><td>46</td><td>Platelet activation, signaling and aggregation</td><td>3.466490471656232e-21</td></tr>
+<tr><td>47</td><td>Immunoregulatory interactions between a Lymphoid and a non-Lymphoid cell</td><td>3.94231989259815e-21</td></tr>
+<tr><td>48</td><td>IRAK2 mediated activation of TAK1 complex upon TLR7/8 or 9 stimulation</td><td>7.131048040946501e-21</td></tr>
+<tr><td>49</td><td>Adaptive Immune System</td><td>1.0457912148669761e-20</td></tr>
+<tr><td>50</td><td>Metabolism of vitamins and cofactors</td><td>1.1117726571096023e-20</td></tr>
+</tbody> 
+</table>

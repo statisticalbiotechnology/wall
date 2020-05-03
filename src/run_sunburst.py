@@ -7,6 +7,7 @@ from sunburst.run_server import run_sunburst
 import bs4
 import sys
 import argparse
+import re
 
 parser = argparse.ArgumentParser(
     description="""To use this tool you simply need to provide the path to the csv file for the -log10(q-values).
@@ -194,10 +195,10 @@ def make_the_json_files():
     json_soup = soup.find("select", {"id": "json_sources"})
 
     for i in df_dict:
-        if i == 'Triple Neg log adjusted q-value':
-            clust = 'Triple_Negative'
-        elif i != 'Triple Neg':
-            clust = i.strip('Status Neg log adjusted cluster q-value')
+        print(i)
+        if i.endswith(" log adjusted q-value"):
+            print('here')
+            clust = re.sub(" log adjusted q-value", "", i)
 
         options = []
         for option in json_soup.find_all('option'):

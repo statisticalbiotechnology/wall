@@ -27,22 +27,26 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}GSEA based pathway analysis}{4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Results}{5}%
+\contentsline {chapter}{\numberline {3}Results}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}PCA based pathway analysis}{5}%
+\contentsline {section}{\numberline {3.1}PCA based pathway analysis}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Sunburst Plotting}{5}%
+\contentsline {section}{\numberline {3.2}Sunburst Plotting}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}GSEA Validation}{5}%
+\contentsline {section}{\numberline {3.3}GSEA Validation}{6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Discussion}{7}%
+\contentsline {chapter}{\numberline {4}Discussion}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}PCA}{7}%
+\contentsline {section}{\numberline {4.1}PCA}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusions}{8}%
+\contentsline {section}{\numberline {4.2}PCA based pathway analysis}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Future Work}{9}%
+\contentsline {section}{\numberline {4.3}Sunburst Plotting}{8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Ethical reflections}{10}%
+\contentsline {chapter}{\numberline {5}Conclusions}{9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Acknowledgements}{11}%
+\contentsline {chapter}{\numberline {6}Future Work}{10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Ethical reflections}{11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Acknowledgements}{12}%
