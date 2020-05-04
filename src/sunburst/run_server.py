@@ -37,3 +37,6 @@ def run_sunburst(path='sunburst/'):
     port = check_port()
     Timer(1, open_localhost, args=[port, path]).start();
     run_server(port)
+
+if __name__ == "__main__":
+    run_sunburst()
