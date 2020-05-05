@@ -103,7 +103,7 @@ Results are derived from statistical tests comparing each cluster to all the oth
 |:---:|:---:|
 | ER Receptor| Immune System, Cell Cycle, Neuronal System, Signal transduction, SLC mediated transport, Keratinization|
 | PR Receptor| Immune System, Cell Cycle, NMDA receptor, G protein mediated receptor, DAG, IP3, fatty acid metabolism|
-| HER2 Receptor| Cell Cycle, visual phototransduction, metabolism of amine derived hormones, tryptophan metabolism|
+| HER2 Receptor| Cell Cycle, Visual Phototransduction, Metabolism of Amine Derived Hormones, Tryptophan metabolism|
 | Triple Negative signature| Neuronal system, small molecule transport, lipid metabolism, IP metabolism, metabolism of cofactors, G protein modulated events, CaM pathway|
 | ER-/PR-/HER2+| metabolism of amine derived hormones, tryptophan metabolism, Cell Cycle, G1 phase|
 
@@ -127,6 +127,42 @@ Results are derived from statistical tests comparing each cluster to all the oth
 
 
 Cluster 1, 4ER+  and 10 had more than 30 pathways with fdr == 0. 4ER+ had 72 for example
+
+
+
+## Sunburst Plots Of Intclusts after adjustment
+| Cluster | Pathways |
+|:---:|:---:|
+| 1| Cellular Senescence, Chromosome Maintenance, Reproduction, Meiosis, BER, HOX|
+| 2| Iron Uptake/Transport, Insulin Receptor Recycling, mTORC1, RUNX3 Regulates Wnt|
+| 3| Cell Cycle, Megakaryocyte Development, Golgi to ER Retrograde Transport|
+| 4ER-| Rho GTPase Cycle, G-Protein Mediated Events, PI3K/Akt Signaling in Cancer|
+| 4ER+| Cell Cycle, cGMP effects, Cell-Cell Junction Organization, Double Strand Break Repair|
+| 5| Metabolism of Amine-Derived Hormones, Catecholamine Biosynthesis, Synthesis of PIP in the Nucleus |
+| 6| FGFR1, TRAIL Signaling |
+| 7| Ion Channel Transport, Fe-S Cluster Assembly, DAG and IP3, G-Protein Mediated Events |
+| 8| Noncanonical Activation of NOTCH3|
+| 9| Vitamin B2 Metabolism, Assembly of the HIV Virion, GAG, GAGPOL, mRNA Stability|
+| 10| Cell Cycle (G1, Cyclin D), Evasion of Oncogene Induced Senescence|
+
+
+
+
+
+## Sunburst Plots For Receptors/Receptor Signatures
+
+| Cluster | Pathways |
+|:---:|:---:|
+| ER | SLC-mediated transmembrane transport, G1 Phase, G-protein Mediated Events, DAG and IP3 Signaling|
+| PR | Activation of AMPK downstream of NMDARs, Caspase-mediated cleavage of cytoskeletal proteins, G-protein Mediated Events, G1 Phase|
+| HER2 | Fertilization, Catecholamine Biosynthesis, Metabolism of Amine-Derived Hormones |
+| Triple Negative | SLC-mediated transmembrane transport, G-protein mediated events, G1 Phase|
+
+
+
+
+
+
 
 
 
