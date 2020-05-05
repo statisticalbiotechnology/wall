@@ -249,7 +249,7 @@
 				.style("top", d3.event.pageY + "px")
 				.style("opacity", .9)
 				.style("position", "absolute")
-				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>log10(q) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
+				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>-log10(q) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
 
 			d3.select("#tooltip").classed("hidden", false);
 		}
