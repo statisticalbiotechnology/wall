@@ -21,11 +21,11 @@ def GSEA(receptor, level):
     destination_path = f'GSEA_/{receptor}/' #out dir for the GSEA file
 
     gs_res = gseapy.gsea(data=metabric_data,
-                         gene_sets='Reactome_2016',
+                         gene_sets='../data/GSEA_reactome.gmt',
                          method="signal_to_noise",
                          permutation_num=1000,
-                         max_size=10000,
-                         min_size=2,
+                         max_size=100000,
+                         min_size=1,
                          cls=classes,
                          #processes = 4, #multiprocessing
                          verbose=True,
