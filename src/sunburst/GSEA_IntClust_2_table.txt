@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Assembly of collagen fibrils and other multimeric structures</td><td>0.0</td></tr>
+<tr><td>2</td><td>Collagen formation</td><td>0.0</td></tr>
+<tr><td>3</td><td>ERCC6 (CSB) and EHMT2 (G9a) positively regulate rRNA expression</td><td>0.0</td></tr>
+<tr><td>4</td><td>Extracellular matrix organization</td><td>0.0</td></tr>
+<tr><td>5</td><td>Formation of the beta-catenin:TCF transactivating complex</td><td>0.0</td></tr>
+<tr><td>6</td><td>Positive epigenetic regulation of rRNA expression</td><td>0.0</td></tr>
+<tr><td>7</td><td>RNA Polymerase I Promoter Opening</td><td>0.0</td></tr>
+<tr><td>8</td><td>SIRT1 negatively regulates rRNA expression</td><td>0.0</td></tr>
+<tr><td>9</td><td>HDACs deacetylate histones</td><td>9.02991799738342e-05</td></tr>
+<tr><td>10</td><td>DNA methylation</td><td>9.932909797121748e-05</td></tr>
+<tr><td>11</td><td>Collagen biosynthesis and modifying enzymes</td><td>0.00011036566441246402</td></tr>
+<tr><td>12</td><td>Cell junction organization</td><td>0.00014189871138745337</td></tr>
+<tr><td>13</td><td>Diseases associated with glycosaminoglycan metabolism</td><td>0.00015281399687879608</td></tr>
+<tr><td>14</td><td>Interleukin-7 signaling</td><td>0.00016554849661869607</td></tr>
+<tr><td>15</td><td>PRC2 methylates histones and DNA</td><td>0.0002483227449280439</td></tr>
+<tr><td>16</td><td>Senescence-Associated Secretory Phenotype (SASP)</td><td>0.0002648775945899138</td></tr>
+<tr><td>17</td><td>B-WICH complex positively regulates rRNA expression</td><td>0.00027591416103115997</td></tr>
+<tr><td>18</td><td>Elastic fibre formation</td><td>0.0002921444057976986</td></tr>
+<tr><td>19</td><td>RNA Polymerase I Transcription</td><td>0.0003136708356985818</td></tr>
+<tr><td>20</td><td>Activated PKN1 stimulates transcription of AR (androgen receptor) regulated genes KLK2 and KLK3</td><td>0.0003310969932373918</td></tr>
+<tr><td>21</td><td>Pre-NOTCH Transcription and Translation</td><td>0.00034765184289926084</td></tr>
+<tr><td>22</td><td>Non-integrin membrane-ECM interactions</td><td>0.00040634630988225373</td></tr>
+<tr><td>23</td><td>Transcriptional regulation of granulopoiesis</td><td>0.000518238772023743</td></tr>
+<tr><td>24</td><td>NOTCH3 Intracellular Domain Regulates Transcription</td><td>0.0006621939864747837</td></tr>
+<tr><td>25</td><td>RNA Polymerase I Promoter Escape</td><td>0.0007151695053927667</td></tr>
+<tr><td>26</td><td>Depurination</td><td>0.0008404769828333798</td></tr>
+<tr><td>27</td><td>HCMV Late Events</td><td>0.0008461367604955565</td></tr>
+<tr><td>28</td><td>Molecules associated with elastic fibres</td><td>0.0009578163018653111</td></tr>
+<tr><td>29</td><td>RMTs methylate histone arginines</td><td>0.0009932909797121738</td></tr>
+<tr><td>30</td><td>DNA strand elongation</td><td>0.0010068002665401855</td></tr>
+<tr><td>31</td><td>Extension of Telomeres</td><td>0.0010068002665401855</td></tr>
+<tr><td>32</td><td>Condensation of Prophase Chromosomes</td><td>0.0012496241357669306</td></tr>
+<tr><td>33</td><td>HCMV Early Events</td><td>0.0012581685743020875</td></tr>
+<tr><td>34</td><td>Cleavage of the damaged purine</td><td>0.0014278557833362526</td></tr>
+<tr><td>35</td><td>NoRC negatively regulates rRNA expression</td><td>0.0015651857862131232</td></tr>
+<tr><td>36</td><td>Activation of HOX genes during differentiation</td><td>0.0018112953159457315</td></tr>
+<tr><td>37</td><td>Collagen chain trimerization</td><td>0.001855885777883275</td></tr>
+<tr><td>38</td><td>Activation of anterior HOX genes in hindbrain development during early embryogenesis</td><td>0.0018730629903143871</td></tr>
+<tr><td>39</td><td>RNA Polymerase I Promoter Clearance</td><td>0.0018791991508068178</td></tr>
+<tr><td>40</td><td>Chondroitin sulfate biosynthesis</td><td>0.0019120851359459379</td></tr>
+<tr><td>41</td><td>EPH-ephrin mediated repulsion of cells</td><td>0.001931399127218118</td></tr>
+<tr><td>42</td><td>Laminin interactions</td><td>0.0019356439604647495</td></tr>
+<tr><td>43</td><td>Base-Excision Repair, AP Site Formation</td><td>0.0019629321741931093</td></tr>
+<tr><td>44</td><td>SEMA3A-Plexin repulsion signaling by inhibiting Integrin adhesion</td><td>0.001963482169198485</td></tr>
+<tr><td>45</td><td>HATs acetylate histones</td><td>0.0020108085686856235</td></tr>
+<tr><td>46</td><td>Lagging Strand Synthesis</td><td>0.0023492006219271015</td></tr>
+<tr><td>47</td><td>Amyloid fiber formation</td><td>0.002641251014234647</td></tr>
+<tr><td>48</td><td>Syndecan interactions</td><td>0.002655973706621687</td></tr>
+<tr><td>49</td><td>Degradation of the extracellular matrix</td><td>0.0026929222116641206</td></tr>
+<tr><td>50</td><td>ECM proteoglycans</td><td>0.002726266731550436</td></tr>
+</tbody> 
+</table>

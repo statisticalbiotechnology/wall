@@ -158,13 +158,13 @@ def make_html_table_txt_file(df, outname, threshold=30):
 def make_the_json_files():
     cluster_df = pd.read_csv(args.csv, index_col = 0)
     reactome_ngenes = read_reactome("../data/Ensembl2Reactome_All_Levels.txt.gz")
-
     length_dict = {}
     for i in cluster_df.index:
         if i in reactome_ngenes.index:
             nr_genes = len(reactome_ngenes.loc[i, "genes"])
         else:
-            print('not found')
+            print(f'{i} not found')
+
         length_dict[i] = nr_genes
 
     cluster_df['ngenes'] = cluster_df.index.map(length_dict)
@@ -194,11 +194,14 @@ def make_the_json_files():
 
     json_soup = soup.find("select", {"id": "json_sources"})
 
+
+
     for i in df_dict:
         print(i)
-        if i.endswith(" log adjusted q-value"):
+        if i.startswith("IntClust "):
             print('here')
-            clust = re.sub(" log adjusted q-value", "", i)
+            clust = re.sub("IntClust ", "", i)
+
 
         options = []
         for option in json_soup.find_all('option'):
@@ -216,8 +219,8 @@ def make_the_json_files():
             json_soup.append(new_link)
             json_soup.append("\n")
 
-        sunburst(df_dict[i], outname = f'sunburst/adj_{clust}.json')
-        make_html_table_txt_file(df_dict[i], threshold=50, outname=f"sunburst/{clust}_table.txt")
+        sunburst(df_dict[i], outname = f'sunburst/GSEA_adj_{clust}.json')
+        make_html_table_txt_file(df_dict[i], threshold=50, outname=f"sunburst/GSEA_adj_{clust}_table.txt")
 
 
     with open("sunburst/adjusted_sunburst.html", 'w') as outf:
