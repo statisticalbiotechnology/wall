@@ -15,6 +15,11 @@ python3 -m http.server
 python -m http.server 8001
 #Accessing the server from the browser (assuming you are in the sunburst folder)
 localhost:8001/sunburst.html
+
+
+#for a simpler way, locate to the sunburst directory and run:
+python run_server.py
+#this finds an open port and opens the adjusted_sunburst html file in a browser 
 ```
 - Exp folder
 	- Contains the experiments. The first version contains the csv files for the intclust qvalues and the receptor qvalues
