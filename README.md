@@ -1,12 +1,13 @@
+![sunburst_img](/sunburst_img.png)
 # Disposition
 
 - Data folder
-	- Contains most of the data needed for the code, some files are too big to store on github
+	- Contains most of the data needed for the code, some files are too big to store on GitHub
 - Src folder
 	- Contains the code base, mostly with ipynb files for developing scripts but also py files for already completed scripts
 	- The sunburst folder contains all the files needed to view the sunburst which can be run through pythons http.server module
 
-```bash
+```shell
 #installing the module
 python3 -m pip install http.server
 #running the server
@@ -19,7 +20,7 @@ localhost:8001/sunburst.html
 
 #for a simpler way, locate to the sunburst directory and run:
 python run_server.py
-#this finds an open port and opens the adjusted_sunburst html file in a browser 
+#this finds an open port and opens the adjusted_sunburst html file in a browser
 ```
 - Exp folder
 	- Contains the experiments. The first version contains the csv files for the intclust qvalues and the receptor qvalues
@@ -174,6 +175,3 @@ Cluster 1, 4ER+  and 10 had more than 30 pathways with fdr == 0. 4ER+ had 72 for
 
 
 ### Comparing wall and GSEA significant pathways
-
-
-![Comparing wall and GSEA significant pathways](/src/gsea_wall_comparison.png)
