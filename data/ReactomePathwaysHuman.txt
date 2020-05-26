@@ -64,9 +64,9 @@ R-HSA-399710	Activation of AMPA receptors	Homo sapiens
 R-HSA-9619483	Activation of AMPK downstream of NMDARs	Homo sapiens
 R-HSA-176814	Activation of APC/C and APC/C:Cdc20 mediated degradation of mitotic proteins	Homo sapiens
 R-HSA-176187	Activation of ATR in response to replication stress	Homo sapiens
-R-HSA-111447	Activation of BAD and translocation to mitochondria 	Homo sapiens
+R-HSA-111447	Activation of BAD and translocation to mitochondria	Homo sapiens
 R-HSA-114452	Activation of BH3-only proteins	Homo sapiens
-R-HSA-111446	Activation of BIM and translocation to mitochondria 	Homo sapiens
+R-HSA-111446	Activation of BIM and translocation to mitochondria	Homo sapiens
 R-HSA-139910	Activation of BMF and translocation to mitochondria	Homo sapiens
 R-HSA-174577	Activation of C3 and C5	Homo sapiens
 R-HSA-451308	Activation of Ca-permeable Kainate Receptor	Homo sapiens
@@ -372,13 +372,13 @@ R-HSA-2243919	Crosslinking of collagen fibrils	Homo sapiens
 R-HSA-69273	Cyclin A/B1/B2 associated events during G2/M transition	Homo sapiens
 R-HSA-69656	Cyclin A:Cdk2-associated events at S phase entry	Homo sapiens
 R-HSA-69231	Cyclin D associated events in G1	Homo sapiens
-R-HSA-69202	Cyclin E associated events during G1/S transition 	Homo sapiens
+R-HSA-69202	Cyclin E associated events during G1/S transition	Homo sapiens
 R-HSA-1614603	Cysteine formation from homocysteine	Homo sapiens
 R-HSA-211897	Cytochrome P450 - arranged by substrate type	Homo sapiens
 R-HSA-111461	Cytochrome c-mediated apoptotic response	Homo sapiens
 R-HSA-1280215	Cytokine Signaling in Immune system	Homo sapiens
 R-HSA-2564830	Cytosolic iron-sulfur cluster assembly	Homo sapiens
-R-HSA-1834949	Cytosolic sensors of pathogen-associated DNA 	Homo sapiens
+R-HSA-1834949	Cytosolic sensors of pathogen-associated DNA	Homo sapiens
 R-HSA-156584	Cytosolic sulfonation of small molecules	Homo sapiens
 R-HSA-379716	Cytosolic tRNA aminoacylation	Homo sapiens
 R-HSA-1489509	DAG and IP3 signaling	Homo sapiens
@@ -1282,7 +1282,7 @@ R-HSA-975871	MyD88 cascade initiated on plasma membrane	Homo sapiens
 R-HSA-5602498	MyD88 deficiency (TLR2/4)	Homo sapiens
 R-HSA-5602680	MyD88 deficiency (TLR5)	Homo sapiens
 R-HSA-975155	MyD88 dependent cascade initiated on endosome	Homo sapiens
-R-HSA-166166	MyD88-independent TLR4 cascade 	Homo sapiens
+R-HSA-166166	MyD88-independent TLR4 cascade	Homo sapiens
 R-HSA-166058	MyD88:MAL(TIRAP) cascade initiated on plasma membrane	Homo sapiens
 R-HSA-3785653	Myoclonic epilepsy of Lafora	Homo sapiens
 R-HSA-525793	Myogenesis	Homo sapiens
@@ -2077,7 +2077,7 @@ R-HSA-933542	TRAF6 mediated NF-kB activation	Homo sapiens
 R-HSA-975138	TRAF6 mediated induction of NFkB and MAP kinases upon TLR7/8 or 9 activation	Homo sapiens
 R-HSA-937072	TRAF6-mediated induction of TAK1 complex within TLR4 complex	Homo sapiens
 R-HSA-75158	TRAIL  signaling	Homo sapiens
-R-HSA-937061	TRIF(TICAM1)-mediated TLR4 signaling 	Homo sapiens
+R-HSA-937061	TRIF(TICAM1)-mediated TLR4 signaling	Homo sapiens
 R-HSA-2562578	TRIF-mediated programmed cell death	Homo sapiens
 R-HSA-187042	TRKA activation by NGF	Homo sapiens
 R-HSA-3295583	TRP channels	Homo sapiens
@@ -2154,7 +2154,7 @@ R-HSA-8986944	Transcriptional Regulation by MECP2	Homo sapiens
 R-HSA-3700989	Transcriptional Regulation by TP53	Homo sapiens
 R-HSA-8853884	Transcriptional Regulation by VENTX	Homo sapiens
 R-HSA-2151201	Transcriptional activation of mitochondrial biogenesis	Homo sapiens
-R-HSA-69560	Transcriptional activation of p53 responsive genes  	Homo sapiens
+R-HSA-69560	Transcriptional activation of p53 responsive genes	Homo sapiens
 R-HSA-2173793	Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer	Homo sapiens
 R-HSA-8878171	Transcriptional regulation by RUNX1	Homo sapiens
 R-HSA-8878166	Transcriptional regulation by RUNX2	Homo sapiens
@@ -2176,7 +2176,7 @@ R-HSA-110313	Translesion synthesis by Y family DNA polymerases bypasses lesions 
 R-HSA-1445148	Translocation of SLC2A4 (GLUT4) to the plasma membrane	Homo sapiens
 R-HSA-202430	Translocation of ZAP-70 to Immunological synapse	Homo sapiens
 R-HSA-112315	Transmission across Chemical Synapses	Homo sapiens
-R-HSA-112307	Transmission across Electrical Synapses 	Homo sapiens
+R-HSA-112307	Transmission across Electrical Synapses	Homo sapiens
 R-HSA-174362	Transport and synthesis of PAPS	Homo sapiens
 R-HSA-168874	Transport of HA trimer, NA tetramer and M2 tetramer from the endoplasmic reticulum to the Golgi Apparatus	Homo sapiens
 R-HSA-72202	Transport of Mature Transcript to Cytoplasm	Homo sapiens

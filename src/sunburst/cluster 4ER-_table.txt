@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Rho GTPase cycle</td><td>3.85980328770806e-05</td></tr>
+<tr><td>2</td><td>G-protein mediated events</td><td>0.00035900329530218656</td></tr>
+<tr><td>3</td><td>Reelin signalling pathway</td><td>0.00035900329530218656</td></tr>
+<tr><td>4</td><td>PI3K/AKT Signaling in Cancer</td><td>0.00035900329530218656</td></tr>
+<tr><td>5</td><td>RUNX1 regulates estrogen receptor mediated transcription</td><td>0.00035900329530218656</td></tr>
+<tr><td>6</td><td>Acetylcholine regulates insulin secretion</td><td>0.00035900329530218656</td></tr>
+<tr><td>7</td><td>PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling</td><td>0.00035900329530218656</td></tr>
+<tr><td>8</td><td>Constitutive Signaling by Aberrant PI3K in Cancer</td><td>0.00035900329530218656</td></tr>
+<tr><td>9</td><td>PLC beta mediated events</td><td>0.00035900329530218656</td></tr>
+<tr><td>10</td><td>Interleukin-3, Interleukin-5 and GM-CSF signaling</td><td>0.00035900329530218656</td></tr>
+<tr><td>11</td><td>Regulation of KIT signaling</td><td>0.00035900329530218656</td></tr>
+<tr><td>12</td><td>Transfer of LPS from LBP carrier to CD14</td><td>0.00035900329530218656</td></tr>
+<tr><td>13</td><td>Regulation of signaling by CBL</td><td>0.00035900329530218656</td></tr>
+<tr><td>14</td><td>Cell-Cell communication</td><td>0.00035900329530218656</td></tr>
+<tr><td>15</td><td>RET signaling</td><td>0.0003781225446586293</td></tr>
+<tr><td>16</td><td>Negative regulation of the PI3K/AKT network</td><td>0.0004125205329967775</td></tr>
+<tr><td>17</td><td>Platelet Aggregation (Plug Formation)</td><td>0.00044314047636838296</td></tr>
+<tr><td>18</td><td>Synthesis of IP3 and IP4 in the cytosol</td><td>0.00044314047636838296</td></tr>
+<tr><td>19</td><td>PECAM1 interactions</td><td>0.00044314047636838296</td></tr>
+<tr><td>20</td><td>GAB1 signalosome</td><td>0.00048517071002576956</td></tr>
+<tr><td>21</td><td>ABC transporters in lipid homeostasis</td><td>0.00048517071002576956</td></tr>
+<tr><td>22</td><td>Inositol phosphate metabolism</td><td>0.0005636064037470641</td></tr>
+<tr><td>23</td><td>Interleukin receptor SHC signaling</td><td>0.00060362231095834</td></tr>
+<tr><td>24</td><td>RUNX1 regulates transcription of genes involved in WNT signaling</td><td>0.0008149723180444469</td></tr>
+<tr><td>25</td><td>Synthesis of PI</td><td>0.0008149723180444469</td></tr>
+<tr><td>26</td><td>Transport of inorganic cations/anions and amino acids/oligopeptides</td><td>0.0008686098618831212</td></tr>
+<tr><td>27</td><td>Calmodulin induced events</td><td>0.0008686098618831212</td></tr>
+<tr><td>28</td><td>CaM pathway</td><td>0.0008686098618831212</td></tr>
+<tr><td>29</td><td>Interleukin-4 and Interleukin-13 signaling</td><td>0.0009457355715626123</td></tr>
+<tr><td>30</td><td>Hemostasis</td><td>0.0010048641001348141</td></tr>
+<tr><td>31</td><td>RHO GTPases Activate NADPH Oxidases</td><td>0.0010048641001348141</td></tr>
+<tr><td>32</td><td>Metabolism of vitamins and cofactors</td><td>0.0010096044011907112</td></tr>
+<tr><td>33</td><td>Signaling by Erythropoietin</td><td>0.0010096044011907112</td></tr>
+<tr><td>34</td><td>Integrin signaling</td><td>0.0010096044011907112</td></tr>
+<tr><td>35</td><td>Other interleukin signaling</td><td>0.0010397304826805446</td></tr>
+<tr><td>36</td><td>HS-GAG biosynthesis</td><td>0.0010801116551470659</td></tr>
+<tr><td>37</td><td>Interleukin-2 family signaling</td><td>0.0011431218183402731</td></tr>
+<tr><td>38</td><td>Ca-dependent events</td><td>0.0012072012395326404</td></tr>
+<tr><td>39</td><td>Signaling by SCF-KIT</td><td>0.0013775427097799868</td></tr>
+<tr><td>40</td><td>Tryptophan catabolism</td><td>0.0014458041987756149</td></tr>
+<tr><td>41</td><td>Regulation of TLR by endogenous ligand</td><td>0.0014458041987756149</td></tr>
+<tr><td>42</td><td>Antimicrobial peptides</td><td>0.0014458041987756149</td></tr>
+<tr><td>43</td><td>Signal regulatory protein family interactions</td><td>0.0015763717303793824</td></tr>
+<tr><td>44</td><td>Estrogen biosynthesis</td><td>0.0015763717303793824</td></tr>
+<tr><td>45</td><td>Nef and signal transduction</td><td>0.0015763717303793824</td></tr>
+<tr><td>46</td><td>Interleukin-2 signaling</td><td>0.001592205689526537</td></tr>
+<tr><td>47</td><td>Cell junction organization</td><td>0.001592205689526537</td></tr>
+<tr><td>48</td><td>TNFs bind their physiological receptors</td><td>0.001592205689526537</td></tr>
+<tr><td>49</td><td>Synthesis of PIPs at the plasma membrane</td><td>0.001592205689526537</td></tr>
+<tr><td>50</td><td>Interaction With Cumulus Cells And The Zona Pellucida</td><td>0.001592205689526537</td></tr>
+</tbody> 
+</table>
