@@ -199,7 +199,6 @@ def make_the_json_files():
     for i in df_dict:
         print(i)
         if i.startswith("IntClust "):
-            print('here')
             clust = re.sub("IntClust ", "", i)
 
 
