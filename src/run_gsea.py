@@ -1,9 +1,11 @@
 import gseapy
 import pandas as pd
+import time
 
 
-x = input("Enter cluster:")
 
+
+time.sleep(22000)
 
 metabric_data = pd.read_csv('../data/GSEA_expression.csv', index_col=0)
 clinical_data = pd.read_csv('../data/GSEA_clinical.csv', index_col=0)
@@ -21,7 +23,7 @@ metabric_data = metabric_data.T.loc[clinical_patients].T
 
 def GSEA(receptor, level):
     classes = ['MUT' if x == level else 'WT' for x in clinical_data[receptor]] #define levels
-    destination_path = f'GSEA_/adj_{level}/' #out dir for the GSEA file
+    destination_path = f'GSEA_/adj_HER2{level}/' #out dir for the GSEA file
 
     gs_res = gseapy.gsea(data=metabric_data,
                          gene_sets='../data/GSEA_reactome.gmt',
@@ -37,4 +39,4 @@ def GSEA(receptor, level):
 
 
 
-GSEA('Integrative Cluster', x)
+GSEA('HER2 Status', "Positive")
