@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2cm,a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{authblk}
+%\usepackage[superscript,biblabel]{cite}
+\usepackage[super]{natbib}
+
+\usepackage[outdir=./img/]{epstopdf}
+\usepackage{epsfig}
+\usepackage{url}
+% Places figures at end of document, and do not print out the figures
+\usepackage[nomarkers,nolists,tablesfirst]{endfloat}
+\renewcommand{\includegraphics}[2][]{}
+
+\usepackage{xr}
+\externaldocument{supplement}
+
+\usepackage{tikz}
+\usetikzlibrary{fit,positioning}
+\usetikzlibrary{arrows}
+
+\setlength\parindent{0pt}
+
+\input{./title.tex}
+
+\begin{document}
+
+\maketitle
+
+
+\begin{abstract}
+
+\end{abstract}
+
+\section*{Introduction}
+
+\section*{Methods}
+\subsection*{Datasets}
+\subsection*{Code availability}
+
+\section*{Results}
+
+\section*{Discussion}
+
+
+\section*{Acknowledgments}
+
+This work was supported by a grant from the Swedish Research Council (grant
+2017-04030).
+
+\section*{Author Contributions}
+
+\section*{Competing interests}
+
+The authors declare that they have no conflict of interest.
+
+\end{document}
