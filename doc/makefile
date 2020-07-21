@@ -1,6 +1,6 @@
 main=paper
 
-all: ${main}.pdf supplement.pdf coverletter.pdf in_brief.pdf diff.pdf
+all: ${main}.pdf supplement.pdf coverletter.pdf # diff.pdf
 
 %.pdf: %.tex
 	pdflatex -shell-escape $*.tex
