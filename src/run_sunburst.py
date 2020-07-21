@@ -198,8 +198,10 @@ def make_the_json_files():
 
     for i in df_dict:
         print(i)
-        if i.startswith("IntClust "):
-            clust = re.sub("IntClust ", "", i)
+        if i == "cluster 4ER- log adjusted q-value":
+            clust = "4ER-"
+        else:
+            clust = i.strip("cluster log adjusted q-value")
 
 
         options = []
