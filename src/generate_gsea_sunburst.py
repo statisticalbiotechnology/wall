@@ -5,7 +5,7 @@ from networkx.readwrite import json_graph
 import json
 
 relation_file = "../data/ReactomePathwaysRelation.txt"
-pathway_name = "../data/GSEA_reactome.csv"
+pathway_name = "../data/ReactomePathwaysHuman.txt"
 
 def generate_tree(relation_file = relation_file):
     rel_df = pd.read_csv(relation_file, sep = "\t", header = None, index_col = 0, names=['id'])
@@ -131,7 +131,7 @@ def read_reactome(file_name, gene_name_start = "ENSG0"):
 
 
 def make_the_json_files():
-    cluster_df = pd.read_csv("../exp/GSEA_qvalues.csv", index_col = 0)
+    cluster_df = pd.read_csv("../exp/GSEA_mutations.csv", index_col = 0)
     #print(cluster_df)
     #clusterindex = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
     #cluster_df = cluster_df.iloc[:,[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]]
@@ -166,6 +166,6 @@ def make_the_json_files():
     for i in df_dict:
         clust = i.strip('cluster qva')
         #print(clust)
-        sunburst(df_dict[i], outname = f'sunburst/GSEA_clust_{clust}.json')
+        sunburst(df_dict[i], outname = f'sunburst/GSEA_mutation_{clust}.json')
 
 make_the_json_files()

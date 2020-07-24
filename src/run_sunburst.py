@@ -157,15 +157,19 @@ def make_html_table_txt_file(df, outname, threshold=30):
 
 def make_the_json_files():
     cluster_df = pd.read_csv(args.csv, index_col = 0)
+    print(cluster_df)
+    print(cluster_df.index)
+    print(cluster_df.columns)
     reactome_ngenes = read_reactome("../data/Ensembl2Reactome_All_Levels.txt.gz")
     length_dict = {}
     for i in cluster_df.index:
         if i in reactome_ngenes.index:
             nr_genes = len(reactome_ngenes.loc[i, "genes"])
+
         else:
             print(f'{i} not found')
-
         length_dict[i] = nr_genes
+
 
     cluster_df['ngenes'] = cluster_df.index.map(length_dict)
 
@@ -184,7 +188,7 @@ def make_the_json_files():
 
         #print(df)
         df_dict[i] = df
-
+    print(df)
 
 
     ###### scrapes the html file to see that duplicates are not added and then adds the <option> tag
