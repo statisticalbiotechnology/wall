@@ -1,0 +1,449 @@
+HDF5 "Skin_Dress1.h5" {
+GROUP "/" {
+   ATTRIBUTE "CLASS" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 5;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+         "GROUP"
+      }
+   }
+   ATTRIBUTE "FILTERS" {
+      DATATYPE  H5T_STD_I64LE
+      DATASPACE  SCALAR
+      DATA {
+         65793
+      }
+   }
+   ATTRIBUTE "PYTABLES_FORMAT_VERSION" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 3;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+         "2.1"
+      }
+   }
+   ATTRIBUTE "TITLE" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 1;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+         ""
+      }
+   }
+   ATTRIBUTE "VERSION" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 3;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+         "1.0"
+      }
+   }
+   ATTRIBUTE "chemistry_description" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 22;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_UTF8;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+         "Single Cell 5' R2-only"
+      }
+   }
+   ATTRIBUTE "filetype" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 6;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SCALAR
+      DATA {
+         "matrix"
+      }
+   }
+   ATTRIBUTE "library_ids" {
+      DATATYPE  H5T_STRING {
+         STRSIZE 11;
+         STRPAD H5T_STR_NULLTERM;
+         CSET H5T_CSET_ASCII;
+         CTYPE H5T_C_S1;
+      }
+      DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+      DATA {
+         "Skin_Dress1"
+      }
+   }
+   ATTRIBUTE "original_gem_groups" {
+      DATATYPE  H5T_STD_I64LE
+      DATASPACE  SIMPLE { ( 1 ) / ( 1 ) }
+      DATA {
+         1
+      }
+   }
+   GROUP "GRCh38" {
+      ATTRIBUTE "CLASS" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 5;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+            "GROUP"
+         }
+      }
+      ATTRIBUTE "FILTERS" {
+         DATATYPE  H5T_STD_I64LE
+         DATASPACE  SCALAR
+         DATA {
+            65793
+         }
+      }
+      ATTRIBUTE "TITLE" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 1;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+            ""
+         }
+      }
+      ATTRIBUTE "VERSION" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 3;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SCALAR
+         DATA {
+            "1.0"
+         }
+      }
+      DATASET "barcodes" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 18;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SIMPLE { ( 5653 ) / ( 5653 ) }
+         DATA {
+         }
+         ATTRIBUTE "CLASS" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 6;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "CARRAY"
+            }
+         }
+         ATTRIBUTE "TITLE" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 1;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  NULL
+            DATA {
+            }
+         }
+         ATTRIBUTE "VERSION" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 3;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "1.1"
+            }
+         }
+      }
+      DATASET "data" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SIMPLE { ( 17113300 ) / ( 17113300 ) }
+         DATA {
+         }
+         ATTRIBUTE "CLASS" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 6;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "CARRAY"
+            }
+         }
+         ATTRIBUTE "TITLE" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 1;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  NULL
+            DATA {
+            }
+         }
+         ATTRIBUTE "VERSION" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 3;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "1.1"
+            }
+         }
+      }
+      DATASET "gene_names" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 19;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SIMPLE { ( 33694 ) / ( 33694 ) }
+         DATA {
+         }
+         ATTRIBUTE "CLASS" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 6;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "CARRAY"
+            }
+         }
+         ATTRIBUTE "TITLE" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 1;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  NULL
+            DATA {
+            }
+         }
+         ATTRIBUTE "VERSION" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 3;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "1.1"
+            }
+         }
+      }
+      DATASET "genes" {
+         DATATYPE  H5T_STRING {
+            STRSIZE 15;
+            STRPAD H5T_STR_NULLTERM;
+            CSET H5T_CSET_ASCII;
+            CTYPE H5T_C_S1;
+         }
+         DATASPACE  SIMPLE { ( 33694 ) / ( 33694 ) }
+         DATA {
+         }
+         ATTRIBUTE "CLASS" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 6;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "CARRAY"
+            }
+         }
+         ATTRIBUTE "TITLE" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 1;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  NULL
+            DATA {
+            }
+         }
+         ATTRIBUTE "VERSION" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 3;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "1.1"
+            }
+         }
+      }
+      DATASET "indices" {
+         DATATYPE  H5T_STD_I64LE
+         DATASPACE  SIMPLE { ( 17113300 ) / ( 17113300 ) }
+         DATA {
+         }
+         ATTRIBUTE "CLASS" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 6;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "CARRAY"
+            }
+         }
+         ATTRIBUTE "TITLE" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 1;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  NULL
+            DATA {
+            }
+         }
+         ATTRIBUTE "VERSION" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 3;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "1.1"
+            }
+         }
+      }
+      DATASET "indptr" {
+         DATATYPE  H5T_STD_I64LE
+         DATASPACE  SIMPLE { ( 5654 ) / ( 8192 ) }
+         DATA {
+         }
+         ATTRIBUTE "CLASS" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 6;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "CARRAY"
+            }
+         }
+         ATTRIBUTE "TITLE" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 1;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  NULL
+            DATA {
+            }
+         }
+         ATTRIBUTE "VERSION" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 3;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "1.1"
+            }
+         }
+      }
+      DATASET "shape" {
+         DATATYPE  H5T_STD_I32LE
+         DATASPACE  SIMPLE { ( 2 ) / ( 16384 ) }
+         DATA {
+         }
+         ATTRIBUTE "CLASS" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 6;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "CARRAY"
+            }
+         }
+         ATTRIBUTE "TITLE" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 1;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  NULL
+            DATA {
+            }
+         }
+         ATTRIBUTE "VERSION" {
+            DATATYPE  H5T_STRING {
+               STRSIZE 3;
+               STRPAD H5T_STR_NULLTERM;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }
+            DATASPACE  SCALAR
+            DATA {
+               "1.1"
+            }
+         }
+      }
+   }
+}
+}
