@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<style>
+	path {
+		stroke: #fff;
+	}
+
+	#full-canvas{
+		position: fixed;
+		height: auto;
+		width: auto;
+		z-index: -1;
+	}
+
+	#tooltip {
+		position: fixed;
+		width: auto;
+		height: auto;
+		background-color: white;
+		pointer-events: none;
+		float: left;
+		z-index: 1
+	}
+	#table{
+		width: 35%;
+		float: right;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+	th {
+		font-size: 20px;
+		border: 1px solid black;
+	}
+
+	#tooltip.hidden {
+		display: none;
+	}
+
+	#tooltip p {
+		margin: 0;
+		font-family: sans-serif;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	.line {
+		fill: none;
+		stroke-width: 2;
+	}
+
+	.grid line {
+		stroke: lightgrey;
+		stroke-opacity: 0.7;
+		shape-rendering: crispEdges;
+	}
+
+	.grid path {
+		stroke-width: 0;
+	}
+</style>
+</head><body>
+<div class="sunburst-and-table">
+<div class="hidden" id="tooltip">
+		//<p><span id="value">150</span>%</p>
+</div>
+<div id="table">
+	<table>
+		<thead>
+			<tr>
+				<th>Rank</th>
+				<th>Pathway</th>
+				<th>-log10(q-value)</th>
+			</tr>
+		</thead>
+		<tbody id="tableBody">
+
+		</tbody>
+	</table>
+ </div>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="breadcrumb.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<select content-type="text/plain" id="json_sources" name="json_sources">
+<option selected="" value="">---Select data---</option>
+<option value="adj_1.json">adj IntClust 1</option>
+<option value="adj_2.json">adj IntClust 2</option>
+<option value="adj_3.json">adj IntClust 3</option>
+<option value="adj_4ER+.json">adj IntClust 4ER+</option>
+<option value="adj_4ER-.json">adj IntClust 4ER-</option>
+<option value="adj_5.json">adj IntClust 5</option>
+<option value="adj_6.json">adj IntClust 6</option>
+<option value="adj_7.json">adj IntClust 7</option>
+<option value="adj_8.json">adj IntClust 8</option>
+<option value="adj_9.json">adj IntClust 9</option>
+<option value="adj_10.json">adj IntClust 10</option>
+<option value="adj_ER.json">ERStatus</option>
+<option value="adj_PR.json">PRStatus</option>
+<option value="adj_HER2.json">HER2Status</option>
+<option value="adj_Triple_Negative.json">Triple_NegativeStatus</option>
+<option value="adj_LumA.json">LumA Status</option>
+<option value="adj_LumB.json">LumB Status</option>
+<option value="adj_Her2.json">Her2 Status</option>
+<option value="adj_Normal.json">Normal Status</option>
+<option value="adj_Basal.json">Basal Status</option>
+<option value="adj_claudin-low.json">claudin-low Status</option>
+<option value="adj_NC.json">NC Status</option>
+<option value="GSEA_adj_1.json">GSEA IntClust 1 Status</option>
+<option value="GSEA_adj_2.json">GSEA IntClust 2 Status</option>
+<option value="GSEA_adj_3.json">GSEA IntClust 3 Status</option>
+<option value="GSEA_adj_4ER+.json">GSEA IntClust 4ER+ Status</option>
+<option value="GSEA_adj_4ER-.json">GSEA IntClust 4ER- Status</option>
+<option value="GSEA_adj_5.json">GSEA IntClust 5 Status</option>
+<option value="GSEA_adj_6.json">GSEA IntClust 6 Status</option>
+<option value="GSEA_adj_7.json">GSEA IntClust 7 Status</option>
+<option value="GSEA_adj_8.json">GSEA IntClust 8 Status</option>
+<option value="GSEA_adj_9.json">GSEA IntClust 9 Status</option>
+<option value="GSEA_adj_10.json">GSEA IntClust 10 Status</option>
+<option value="GSEA_adj_TP53.json">TP53 Status</option>
+<option value="GSEA_adj_BRCA1.json">BRCA1 Status</option>
+
+</select>​
+	<div class="hidden" id="factbox">
+	</div>
+
+	<div class="hidden" id="inputThreshold">
+		<input type="number" id="inputfield" clientIDMode="static" value=color_start>
+		<button onclick="ChangeThreshold()" type="button" name="Change Threshold">Change color threshold</button>
+	</div>
+
+<script>
+		var color_start = 3;
+
+		function ChangeThreshold() {
+			var num = document.getElementById("inputfield").value;
+			color_start = num;
+			draw(color_start)
+		}
+
+
+		var margin = {top: 20, right: 20, bottom: 20, left: 20},
+			width = window.innerWidth - margin.left - margin.right,
+			height = 0.95*(window.innerHeight) - margin.top - margin.bottom; // Use the window's height
+
+		var radius = (Math.min(width, height) / 2) - 10;
+
+		var charHight = 2 * radius - 100
+		var charWidth = width - 2 * radius - margin.right
+
+		var formatNumber = d3.format(",d");
+
+		var x = d3.scaleLinear()
+			.range([0, 2 * Math.PI]);
+
+		var y = d3.scaleSqrt()
+			.range([0, radius]);
+
+		var color = d3.scaleLinear()
+			.domain([0.0, 3.0, 50])
+			.range(["white", 'white', 'red']);
+
+
+		var partition = d3.partition();
+
+		var arc = d3.arc()
+			.startAngle(function(d) {return Math.max(0, Math.min(2 * Math.PI, x(d.x0)));})
+			.endAngle(function(d) {return Math.max(0, Math.min(2 * Math.PI, x(d.x1)));})
+			.innerRadius(function(d) {return Math.max(0, y(d.y0));})
+			.outerRadius(function(d) {return Math.max(0, y(d.y1));});
+
+		var svg = d3.select("body").append("svg")
+			.attr("width", width)
+			.attr("height", height)
+			.attr("id", "full-canvas")
+			.append("g")
+			.attr("id", "container")
+			.attr("transform", "translate(" + radius + "," + (height / 2) + ")");
+
+
+		var breadcrumb = d3.breadcrumb()
+			.container('svg').wrapWidth(width * 2 / 3) // any element or selection
+
+		var legend = d3.select('svg')
+			.append("g")
+			.selectAll("g")
+			.data(Array.apply(null, {
+				length: 500
+			}).map(Number.call, Number).map(function(x) {
+				return x * 30 / 500
+			}))
+			.enter()
+			//.innerHTML += 'legend'
+			.append('g')
+			.attr('class', 'legend')
+			.attr('transform', function(d, i) {
+				var height = legendRectSize;
+				var x = i * 1;
+				var y = 2 * radius - 10
+				return 'translate(' + x + ',' + y + ')';
+
+				var legendtitle = d3.select(svg)
+					.append('legend')
+					.select('legend')
+					.text('Legend')
+			});
+
+		var legendRectSize = 10
+		var legendSpacing = 0.001
+
+		d3.select("#json_sources").on('change', draw)
+
+	function draw(color_start) {
+			source = d3.select("#json_sources").property('value')
+			//const obj = JSON.parse(source);
+			svg.selectAll('path').remove()
+			d3.json(source, function(error, dataset) {
+				if (error) throw error;
+
+				root = d3.hierarchy(dataset);
+
+				root.sum(function(d) {return d.children ? 0 : d.ngenes; });
+
+				var color_threshold = root.data.max_val
+				var color_start = document.getElementById("inputfield").value;
+
+
+				var color = d3.scaleLinear()
+					.domain([0.0, color_start, color_threshold])
+					.range(["white", 'white', 'red']);
+
+				svg.selectAll("path")
+					.data(partition(root).descendants())
+					.enter().append("path")
+					.attr("d", arc)
+					.attr("id", "sunburst")
+					.style("fill", function(d) {return color(d.data.value); })
+					.style('stroke', 'black')
+					.attr('stroke-width', 1)
+					.attr("stroke-opacity", 0.2)
+					.on("mouseover", mouseover)
+					.on("mouseout", mouseout)
+					.on("click", click);
+
+				dictionary = {}
+				function searchid(obj) {
+					dictionary[obj.source] = obj.value
+					if(!obj.children) {
+						return
+					}
+					obj.children.forEach(child => searchid(child))
+				}
+				searchid(root.data);
+
+
+				var max_val = root.data.max_val;
+
+				var sortable = [];
+				for (var pathway in dictionary) {
+					sortable.push([pathway, dictionary[pathway]]);
+				}
+
+				if (max_val >= 1) {
+					sortable.sort(function(a, b){
+						return b[1] - a[1]
+					});
+				} else {
+					sortable.sort(function(a, b){
+						return a[1] - b[1]
+					});
+				}
+
+				var tableData = sortable.slice(0, 40);
+
+				//add rank at the beginning of the array
+				for (var i = 0; i < tableData.length; i++) {
+					tableData[i].unshift(i+1);
+				}
+
+
+				function createTable(tableData) {
+					jQuery("#tableBody").empty() //clears tbody because otherwise it just adds on at the end of the table if you click another cluster
+					var table_body = document.getElementById('tableBody');
+					var row = table_body.insertRow(0);
+
+					tableData.forEach(function(rowData){
+						var row = document.createElement('tr');
+
+						rowData.forEach(function(cellData){
+							var cell = document.createElement('td');
+							cell.appendChild(document.createTextNode(cellData));
+							row.appendChild(cell);
+						});
+						table_body.appendChild(row);
+					});
+
+					//table_body.appendChild(tableBody);
+
+				}
+				createTable(tableData);
+
+
+				//jQuery("#table").load(obj.table).attr('id', 'table')
+				jQuery("#factbox").empty()
+				document.getElementById('factbox').innerHTML = "Maximum -log10(q-value) = " + color_threshold.toPrecision(5) + "</br>" +
+					"Colored pathways have -log10(qvalue) > "  + "</br>";
+
+
+			})
+
+			legend.append('rect')
+				.attr('width', legendRectSize)
+				.attr('height', legendRectSize)
+				.style('fill', color)
+				.style('stroke', color);
+
+
+
+
+		}
+
+
+		function click(d) {
+
+			svg.selectAll(".axis").remove();
+			svg.selectAll(".grid").remove();
+
+			svg.transition()
+				.duration(500)
+				.tween("scale", function() {
+					var xd = d3.interpolate(x.domain(), [d.x0, d.x1]),
+						yd = d3.interpolate(y.domain(), [d.y0, 1]),
+						yr = d3.interpolate(y.range(), [d.y0 ? 20 : 0, radius]);
+					return function(t) {
+						x.domain(xd(t));
+						y.domain(yd(t)).range(yr(t));};
+				})
+				.selectAll("path")
+				.attrTween("d", function(d) {
+					return function() {
+						return arc(d);};
+				});
+
+	}
+
+		function mouseover(d) {
+
+			d3.select("#tooltip")
+				.style("left", d3.event.pageX + "px")
+				.style("top", d3.event.pageY + "px")
+				.style("opacity", .9)
+				.style("position", "absolute")
+				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>-log10(q) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
+
+			d3.select("#tooltip").classed("hidden", false);
+		}
+
+		function mouseout(d) {
+			d3.select("#tooltip").classed("hidden", true);
+		}
+		// gridlines in x axis function
+		function make_x_gridlines() {
+		    return d3.axisBottom(xScale)
+		        .ticks(10)
+		}
+
+		// gridlines in y axis function
+		function make_y_gridlines() {
+		    return d3.axisLeft(yScale)
+		        .ticks(10)
+		}
+
+		d3.select(self.frameElement).style("height", height + "px");
+	</script>
+<!-- Transition: <input type="number" id="transitionValue" value="-1.5"> <button onclick="draw()">change</button>
+-->
+</body></html>
