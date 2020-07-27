@@ -130,8 +130,9 @@ dmypy.json
 
 
 #Big files
-/data/metabric.csv.gz
-/data/metabric.csv
-/data/expression_data_metabric.csv
-/data/expression_data.csv
-/data/expression_data.csv.gz
+/metabric/data/metabric.csv.gz
+/metabric/data/metabric.csv
+/metabric/data/expression_data_metabric.csv
+/metabric/data/expression_data.csv
+/metabric/data/expression_data.csv.gz
+/single_cell/data
