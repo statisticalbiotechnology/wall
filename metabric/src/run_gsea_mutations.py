@@ -1,14 +1,10 @@
 import gseapy
 import pandas as pd
-import time
 
 
 metabric_data = pd.read_csv('../data/GSEA_expression.csv', index_col=0)
 mutation_data = pd.read_csv('../data/mutations_per_patients.csv', index_col=0)
 #gene expression dataset and clinical_data
-
-#mutation_patients = mutation_data.index.tolist() # patient names as list
-#print(mutation_patients)
 
 
 mutation_patients = [item for item in mutation_data.index.tolist() if item in metabric_data.columns.tolist()]
@@ -34,7 +30,6 @@ def GSEA(mutation):
                          #processes = 4, #multiprocessing
                          verbose=True,
                          outdir=destination_path)
+#CDH1, MAP3K1, KMT2C, AKT1
 
-
-
-GSEA('BRCA2')
+GSEA('AKT1')
