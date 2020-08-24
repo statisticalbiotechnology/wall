@@ -4,16 +4,16 @@ import networkx as nx
 from networkx.readwrite import json_graph
 import json
 
-relation_file = "../data/ReactomePathwaysRelation.txt"
+relation_file = "../data/ReactomePathwaysRelationHuman.txt"
 pathway_name = "../data/ReactomePathwaysHuman.txt"
 
 def generate_tree(relation_file = relation_file):
     rel_df = pd.read_csv(relation_file, sep = "\t", header = None, index_col = 0, names=['id'])
-    real_names = pd.read_csv(pathway_name, sep='\t', index_col=0, names=['ID' 'Name'])
+    real_names = pd.read_csv(pathway_name, sep='\t', header = None, index_col=0, names=['ID', 'Name'])
 
-
-    cut = rel_df.index.str.contains('MMU') & rel_df['id'].str.contains('MMU')
+    cut = rel_df.index.str.contains('HSA') & rel_df['id'].str.contains('HSA')
     rel_df = rel_df.loc[cut]
+
 
     namelist = []
     for i in rel_df.index:
@@ -26,16 +26,20 @@ def generate_tree(relation_file = relation_file):
         if i in real_names.index:
             conversion = real_names.loc[i, 'Name']
             childlist.append(conversion)
+
     names = pd.DataFrame()
     names['parent'] = namelist
     names['child'] = childlist
+    print(names.values)
+
 
 
     G = nx.DiGraph()
     G.add_edges_from(names.values)
     roots = [n for n,d in G.in_degree() if d==0]
+    print(roots)
 
-    roots_df = pd.DataFrame(columns = [['parentId', 'id']])
+    roots_df = pd.DataFrame(columns= [['parentId', 'id']])
     roots_df['id'] = roots
     roots_df['parentId'] = 'Human'
 
@@ -50,10 +54,6 @@ rel_df = generate_tree()
 def default(o):
      if isinstance(o, np.integer): return int(o)
      raise TypeError
-
-
-
-
 
 
 def sunburst(in_df, outname = 'sun_tree.json'):

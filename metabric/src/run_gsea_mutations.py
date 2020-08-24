@@ -27,9 +27,9 @@ def GSEA(mutation):
                          min_size=1,
                          cls=classes,
                          no_plot = True,
-                         #processes = 4, #multiprocessing
+                         processes = 5, #multiprocessing
                          verbose=True,
                          outdir=destination_path)
-#CDH1, MAP3K1, KMT2C, AKT1
+#CDH1, MAP3K1, KMT2C
 
-GSEA('AKT1')
+GSEA('MAP3K1')

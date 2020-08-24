@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Xenobiotics</td><td>0.018516771483574116</td></tr>
+<tr><td>2</td><td>Interleukin-10 signaling</td><td>0.021217133991595347</td></tr>
+<tr><td>3</td><td>Chemokine receptors bind chemokines</td><td>0.028932455443084565</td></tr>
+<tr><td>4</td><td>Activation of the TFAP2 (AP-2) family of transcription factors</td><td>0.040792597595193165</td></tr>
+<tr><td>5</td><td>Phosphorylation of CD3 and TCR zeta chains</td><td>0.044845305936781064</td></tr>
+<tr><td>6</td><td>PD-1 signaling</td><td>0.06504015983605411</td></tr>
+<tr><td>7</td><td>POU5F1 (OCT4), SOX2, NANOG repress genes related to differentiation</td><td>0.06701641033496024</td></tr>
+<tr><td>8</td><td>Activation of IRF3/IRF7 mediated by TBK1/IKK epsilon</td><td>0.08822173336645164</td></tr>
+<tr><td>9</td><td>Modulation by Mtb of host immune system</td><td>0.09133011768200354</td></tr>
+<tr><td>10</td><td>IL-6-type cytokine receptor ligand interactions</td><td>0.09423714058604683</td></tr>
+<tr><td>11</td><td>IKK complex recruitment mediated by RIP1</td><td>0.09752867707541596</td></tr>
+<tr><td>12</td><td>Interleukin-6 family signaling</td><td>0.10299954137738106</td></tr>
+<tr><td>13</td><td>IRAK1 recruits IKK complex</td><td>0.10827167770256534</td></tr>
+<tr><td>14</td><td>Translocation of ZAP-70 to Immunological synapse</td><td>0.10878603246599794</td></tr>
+<tr><td>15</td><td>IRAK1 recruits IKK complex upon TLR7/8 or 9 stimulation</td><td>0.11789975593056959</td></tr>
+<tr><td>16</td><td>CYP2E1 reactions</td><td>0.12482287919730767</td></tr>
+<tr><td>17</td><td>RIPK1-mediated regulated necrosis</td><td>0.13062039217371246</td></tr>
+<tr><td>18</td><td>TICAM1,TRAF6-dependent induction of TAK1 complex</td><td>0.13093251199606806</td></tr>
+<tr><td>19</td><td>Prevention of phagosomal-lysosomal fusion</td><td>0.13160134018683037</td></tr>
+<tr><td>20</td><td>Biosynthesis of maresins</td><td>0.1318596656818579</td></tr>
+<tr><td>21</td><td>Regulation of innate immune responses to cytosolic DNA</td><td>0.13522116017610047</td></tr>
+<tr><td>22</td><td>Regulated Necrosis</td><td>0.13563535111718045</td></tr>
+<tr><td>23</td><td>TICAM1, RIP1-mediated IKK complex recruitment</td><td>0.13943128927131312</td></tr>
+<tr><td>24</td><td>Regulation of necroptotic cell death</td><td>0.13968086314783085</td></tr>
+<tr><td>25</td><td>Regulation of gene expression in early pancreatic precursor cells</td><td>0.14247626947083422</td></tr>
+<tr><td>26</td><td>Signaling by NOTCH1 HD Domain Mutants in Cancer</td><td>0.14427651114284834</td></tr>
+<tr><td>27</td><td>InlA-mediated entry of Listeria monocytogenes into host cells</td><td>0.14792994277134766</td></tr>
+<tr><td>28</td><td>Metallothioneins bind metals</td><td>0.15817786711526374</td></tr>
+<tr><td>29</td><td>Androgen biosynthesis</td><td>0.15899497052722777</td></tr>
+<tr><td>30</td><td>PTK6 Regulates RTKs and Their Effectors AKT1 and DOK1</td><td>0.1613788070269828</td></tr>
+<tr><td>31</td><td>Response to metal ions</td><td>0.16342453619972613</td></tr>
+<tr><td>32</td><td>MAP3K8 (TPL2)-dependent MAPK1/3 activation</td><td>0.16362154507636179</td></tr>
+<tr><td>33</td><td>Phase 0 - rapid depolarisation</td><td>0.16802523498571356</td></tr>
+<tr><td>34</td><td>Constitutive Signaling by NOTCH1 HD Domain Mutants</td><td>0.17287640962681697</td></tr>
+<tr><td>35</td><td>TICAM1-dependent activation of IRF3/IRF7</td><td>0.17292275304821633</td></tr>
+<tr><td>36</td><td>Regulation of TP53 Activity through Methylation</td><td>0.17471345426897328</td></tr>
+<tr><td>37</td><td>Muscle contraction</td><td>0.1771230808832738</td></tr>
+<tr><td>38</td><td>Peptide ligand-binding receptors</td><td>0.17770038585947837</td></tr>
+<tr><td>39</td><td>Cardiac conduction</td><td>0.18059638687573384</td></tr>
+<tr><td>40</td><td>Membrane binding and targetting of GAG proteins</td><td>0.18418846249766754</td></tr>
+<tr><td>41</td><td>Signaling by FGFR4</td><td>0.18608137132341754</td></tr>
+<tr><td>42</td><td>Activated NOTCH1 Transmits Signal to the Nucleus</td><td>0.18645727570691864</td></tr>
+<tr><td>43</td><td>Mineralocorticoid biosynthesis</td><td>0.18690366216232626</td></tr>
+<tr><td>44</td><td>Polo-like kinase mediated events</td><td>0.1889779521246704</td></tr>
+<tr><td>45</td><td>Signaling by FGFR3</td><td>0.1891509738176728</td></tr>
+<tr><td>46</td><td>Spry regulation of FGF signaling</td><td>0.18998457768788715</td></tr>
+<tr><td>47</td><td>Interferon gamma signaling</td><td>0.1944787050419702</td></tr>
+<tr><td>48</td><td>RAS signaling downstream of NF1 loss-of-function variants</td><td>0.2061019537074486</td></tr>
+<tr><td>49</td><td>Myoclonic epilepsy of Lafora</td><td>0.22006277196579183</td></tr>
+<tr><td>50</td><td>Kinesins</td><td>0.22777254493969085</td></tr>
+</tbody> 
+</table>

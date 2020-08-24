@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Cap-dependent Translation Initiation</td><td>1e-05</td></tr>
+<tr><td>2</td><td>Peptide chain elongation</td><td>1e-05</td></tr>
+<tr><td>3</td><td>rRNA processing in the nucleus and cytosol</td><td>1e-05</td></tr>
+<tr><td>4</td><td>rRNA processing</td><td>1e-05</td></tr>
+<tr><td>5</td><td>Viral mRNA Translation</td><td>1e-05</td></tr>
+<tr><td>6</td><td>Translation</td><td>1e-05</td></tr>
+<tr><td>7</td><td>Eukaryotic Translation Elongation</td><td>1e-05</td></tr>
+<tr><td>8</td><td>Selenoamino acid metabolism</td><td>1e-05</td></tr>
+<tr><td>9</td><td>SRP-dependent cotranslational protein targeting to membrane</td><td>1e-05</td></tr>
+<tr><td>10</td><td>Response of EIF2AK4 (GCN2) to amino acid deficiency</td><td>1e-05</td></tr>
+<tr><td>11</td><td>Respiratory electron transport, ATP synthesis by chemiosmotic coupling, and heat production by uncoupling proteins.</td><td>1e-05</td></tr>
+<tr><td>12</td><td>Selenocysteine synthesis</td><td>1e-05</td></tr>
+<tr><td>13</td><td>Nonsense Mediated Decay (NMD) independent of the Exon Junction Complex (EJC)</td><td>1e-05</td></tr>
+<tr><td>14</td><td>Mitochondrial translation termination</td><td>1e-05</td></tr>
+<tr><td>15</td><td>Mitochondrial translation elongation</td><td>1e-05</td></tr>
+<tr><td>16</td><td>Major pathway of rRNA processing in the nucleolus and cytosol</td><td>1e-05</td></tr>
+<tr><td>17</td><td>L13a-mediated translational silencing of Ceruloplasmin expression</td><td>1e-05</td></tr>
+<tr><td>18</td><td>GTP hydrolysis and joining of the 60S ribosomal subunit</td><td>1e-05</td></tr>
+<tr><td>19</td><td>Formation of a pool of free 40S subunits</td><td>1e-05</td></tr>
+<tr><td>20</td><td>Eukaryotic Translation Termination</td><td>1e-05</td></tr>
+<tr><td>21</td><td>Eukaryotic Translation Initiation</td><td>1e-05</td></tr>
+<tr><td>22</td><td>Mitochondrial translation</td><td>3.991519304316457e-05</td></tr>
+<tr><td>23</td><td>Respiratory electron transport</td><td>4.1650636218954353e-05</td></tr>
+<tr><td>24</td><td>The citric acid (TCA) cycle and respiratory electron transport</td><td>4.354384695617953e-05</td></tr>
+<tr><td>25</td><td>Influenza Viral RNA Transcription and Replication</td><td>7.663717064287607e-05</td></tr>
+<tr><td>26</td><td>Cristae formation</td><td>0.0001419206863756964</td></tr>
+<tr><td>27</td><td>Activation of the mRNA upon binding of the cap-binding complex and eIFs, and subsequent binding to 43S</td><td>0.00014737917431322312</td></tr>
+<tr><td>28</td><td>Formation of the ternary complex, and subsequently, the 43S complex</td><td>0.0001710651130421341</td></tr>
+<tr><td>29</td><td>Mitochondrial translation initiation</td><td>0.00019819957924881705</td></tr>
+<tr><td>30</td><td>Metabolism of RNA</td><td>0.0007983038608632924</td></tr>
+<tr><td>31</td><td>Influenza Life Cycle</td><td>0.0010477738173830702</td></tr>
+<tr><td>32</td><td>Regulation of expression of SLITs and ROBOs</td><td>0.0010506708878458798</td></tr>
+<tr><td>33</td><td>Formation of ATP by chemiosmotic coupling</td><td>0.0011901984834689092</td></tr>
+<tr><td>34</td><td>Influenza Infection</td><td>0.0012864096500768492</td></tr>
+<tr><td>35</td><td>Nonsense-Mediated Decay (NMD)</td><td>0.0013242452280202853</td></tr>
+<tr><td>36</td><td>Ribosomal scanning and start codon recognition</td><td>0.001410336820858483</td></tr>
+<tr><td>37</td><td>Nonsense Mediated Decay (NMD) enhanced by the Exon Junction Complex (EJC)</td><td>0.0016829108418199136</td></tr>
+<tr><td>38</td><td>Interconversion of nucleotide di- and triphosphates</td><td>0.0028738938991078526</td></tr>
+<tr><td>39</td><td>Antigen activates B Cell Receptor (BCR) leading to generation of second messengers</td><td>0.003115101192417618</td></tr>
+<tr><td>40</td><td>Mitochondrial protein import</td><td>0.003856421727862672</td></tr>
+<tr><td>41</td><td>Interleukin-2 family signaling</td><td>0.004153468256556828</td></tr>
+<tr><td>42</td><td>Signaling by ROBO receptors</td><td>0.004286891732835879</td></tr>
+<tr><td>43</td><td>Translation initiation complex formation</td><td>0.0046729982099314666</td></tr>
+<tr><td>44</td><td>Complex I biogenesis</td><td>0.007321586838203335</td></tr>
+<tr><td>45</td><td>Metabolism</td><td>0.007440934591488545</td></tr>
+<tr><td>46</td><td>MET activates PTK2 signaling</td><td>0.010428751346005</td></tr>
+<tr><td>47</td><td>Metabolism of amino acids and derivatives</td><td>0.011410423184605981</td></tr>
+<tr><td>48</td><td>Interleukin-3, Interleukin-5 and GM-CSF signaling</td><td>0.012757081073710244</td></tr>
+<tr><td>49</td><td>FCGR activation</td><td>0.014166293517899156</td></tr>
+<tr><td>50</td><td>Interleukin-35 Signalling</td><td>0.01419101654323582</td></tr>
+</tbody> 
+</table>

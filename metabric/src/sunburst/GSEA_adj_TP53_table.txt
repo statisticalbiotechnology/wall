@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Metabolism</td><td>1e-05</td></tr>
+<tr><td>2</td><td>Immune System</td><td>0.08228010521588504</td></tr>
+<tr><td>3</td><td>Metabolism of proteins</td><td>0.11986484463548683</td></tr>
+<tr><td>4</td><td>Peroxisomal protein import</td><td>0.1784767220547037</td></tr>
+<tr><td>5</td><td>Fatty acid metabolism</td><td>0.1812932688662464</td></tr>
+<tr><td>6</td><td>Protein localization</td><td>0.18171948023747603</td></tr>
+<tr><td>7</td><td>Developmental Biology</td><td>0.18784243279656124</td></tr>
+<tr><td>8</td><td>Vesicle-mediated transport</td><td>0.1934090374457347</td></tr>
+<tr><td>9</td><td>Innate Immune System</td><td>0.20326233399627894</td></tr>
+<tr><td>10</td><td>Post-translational protein modification</td><td>0.20624879707448512</td></tr>
+<tr><td>11</td><td>Transport of small molecules</td><td>0.22986188123802806</td></tr>
+<tr><td>12</td><td>Peroxisomal lipid metabolism</td><td>0.23511674510055516</td></tr>
+<tr><td>13</td><td>Biological oxidations</td><td>0.23647911721306217</td></tr>
+<tr><td>14</td><td>Cellular responses to stress</td><td>0.23688543872030107</td></tr>
+<tr><td>15</td><td>Metabolism of lipids</td><td>0.23861230512606663</td></tr>
+<tr><td>16</td><td>Neutrophil degranulation</td><td>0.24436175445349756</td></tr>
+<tr><td>17</td><td>Triglyceride metabolism</td><td>0.24640497117561336</td></tr>
+<tr><td>18</td><td>Membrane Trafficking</td><td>0.2468403156476551</td></tr>
+<tr><td>19</td><td>Cell Cycle</td><td>0.2993776865336498</td></tr>
+<tr><td>20</td><td>Organelle biogenesis and maintenance</td><td>0.3017899531661</td></tr>
+<tr><td>21</td><td>Cholesterol biosynthesis</td><td>0.3090365292200155</td></tr>
+<tr><td>22</td><td>Neuronal System</td><td>0.34438397661373327</td></tr>
+<tr><td>23</td><td>Pyruvate metabolism and Citric Acid (TCA) cycle</td><td>0.3478924744979791</td></tr>
+<tr><td>24</td><td>Hemostasis</td><td>0.3524331173413743</td></tr>
+<tr><td>25</td><td>The citric acid (TCA) cycle and respiratory electron transport</td><td>0.3552727506021918</td></tr>
+<tr><td>26</td><td>Gap junction assembly</td><td>0.39020929670188664</td></tr>
+<tr><td>27</td><td>Triglyceride catabolism</td><td>0.4383306126425393</td></tr>
+<tr><td>28</td><td>Branched-chain amino acid catabolism</td><td>0.4682670679334566</td></tr>
+<tr><td>29</td><td>Gap junction trafficking and regulation</td><td>0.4717773625457112</td></tr>
+<tr><td>30</td><td>Transmission across Chemical Synapses</td><td>0.4742642678422495</td></tr>
+<tr><td>31</td><td>Interleukin-6 signaling</td><td>0.4743738061287632</td></tr>
+<tr><td>32</td><td>Translocation of SLC2A4 (GLUT4) to the plasma membrane</td><td>0.4765812678656715</td></tr>
+<tr><td>33</td><td>Metabolism of amino acids and derivatives</td><td>0.4774716976551839</td></tr>
+<tr><td>34</td><td>Citric acid cycle (TCA cycle)</td><td>0.486488740617181</td></tr>
+<tr><td>35</td><td>Abacavir metabolism</td><td>0.4872723606668561</td></tr>
+<tr><td>36</td><td>Cilium Assembly</td><td>0.4876698752054651</td></tr>
+<tr><td>37</td><td>Mitochondrial Fatty Acid Beta-Oxidation</td><td>0.4952581147940026</td></tr>
+<tr><td>38</td><td>Class I peroxisomal membrane protein import</td><td>0.5060948226085841</td></tr>
+<tr><td>39</td><td>AMPK inhibits chREBP transcriptional activation activity</td><td>0.5842278164084796</td></tr>
+<tr><td>40</td><td>Cellular responses to external stimuli</td><td>0.5961870431680544</td></tr>
+<tr><td>41</td><td>Metabolism of carbohydrates</td><td>0.6015299685024456</td></tr>
+<tr><td>42</td><td>TRAF6 mediated NF-kB activation</td><td>0.6115336889559311</td></tr>
+<tr><td>43</td><td>alpha-linolenic (omega3) and linoleic (omega6) acid metabolism</td><td>0.6178253958070472</td></tr>
+<tr><td>44</td><td>M Phase</td><td>0.6197603480756106</td></tr>
+<tr><td>45</td><td>alpha-linolenic acid (ALA) metabolism</td><td>0.6234698787451081</td></tr>
+<tr><td>46</td><td>mitochondrial fatty acid beta-oxidation of unsaturated fatty acids</td><td>0.6390929406984452</td></tr>
+<tr><td>47</td><td>ROBO receptors bind AKAP5</td><td>0.6433539133129217</td></tr>
+<tr><td>48</td><td>Cargo trafficking to the periciliary membrane</td><td>0.6447527343019964</td></tr>
+<tr><td>49</td><td>TAK1 activates NFkB by phosphorylation and activation of IKKs complex</td><td>0.6596792198627061</td></tr>
+<tr><td>50</td><td>Gap junction trafficking</td><td>0.6609894872172261</td></tr>
+</tbody> 
+</table>

@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>Gene expression (Transcription)</td><td>0.08431577525243016</td></tr>
+<tr><td>2</td><td>RNA Polymerase II Transcription</td><td>0.10712723499538214</td></tr>
+<tr><td>3</td><td>Generic Transcription Pathway</td><td>0.12358613632890443</td></tr>
+<tr><td>4</td><td>Immune System</td><td>0.16632152926506774</td></tr>
+<tr><td>5</td><td>Cytokine Signaling in Immune system</td><td>0.21598698592060878</td></tr>
+<tr><td>6</td><td>Membrane Trafficking</td><td>0.25121480982744604</td></tr>
+<tr><td>7</td><td>Interferon alpha/beta signaling</td><td>0.2565567339444665</td></tr>
+<tr><td>8</td><td>Adaptive Immune System</td><td>0.26169240616507683</td></tr>
+<tr><td>9</td><td>Vesicle-mediated transport</td><td>0.26218741071646096</td></tr>
+<tr><td>10</td><td>Interferon Signaling</td><td>0.26616578062943713</td></tr>
+<tr><td>11</td><td>Triglyceride metabolism</td><td>0.27917062383096697</td></tr>
+<tr><td>12</td><td>SUMOylation of transcription cofactors</td><td>0.2805100791866341</td></tr>
+<tr><td>13</td><td>Metabolism of RNA</td><td>0.2879184806374841</td></tr>
+<tr><td>14</td><td>Cytosolic sensors of pathogen-associated DNA</td><td>0.2883676514341105</td></tr>
+<tr><td>15</td><td>RAF activation</td><td>0.2885488295705649</td></tr>
+<tr><td>16</td><td>Negative regulators of DDX58/IFIH1 signaling</td><td>0.28884890585906725</td></tr>
+<tr><td>17</td><td>ISG15 antiviral mechanism</td><td>0.2911676771793137</td></tr>
+<tr><td>18</td><td>Transcriptional Regulation by TP53</td><td>0.3016887739169145</td></tr>
+<tr><td>19</td><td>Downregulation of ERBB2:ERBB3 signaling</td><td>0.30472193224046834</td></tr>
+<tr><td>20</td><td>TRAF3-dependent IRF activation pathway</td><td>0.30622219060000755</td></tr>
+<tr><td>21</td><td>TICAM1-dependent activation of IRF3/IRF7</td><td>0.30929534385651736</td></tr>
+<tr><td>22</td><td>Regulation of TP53 Activity</td><td>0.3157434294600736</td></tr>
+<tr><td>23</td><td>Metabolism of porphyrins</td><td>0.3170391942559877</td></tr>
+<tr><td>24</td><td>Regulation of innate immune responses to cytosolic DNA</td><td>0.3246349848988544</td></tr>
+<tr><td>25</td><td>Antiviral mechanism by IFN-stimulated genes</td><td>0.3280230160505503</td></tr>
+<tr><td>26</td><td>TICAM1,TRAF6-dependent induction of TAK1 complex</td><td>0.3329202610789106</td></tr>
+<tr><td>27</td><td>TNFR1-induced NFkappaB signaling pathway</td><td>0.335867463177346</td></tr>
+<tr><td>28</td><td>TGF-beta receptor signaling in EMT (epithelial to mesenchymal transition)</td><td>0.3510407276899123</td></tr>
+<tr><td>29</td><td>IRAK2 mediated activation of TAK1 complex</td><td>0.3598499753543595</td></tr>
+<tr><td>30</td><td>STING mediated induction of host immune responses</td><td>0.3620360874088759</td></tr>
+<tr><td>31</td><td>Negative regulation of MAPK pathway</td><td>0.36871492865920463</td></tr>
+<tr><td>32</td><td>Triglyceride catabolism</td><td>0.38097543176427867</td></tr>
+<tr><td>33</td><td>Intra-Golgi traffic</td><td>0.4038120952560989</td></tr>
+<tr><td>34</td><td>TNF signaling</td><td>0.4061306092210378</td></tr>
+<tr><td>35</td><td>Alpha-protein kinase 1 signaling pathway</td><td>0.4121637896939053</td></tr>
+<tr><td>36</td><td>Signaling by WNT</td><td>0.4136428355512505</td></tr>
+<tr><td>37</td><td>DDX58/IFIH1-mediated induction of interferon-alpha/beta</td><td>0.4168048323665795</td></tr>
+<tr><td>38</td><td>Purine ribonucleoside monophosphate biosynthesis</td><td>0.4437494459660141</td></tr>
+<tr><td>39</td><td>Estrogen biosynthesis</td><td>0.4472307522675902</td></tr>
+<tr><td>40</td><td>Antigen Presentation: Folding, assembly and peptide loading of class I MHC</td><td>0.44878877760994057</td></tr>
+<tr><td>41</td><td>RORA activates gene expression</td><td>0.4509821466143682</td></tr>
+<tr><td>42</td><td>Peptide chain elongation</td><td>0.4530240403888277</td></tr>
+<tr><td>43</td><td>Infectious disease</td><td>0.4573292049732271</td></tr>
+<tr><td>44</td><td>RNA Polymerase III Transcription</td><td>0.4574804563639277</td></tr>
+<tr><td>45</td><td>RNA Polymerase III Abortive And Retractive Initiation</td><td>0.4601936907705759</td></tr>
+<tr><td>46</td><td>Mitochondrial tRNA aminoacylation</td><td>0.4607603903678639</td></tr>
+<tr><td>47</td><td>Loss of function of MECP2 in Rett syndrome</td><td>0.4674598300354785</td></tr>
+<tr><td>48</td><td>Nonsense Mediated Decay (NMD) enhanced by the Exon Junction Complex (EJC)</td><td>0.46895837439914717</td></tr>
+<tr><td>49</td><td>IRAK2 mediated activation of TAK1 complex upon TLR7/8 or 9 stimulation</td><td>0.4695380672292088</td></tr>
+<tr><td>50</td><td>Deactivation of the beta-catenin transactivating complex</td><td>0.4699069521999173</td></tr>
+</tbody> 
+</table>

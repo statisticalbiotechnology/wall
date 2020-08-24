@@ -64,19 +64,18 @@
 		//<p><span id="value">150</span>%</p>
 </div>
 <div id="table">
-	<table>
-		<thead>
-			<tr>
-				<th>Rank</th>
-				<th>Pathway</th>
-				<th>-log10(q-value)</th>
-			</tr>
-		</thead>
-		<tbody id="tableBody">
-
-		</tbody>
-	</table>
- </div>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Pathway</th>
+<th>-log10(q-value)</th>
+</tr>
+</thead>
+<tbody id="tableBody">
+</tbody>
+</table>
+</div>
 </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -84,6 +83,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <select content-type="text/plain" id="json_sources" name="json_sources">
 <option selected="" value="">---Select data---</option>
+<!--
 <option value="adj_1.json">adj IntClust 1</option>
 <option value="adj_2.json">adj IntClust 2</option>
 <option value="adj_3.json">adj IntClust 3</option>
@@ -95,6 +95,7 @@
 <option value="adj_8.json">adj IntClust 8</option>
 <option value="adj_9.json">adj IntClust 9</option>
 <option value="adj_10.json">adj IntClust 10</option>
+-->
 <option value="adj_ER.json">ERStatus</option>
 <option value="adj_PR.json">PRStatus</option>
 <option value="adj_HER2.json">HER2Status</option>
@@ -106,6 +107,7 @@
 <option value="adj_Basal.json">Basal Status</option>
 <option value="adj_claudin-low.json">claudin-low Status</option>
 <option value="adj_NC.json">NC Status</option>
+<!--
 <option value="GSEA_adj_1.json">GSEA IntClust 1 Status</option>
 <option value="GSEA_adj_2.json">GSEA IntClust 2 Status</option>
 <option value="GSEA_adj_3.json">GSEA IntClust 3 Status</option>
@@ -117,18 +119,20 @@
 <option value="GSEA_adj_8.json">GSEA IntClust 8 Status</option>
 <option value="GSEA_adj_9.json">GSEA IntClust 9 Status</option>
 <option value="GSEA_adj_10.json">GSEA IntClust 10 Status</option>
+-->
 <option value="GSEA_adj_TP53.json">TP53 Status</option>
 <option value="GSEA_adj_BRCA1.json">BRCA1 Status</option>
-
+<option value="GSEA_adj_BRCA2.json">BRCA2 Status</option>
+<option value="GSEA_adj_RB1.json">RB1 Status</option>
+<option value="GSEA_adj_PIK3CA.json">PIK3CA Status</option>
+<option value="GSEA_adj_GATA3.json">GATA3 Status</option>
 </select>​
 	<div class="hidden" id="factbox">
-	</div>
-
-	<div class="hidden" id="inputThreshold">
-		<input type="number" id="inputfield" clientIDMode="static" value=color_start>
-		<button onclick="ChangeThreshold()" type="button" name="Change Threshold">Change color threshold</button>
-	</div>
-
+</div>
+<div class="hidden" id="inputThreshold">
+<input clientidmode="static" id="inputfield" type="number" value="3"/>
+<button name="Change Threshold" onclick="ChangeThreshold()" type="button">Change color threshold</button>
+</div>
 <script>
 		var color_start = 3;
 
@@ -157,8 +161,8 @@
 			.range([0, radius]);
 
 		var color = d3.scaleLinear()
-			.domain([0.0, 3.0, 50])
-			.range(["white", 'white', 'red']);
+			.domain([0, 3, 20])
+			.range(['#aeeba9', '#ffffbf', '#fc8d59']);
 
 
 		var partition = d3.partition();
@@ -221,13 +225,17 @@
 
 				root.sum(function(d) {return d.children ? 0 : d.ngenes; });
 
-				var color_threshold = root.data.max_val
+				var color_threshold = root.data.max_val;
+				var color_zero = root.data.min_val;
+
 				var color_start = document.getElementById("inputfield").value;
 
 
+				color_start = d3.select("#inputfield").property("value")
 				var color = d3.scaleLinear()
-					.domain([0.0, color_start, color_threshold])
-					.range(["white", 'white', 'red']);
+					.domain([0, color_start, color_threshold])
+					.range(['#aeeba9', '#ffffbf', '#fc8d59']);
+
 
 				svg.selectAll("path")
 					.data(partition(root).descendants())
@@ -372,6 +380,6 @@
 
 		d3.select(self.frameElement).style("height", height + "px");
 	</script>
-<!-- Transition: <input type="number" id="transitionValue" value="-1.5"> <button onclick="draw()">change</button>
--->
+
+
 </body></html>

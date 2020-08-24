@@ -1,0 +1,55 @@
+<table> 
+<tbody>
+<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>
+<tr><td>1</td><td>The citric acid (TCA) cycle and respiratory electron transport</td><td>0.0013309382462707172</td></tr>
+<tr><td>2</td><td>Interferon alpha/beta signaling</td><td>0.0013883752765397037</td></tr>
+<tr><td>3</td><td>Respiratory electron transport, ATP synthesis by chemiosmotic coupling, and heat production by uncoupling proteins.</td><td>0.0026618764925414318</td></tr>
+<tr><td>4</td><td>Formation of ATP by chemiosmotic coupling</td><td>0.007320160354488934</td></tr>
+<tr><td>5</td><td>Respiratory electron transport</td><td>0.00887292164180477</td></tr>
+<tr><td>6</td><td>Formation of TC-NER Pre-Incision Complex</td><td>0.016237446604502728</td></tr>
+<tr><td>7</td><td>Cristae formation</td><td>0.023513242350782643</td></tr>
+<tr><td>8</td><td>Chk1/Chk2(Cds1) mediated inactivation of Cyclin B:Cdk1 complex</td><td>0.02680889896059584</td></tr>
+<tr><td>9</td><td>Molecules associated with elastic fibres</td><td>0.03843084186106689</td></tr>
+<tr><td>10</td><td>Glycogen synthesis</td><td>0.057821872699094404</td></tr>
+<tr><td>11</td><td>Keratan sulfate/keratin metabolism</td><td>0.07578518955235601</td></tr>
+<tr><td>12</td><td>mRNA Splicing</td><td>0.07817043966430003</td></tr>
+<tr><td>13</td><td>Cargo concentration in the ER</td><td>0.07899118491616694</td></tr>
+<tr><td>14</td><td>Cooperation of Prefoldin and TriC/CCT  in actin and tubulin folding</td><td>0.07900069161792603</td></tr>
+<tr><td>15</td><td>Mitochondrial translation</td><td>0.0801890293378106</td></tr>
+<tr><td>16</td><td>mRNA Splicing - Major Pathway</td><td>0.08069688735283492</td></tr>
+<tr><td>17</td><td>EPHB-mediated forward signaling</td><td>0.0819266431593307</td></tr>
+<tr><td>18</td><td>Negative regulators of DDX58/IFIH1 signaling</td><td>0.08260832895411226</td></tr>
+<tr><td>19</td><td>Metallothioneins bind metals</td><td>0.08282531086407757</td></tr>
+<tr><td>20</td><td>Chaperone Mediated Autophagy</td><td>0.08312314319890739</td></tr>
+<tr><td>21</td><td>Elastic fibre formation</td><td>0.08611170453371526</td></tr>
+<tr><td>22</td><td>Neddylation</td><td>0.08651098600759646</td></tr>
+<tr><td>23</td><td>Mitochondrial translation initiation</td><td>0.08936299653531943</td></tr>
+<tr><td>24</td><td>Cyclin E associated events during G1/S transition</td><td>0.09479910145028231</td></tr>
+<tr><td>25</td><td>Nephrin family interactions</td><td>0.10301462026135333</td></tr>
+<tr><td>26</td><td>Metabolism of proteins</td><td>0.10404265532054176</td></tr>
+<tr><td>27</td><td>DCC mediated attractive signaling</td><td>0.10608686937982827</td></tr>
+<tr><td>28</td><td>TP53 Regulates Metabolic Genes</td><td>0.10614232514008952</td></tr>
+<tr><td>29</td><td>Prefoldin mediated transfer of substrate  to CCT/TriC</td><td>0.10625323666061205</td></tr>
+<tr><td>30</td><td>MAP kinase activation</td><td>0.10734528855498805</td></tr>
+<tr><td>31</td><td>TRAF3-dependent IRF activation pathway</td><td>0.10933455302750149</td></tr>
+<tr><td>32</td><td>Mitochondrial translation termination</td><td>0.10977775831277348</td></tr>
+<tr><td>33</td><td>Complex I biogenesis</td><td>0.11012067315883353</td></tr>
+<tr><td>34</td><td>Cellular responses to stress</td><td>0.11270041601485897</td></tr>
+<tr><td>35</td><td>Processing of Capped Intron-Containing Pre-mRNA</td><td>0.11292179183203097</td></tr>
+<tr><td>36</td><td>RHO GTPases activate IQGAPs</td><td>0.11304908800899438</td></tr>
+<tr><td>37</td><td>Folding of actin by CCT/TriC</td><td>0.11396158733692995</td></tr>
+<tr><td>38</td><td>Cellular responses to external stimuli</td><td>0.11514163432853632</td></tr>
+<tr><td>39</td><td>Formation of tubulin folding intermediates by CCT/TriC</td><td>0.11530469879886779</td></tr>
+<tr><td>40</td><td>RHO GTPases Activate WASPs and WAVEs</td><td>0.11568924756045444</td></tr>
+<tr><td>41</td><td>Regulation of gene expression by Hypoxia-inducible Factor</td><td>0.1157916274255522</td></tr>
+<tr><td>42</td><td>MAPK targets/ Nuclear events mediated by MAP kinases</td><td>0.1162613703360007</td></tr>
+<tr><td>43</td><td>N-Glycan antennae elongation</td><td>0.11693243163664142</td></tr>
+<tr><td>44</td><td>Signaling by Hippo</td><td>0.11820833108325428</td></tr>
+<tr><td>45</td><td>Mitochondrial translation elongation</td><td>0.11823767609437409</td></tr>
+<tr><td>46</td><td>Cellular response to hypoxia</td><td>0.11871229746597958</td></tr>
+<tr><td>47</td><td>Cyclin A:Cdk2-associated events at S phase entry</td><td>0.12002105340814581</td></tr>
+<tr><td>48</td><td>Transcriptional regulation by RUNX2</td><td>0.12063140286653662</td></tr>
+<tr><td>49</td><td>Disease</td><td>0.13063448221548435</td></tr>
+<tr><td>50</td><td>Phase II - Conjugation of compounds</td><td>0.131168211845233</td></tr>
+</tbody> 
+</table>
