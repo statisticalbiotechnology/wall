@@ -136,3 +136,11 @@ dmypy.json
 /metabric/data/expression_data.csv
 /metabric/data/expression_data.csv.gz
 /single_cell/src/.Rproj.user/
+metabric/data/GSEA_clinical.csv
+doc/paper.fdb_latexmk
+metabric/data/GSEA_expression.csv
+metabric/data/GSEA_metabric.csv.gz
+doc/paper.synctex.gz
+doc/paper.fls
+doc/paper.fff
+metabric/data/rstudio-server-latest-amd64.deb
