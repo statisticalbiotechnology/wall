@@ -135,4 +135,4 @@ dmypy.json
 /metabric/data/expression_data_metabric.csv
 /metabric/data/expression_data.csv
 /metabric/data/expression_data.csv.gz
-/single_cell/data
+/single_cell/src/.Rproj.user/
