@@ -5,8 +5,9 @@ The entire pipeline can be executed via a shellscript. Depending on how much of 
 However, to make the shell script executable, run:
 
 ```bash
-chmod +x single_cell_pipeline #makes the file executable
-#to run the file:
+#make the file executable
+chmod +x single_cell_pipeline
+#Run the file:
 ./single_cell_pipeline
 
 ```
