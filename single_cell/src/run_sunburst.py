@@ -4,50 +4,29 @@ import networkx as nx
 from networkx.readwrite import json_graph
 import json
 from sunburst.run_server import run_sunburst
-import bs4
-import sys
-import argparse
-import re
-
-parser = argparse.ArgumentParser(
-    description="""To use this tool you simply need to provide the path to the csv file for the -log10(q-values).
-    Currently the script assumes that every column of the csv file is being used and every column name is
-    ~ cluster 1 q-value""",
-    epilog = """Example use: python sun_sunburst.py --csv ../exp/data.csv""")
-parser.add_argument('--csv', type=argparse.FileType('r'), default=sys.argv[1])
-args= parser.parse_args()
 
 
+relation_file = "../../metabric/data/ReactomePathwaysRelationHuman.txt"
+pathway_name = "../../metabric/data/ReactomePathwaysHuman.txt"
 
 
-relation_file = "../data/ReactomePathwaysRelationHuman.txt"
-pathway_name = "../data/ReactomePathwaysHuman.txt"
-
-def generate_tree(relation_file = relation_file):
+def generate_tree():
     rel_df = pd.read_csv(relation_file, sep = "\t", header = None, index_col = 0, names=['id'])
     real_names = pd.read_csv(pathway_name, sep='\t', header = None, index_col=0, names=['pathway', 'name', 'organism'])
-
-
     cut = rel_df.index.str.contains('HSA') & rel_df['id'].str.contains('HSA')
     rel_df = rel_df.loc[cut]
 
-    namelist = []
-    for i in rel_df.index:
-        conversion = real_names.loc[i, 'name']
-        namelist.append(conversion)
+    namelist = [real_names.loc[i, 'name'] for i in rel_df.index]
+    childlist = [real_names.loc[i, 'name'] for i in rel_df["id"]]
 
-    childlist = []
-    for i in rel_df['id']:
-        conversion = real_names.loc[i, 'name']
-        childlist.append(conversion)
     names = pd.DataFrame()
     names['parent'] = namelist
     names['child'] = childlist
 
-
     G = nx.DiGraph()
     G.add_edges_from(names.values)
     roots = [n for n,d in G.in_degree() if d==0]
+    print(roots)
 
     roots_df = pd.DataFrame(columns = ['parentId', 'id'])
 
@@ -56,15 +35,35 @@ def generate_tree(relation_file = relation_file):
 
     roots_df = pd.DataFrame(roots_df.values, columns = ['parentId', 'id'])
     rel_df = pd.DataFrame(names.values, columns = ['parentId', 'id'])
-
     tree = roots_df.append(rel_df)
     return tree
 
 rel_df = generate_tree()
+print("rel_df")
+print(rel_df)
 
 def default(o):
      if isinstance(o, np.integer): return int(o)
      raise TypeError
+
+def fill_missing_pathways(sub_rel_df, in_df, pathways, max_val, highest_rank):
+    for parent_pathway in sub_rel_df["parentId"]:
+        if parent_pathway in pathways:
+            pass
+        elif parent_pathway in in_df.index:
+            pass
+        else:
+            print(parent_pathway)
+            appendNode = pd.DataFrame([[0, len(reactome_ngenes.loc[parent_pathway, "genes"]), "Human", max_val, highest_rank]],
+                                            columns = ["value", "ngenes", "Organism", "max_val", "rank"]).xs(0)
+            appendNode.name = parent_pathway
+            in_df = in_df.append(appendNode)
+
+    pathways = in_df.index
+    subset_vec = [x in pathways for x in rel_df.iloc[:,0]] and [x in pathways for x in rel_df.iloc[:,1]]
+    sub_rel_df = rel_df[subset_vec]
+
+    return in_df, pathways, subset_vec, sub_rel_df
 
 def sunburst(in_df, outname = 'sun_tree.json'):
     max_val = in_df['value'].max()
@@ -75,38 +74,53 @@ def sunburst(in_df, outname = 'sun_tree.json'):
     homoNode.name = 'Human'
 
     in_df = in_df.append(homoNode)
+    print(in_df)
     topDict = in_df.to_dict()
 
     pathways = in_df.index
-
-    n_path = len(pathways)
-
     subset_vec = [x in pathways for x in rel_df.iloc[:,0]] and [x in pathways for x in rel_df.iloc[:,1]]
     sub_rel_df = rel_df[subset_vec]
 
-    G = nx.DiGraph()
 
-    G.add_nodes_from(pathways)
+    in_df, pathways, subset_vec, sub_rel_df = fill_missing_pathways(sub_rel_df, in_df, pathways, max_val, highest_rank)
+    in_df, pathways, subset_vec, sub_rel_df = fill_missing_pathways(sub_rel_df, in_df, pathways, max_val, highest_rank)
+
+
+
+    #print("sub rel df 1")
+    #print(sub_rel_df)
+    G = nx.DiGraph()
+    print(f"\nNumber of pathways: {len(pathways)}")
+    print(f"Number of pathways present: {len(sub_rel_df.values)}\n")
+    #print(sub_rel_df)
+    print(in_df)
+    print(in_df.loc["PKB-mediated events"])
+
+
+    G.add_nodes_from(in_df.index.tolist())
     G.add_edges_from(sub_rel_df.values)
 
     tree = nx.algorithms.dag.dag_to_branching(G)
     secondDict = nx.get_node_attributes(tree,'source')
-
+    #print(secondDict)
 
     thirdDict = {'value':{}, 'ngenes':{}, 'max_val': {}, 'rank': {}}
-
     for key, value in secondDict.items():
+        if value in list(topDict["value"].keys()):
             thirdDict['value'].update({key : topDict['value'][value]})
             thirdDict['ngenes'].update({key : topDict['ngenes'][value]})
             thirdDict['max_val'].update({key : topDict['max_val'][value]})
             thirdDict['rank'].update({key : topDict['rank'][value]})
+        else:
+            #pass
+            print(value)
+
 
     nx.set_node_attributes(tree, thirdDict['value'], name = 'value')
     nx.set_node_attributes(tree, thirdDict['ngenes'], name = 'ngenes')
     nx.set_node_attributes(tree, thirdDict['max_val'], name = 'max_val')
     nx.set_node_attributes(tree, thirdDict['rank'], name = 'rank')
     root = [v for v, d in tree.in_degree() if d == 0][0]
-
     out_json = json_graph.tree_data(tree, root)
 
     with open(outname, 'w') as outfile:
@@ -130,50 +144,23 @@ def read_reactome(file_name, gene_name_start = "ENSG0"):
     out_df = pd.concat([genes_df,names_df], axis=1)
     out_df.columns = ['genes', 'pathway_name']
     out_df.index = out_df.pathway_name
-
     return out_df
 
-
-
-def make_html_table_txt_file(df, outname, threshold=30):
-    series = df.sort_values(by='rank', ascending=True)
-    series = series.iloc[:threshold]
-    full_table = []
-    full_table.append(series.index.tolist())
-    series['value'] = np.power(10, -1*(series['value']))
-    full_table.append(series['value'].tolist())
-    full_table.append(series['rank'].tolist())
-    tablefile = open(outname, 'w')
-    tablefile.write('<table> \n<tbody>\n')
-    tablefile.write('<tr><th>Rank</th><th>Pathway</th><th>q-value</th></tr>\n')
-    for i in range(0, len(full_table[0])):
-        tablefile.write(f'<tr><td>{full_table[2][i]}</td><td>{full_table[0][i]}</td><td>{full_table[1][i]}</td></tr>\n')
-    tablefile.write('</tbody> \n</table>')
-    tablefile.close()
-    print(outname)
-
-
-
+reactome_ngenes = read_reactome("../../metabric/data/ensembl2reactome_All_Levels.txt.gz")
 
 def make_the_json_files():
-    cluster_df = pd.read_csv(args.csv, index_col = 0)
-    print(cluster_df)
-    print(cluster_df.index)
-    print(cluster_df.columns)
-    reactome_ngenes = read_reactome("../data/Ensembl2Reactome_All_Levels.txt.gz")
+    cluster_df = pd.read_csv("../exp/iDEA.csv", sep="\t", index_col = 0)
     length_dict = {}
     for i in cluster_df.index:
         if i in reactome_ngenes.index:
             nr_genes = len(reactome_ngenes.loc[i, "genes"])
 
         else:
-            print(f'{i} not found')
+            pass
+            #print(f'{i} not found')
         length_dict[i] = nr_genes
 
-
     cluster_df['ngenes'] = cluster_df.index.map(length_dict)
-
-
     df_dict = {}
 
     for i in cluster_df.iloc[:,:-1]:
@@ -185,54 +172,11 @@ def make_the_json_files():
         sorted_in_df = df.sort_values(by='value', ascending = False)
         sorted_in_df['rank'] = df.reset_index().index +1
         df = sorted_in_df
-
-        #print(df)
         df_dict[i] = df
-    print(df)
-
-
-    ###### scrapes the html file to see that duplicates are not added and then adds the <option> tag
-    with open("sunburst/adjusted_sunburst.html") as inf:
-        txt = inf.read()
-        soup = bs4.BeautifulSoup(txt, features='lxml')
-
-    json_soup = soup.find("select", {"id": "json_sources"})
-
-
 
     for i in df_dict:
-        print(i)
-        if i == "cluster 4ER- log adjusted q-value":
-            clust = "4ER-"
-        else:
-            clust = i.strip("cluster log adjusted q-value")
-
-
-        options = []
-        for option in json_soup.find_all('option'):
-            options.append(option['value'])
-
-        datafile = "adj_{}.json".format(clust)
-        tablefile = "{}_table.txt".format(clust)
-
-        new_link = soup.new_tag("option", value=json.dumps({"data": datafile, "table": tablefile}))
-        new_link.string = clust + " Status"
-
-        if json.dumps({"data": datafile, "table": tablefile}) in options:
-            pass
-        else:
-            json_soup.append(new_link)
-            json_soup.append("\n")
-
-        sunburst(df_dict[i], outname = f'sunburst/GSEA_adj_{clust}.json')
-        make_html_table_txt_file(df_dict[i], threshold=50, outname=f"sunburst/GSEA_adj_{clust}_table.txt")
-
-
-    with open("sunburst/adjusted_sunburst.html", 'w') as outf:
-        outf.write(str(soup))
-
+        sunburst(df_dict[i], outname = f'sunburst/iDEA.json')
 
 make_the_json_files()
-
 
 run_sunburst()
