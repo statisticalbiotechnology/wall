@@ -64,35 +64,33 @@
 		//<p><span id="value">150</span>%</p>
 </div>
 <div id="table">
-	<table>
-		<thead>
-			<tr>
-				<th>Rank</th>
-				<th>Pathway</th>
-				<th>-log10(q-value)</th>
-			</tr>
-		</thead>
-		<tbody id="tableBody">
-
-		</tbody>
-	</table>
- </div>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Pathway</th>
+<th>-log10(q-value)</th>
+</tr>
+</thead>
+<tbody id="tableBody">
+</tbody>
+</table>
+</div>
 </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="breadcrumb.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <select content-type="text/plain" id="json_sources" name="json_sources">
-	<option selected="" value="">---Select data---</option>
+<option selected="" value="">---Select data---</option>
+<option value="iDEA.json">iDEA</option>
 </select>​
 	<div class="hidden" id="factbox">
-	</div>
-
-	<div class="hidden" id="inputThreshold">
-		<input type="number" id="inputfield" clientIDMode="static" value=color_start>
-		<button onclick="ChangeThreshold()" type="button" name="Change Threshold">Change color threshold</button>
-	</div>
-
+</div>
+<div class="hidden" id="inputThreshold">
+<input clientidmode="static" id="inputfield" type="number" value="3"/>
+<button name="Change Threshold" onclick="ChangeThreshold()" type="button">Change color threshold</button>
+</div>
 <script>
 		var color_start = 3;
 
@@ -121,8 +119,8 @@
 			.range([0, radius]);
 
 		var color = d3.scaleLinear()
-			.domain([0.0, 3.0, 50])
-			.range(["white", 'white', 'red']);
+			.domain([0, 0.01, 3, 20])
+			.range(['#000000','#aeeba9', '#ffffbf', '#fc8d59']);
 
 
 		var partition = d3.partition();
@@ -185,13 +183,17 @@
 
 				root.sum(function(d) {return d.children ? 0 : d.ngenes; });
 
-				var color_threshold = root.data.max_val
+				var color_threshold = root.data.max_val;
+				var color_zero = root.data.min_val;
+
 				var color_start = document.getElementById("inputfield").value;
 
 
+				color_start = d3.select("#inputfield").property("value")
 				var color = d3.scaleLinear()
-					.domain([0.0, color_start, color_threshold])
-					.range(["white", 'white', 'red']);
+					.domain([0, 0.01, color_start, color_threshold])
+					.range(['#FFFFFF','#aeeba9', '#ffffbf', '#fc8d59']);
+
 
 				svg.selectAll("path")
 					.data(partition(root).descendants())
@@ -336,6 +338,4 @@
 
 		d3.select(self.frameElement).style("height", height + "px");
 	</script>
-<!-- Transition: <input type="number" id="transitionValue" value="-1.5"> <button onclick="draw()">change</button>
--->
 </body></html>

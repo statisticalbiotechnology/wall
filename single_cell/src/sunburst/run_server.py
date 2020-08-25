@@ -33,7 +33,7 @@ def run_server(PORT):
 def open_localhost(port, path):
     webbrowser.open_new(f"http://localhost:{port}/{path}")
 
-def run_sunburst(path='sunburst/adjusted_sunburst.html'):
+def run_sunburst(path='sunburst/sunburst.html'):
     port = check_port()
     Timer(1, open_localhost, args=[port, path]).start();
     run_server(port)

@@ -8,7 +8,7 @@ However, to make the shell script executable, run:
 #make the file executable
 chmod +x single_cell_pipeline
 #Run the file:
-./single_cell_pipeline
+./single_cell_pipeline.sh
 
 ```
 Due to difficulties of memory management in linux, the differential expression results are provided in /data/lfc_df.csv and the shell script contains an if statement that checks for this file. If it exists, it skips the differential expression, if it doesnt exist, differential expression will be run.

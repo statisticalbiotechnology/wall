@@ -1,10 +1,11 @@
-setwd("/mnt/c/Users/patri/Documents/GitHub/wall/single_cell/data/finished_data_files")
-library(iDEA)
+#setwd("/mnt/c/Users/patri/Documents/GitHub/wall/single_cell/data/finished_data_files")
+getwd()
+suppressMessages(library(iDEA))
 
 
 
-summary_stats <- read.csv("lfc_df.csv", sep = ",", header=TRUE, row.names=1)
-annotation_data <- read.csv("annotation_reactome.csv", sep= ",", header = TRUE, row.names = 1)
+summary_stats <- read.csv("../data/lfc_df.csv", sep = ",", header=TRUE, row.names=1)
+annotation_data <- read.csv("../data/annotation_reactome.csv", sep= ",", header = TRUE, row.names = 1)
 data(summary_stats)
 head(summary_stats)
 
@@ -17,11 +18,11 @@ head(idea@annotation[[1]])
 
 idea <- iDEA.fit(idea,
                  fit_noGS=FALSE,
-                 init_beta=NULL, 
+                 init_beta=NULL,
                  init_tau=c(-2,0.5),
                  min_degene=1,
                  em_iter=15,
-                 mcmc_iter=1000, 
+                 mcmc_iter=1000,
                  fit.tol=1e-5,
                  modelVariant = F,
                  verbose=TRUE)
@@ -34,7 +35,7 @@ idea <- iDEA.louis(idea)
 idea@gsea
 head(idea@gsea)
 
-write.csv(idea@gsea,"idea_pathways.csv", row.names = FALSE)
+write.csv(idea@gsea,"data/idea_pathways.csv", row.names = FALSE)
 idea <- iDEA.BMA(idea)
 head(idea@BMA_pip)
 
@@ -43,11 +44,11 @@ idea_variant <- iDEA.fit(idea,modelVariant = T)
 
 
 idea.null <- CreateiDEAObject(summary_stats, annotation_data[,c(1:10)], num_core=10)
-idea.null <- iDEA.fit.null(idea.null,numPermute = 10) ## 
-idea.null <- iDEA.louis(idea.null) 
+idea.null <- iDEA.fit.null(idea.null,numPermute = 10) ##
+idea.null <- iDEA.louis(idea.null)
 
 head(idea.null@gsea)
 
 df.FDR <- iDEA.FDR(idea,idea.null,numPermute = 10)
 head(df.FDR)
-write.csv(df.FDR, "idea_pathway_fdr.csv", row.names=FALSE)
+write.csv(df.FDR, "../data/idea_pathway_fdr.csv", row.names=FALSE)
