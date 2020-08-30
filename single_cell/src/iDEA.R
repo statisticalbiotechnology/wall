@@ -11,7 +11,7 @@ head(summary_stats)
 
 
 
-idea <- CreateiDEAObject(summary_stats, annotation_data, max_var_beta = 100, min_precent_annot = 0.00025, num_core=10)
+idea <- CreateiDEAObject(summary_stats, annotation_data, max_var_beta = 100, min_precent_annot = 0.00005, num_core=10)
 
 head(idea@summary)
 head(idea@annotation[[1]])
