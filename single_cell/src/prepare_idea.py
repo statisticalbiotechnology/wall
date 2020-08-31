@@ -58,4 +58,4 @@ for pathway in react_ome.index:
             bin_list.append(0)
     final_df[pathway] = bin_list
 
-final_df.to_csv("../data/finished_data_files/annotation_reactome.csv")
+final_df.to_csv("../data/annotation_reactome.csv")

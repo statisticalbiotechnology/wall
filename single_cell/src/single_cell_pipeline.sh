@@ -12,15 +12,18 @@ python3 file_preparation.py
 FILE=../data/lfc_df.csv
 if [ -e "$FILE" ]; then
 	echo differential expression file already exist, proceeding with pathway analysis;
+	python3 prepare_idea.py
 	Rscript iDEA.R;
 else
 	echo differential expresssion file does not exist, proceeding with differential expression;
 	Rscript differential_expression.R;
+	python3_prepare_idea.py
+	Rscript iDEA.R
 fi
 echo Lets gather the results and convert them to a csv containing the -log10 q-values
 
 
 python3 results.py
-echo Lets make the sunburst plots 
+echo Lets make the sunburst plots
 
 python3 run_sunburst.py
