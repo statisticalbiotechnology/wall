@@ -4,8 +4,14 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{authblk}
+
+
 %\usepackage[superscript,biblabel]{cite}
-\usepackage[super]{natbib}
+%\usepackage[super]{natbib}
+
+\usepackage[style=numeric,sorting=none]{biblatex}
+\addbibresource{references.bib}
+\addbibresource{vancouver.bst}
 
 \usepackage[outdir=./img/]{epstopdf}
 \usepackage{epsfig}
@@ -35,16 +41,13 @@
 \end{abstract}
 
 \section*{Introduction}
-  Pathway analysis is a growing area of research, made more available by advances in computational power and databases. The greatest advantage of pathway analysis is that it lets us consider biological processes as units rather than each individual gene or protein by themselves.
-
-\subsection{Pathway analysis}
-  Pathway analysis is a relatively new concept in biology, made popular in the mid 2000s (((((ref))))). Thanks to advancements in computer hardware, high throughput methods such as pathway analysis have been made possible.
+  Pathway analysis is a relatively new concept in biology, with publications increasing drastically in the last 10 years. Thanks to advances in computational power and databases, pathway analysis has been has become increasingly feasable as a way of data analysis. The greatest advantage of pathway analysis is that it lets us consider biological processes as units rather than each individual gene or protein.
 
   The value of pathway analysis is the fact that you can look specifically at different cellular mechanisms as a unit instead of just the genes or proteins individually. Using the reactome database \cite{reactome}, you can also look at the pathway hierarchy to define subprocesses of particular mechanisms.
 
   A common conundrum in biology is the observation that nothing occurs in isolation, for example, estrogen binding to a receptor does not just cause a conformational change in the receptor, but also leads to a plethora of secondary actions, all dependent on each other. To account for this potential Whac-a-mole when influencing a specific target it is a good idea to look at the target in its pathway context.
 
-  A common practice in pathway analysis is tabularly present results. While this does outline the most interesting pathways a lot of information is lost to truncation. Furthermore, tabular presentations of pathway analysis seldomly characterize the hierarchical relationships of the pathways and even less so in a comprehensive manner.
+  A common practice in pathway analysis is to tabularly present results. While this does outline the most interesting pathways a lot of information is lost to truncation. Furthermore, tabular presentations of pathway analysis seldomly characterize the hierarchical relationships of the pathways and even less so in a comprehensive manner.
 
   Sunburst plotting complemented by a tabular view of the most interesting pathways gives a better understanding of the cell. It incorporates hierarchial relationships as well as the complete picture of the cell landscape.
 
@@ -85,7 +88,7 @@
 \section*{Results}
 
 
-  As there are many pathways, and the choice was to size the cells according to pathway size, some pathways are difficult to see. The table thus acts as a guide to find interesting pathways.
+  As can be seen in figure (((x))),
 
 
 \begin{figure}[htp]
@@ -127,5 +130,7 @@ This work was supported by a grant from the Swedish Research Council (grant
 \section*{Competing interests}
 
 The authors declare that they have no conflict of interest.
+
+\printbibliography[title=References]
 
 \end{document}
