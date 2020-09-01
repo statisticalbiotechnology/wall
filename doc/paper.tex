@@ -41,24 +41,27 @@
 \end{abstract}
 
 \section*{Introduction}
-  Pathway analysis is a relatively new concept in biology, with publications increasing drastically in the last 10 years. Thanks to advances in computational power and databases, pathway analysis has been has become increasingly feasable as a way of data analysis. The greatest advantage of pathway analysis is that it lets us consider biological processes as units rather than each individual gene or protein.
+  Pathway analysis is a relatively new concept in biology, with publications increasing drastically in the last 10 years. Thanks to advances in computational power and databases, pathway analysis has become increasingly feasable as a way of data analysis. The greatest advantage of pathway analysis is that it lets us consider biological processes as units rather than each individual gene or protein. Using pathway databases like the reactome database \cite{reactome}, you can also look at the pathway hierarchy to define subprocesses of particular mechanisms.
 
-  The value of pathway analysis is the fact that you can look specifically at different cellular mechanisms as a unit instead of just the genes or proteins individually. Using the reactome database \cite{reactome}, you can also look at the pathway hierarchy to define subprocesses of particular mechanisms.
-
-  A common conundrum in biology is the observation that nothing occurs in isolation, for example, estrogen binding to a receptor does not just cause a conformational change in the receptor, but also leads to a plethora of secondary actions, all dependent on each other. To account for this potential Whac-a-mole when influencing a specific target it is a good idea to look at the target in its pathway context.
+  A common conundrum in biology is the observation that nothing occurs in isolation, for example, a ligand binding to a receptor does not only cause a conformational change in the receptor, but also leads to a plethora of secondary actions, all dependent on each other. To account for this potential Whac-a-mole when influencing a specific target it is a good idea to look at the target in its pathway context.
 
   A common practice in pathway analysis is to tabularly present results. While this does outline the most interesting pathways a lot of information is lost to truncation. Furthermore, tabular presentations of pathway analysis seldomly characterize the hierarchical relationships of the pathways and even less so in a comprehensive manner.
+
+  EnrichmentMap \cite{enrichmentmap}, a network-based method for pathway visualization uses network nodes and edges to display pathway gene overlap. While effective, it could lead to difficulties in interpretation when it comes to larger pathways with whom many pathways share genes. Therefore, a new way of pathway visualization has been proposed, sunburst plotting. Sunburst plotting uses the same idea of network nodes and edges, but implemented with hierarchical data as opposed to pathway gene overlap.
+
+  Considering the pathway hierarchy as a tree, with the largest pathways at the bottom, and each subprocess building on top, a sunburst plot simply rotates the tree around the origo to maximize visibility. This directed network significantly lowers the complexity of the undirected network seen in EnrichmentMap. This is partly due to the conceding that a pathway can exist in multiple pathway hierarchies, and the sunburst implementation thus incorporates the pathway at each of its hierarchical positions. To show the differences in pathway activities, we suggest the use of colors based on p-values or q-values.
+
+  As an example, sunburst plotting with a color scale going from white to red as p-value decreases would in a comparison of samples that differ greatly in apoptosis see a red line in the apoptosis hierarchy.
 
   Sunburst plotting complemented by a tabular view of the most interesting pathways gives a better understanding of the cell. It incorporates hierarchial relationships as well as the complete picture of the cell landscape.
 
 
-
 \section*{Methods}
-  HDF5 data from (((((dataset))))) were analysed through iDEA (((((ref))))). iDEA requires differential expression data as input, which was obtained through the zingeR-DESeq2 method for R. Subsequently, iDEA was run using the reactome database as gene sets. iDEA was run according to the tutorial outlined in the documentation with the only difference being the $min\_precent\_annot$ parameter being set to $5E-5$ instead of $2.5E-3$. This was to allow smaller pathways to be considered in order to produce the complete pathway hierarchy in the sunburst plot.
+  Data from a single cell study on drug-induced hypersensitivity syndrome was analysed through iDEA \cite{idea}. iDEA requires differential expression data as input, which was obtained through the zingeR-DESeq2 method for R \cite{deseq2}. Subsequently, iDEA was run using gene sets from the reactome database. iDEA was run according to the tutorial outlined in the documentation with the only difference being the $min\_precent\_annot$ parameter being set to $5E-5$ instead of $2.5E-3$. This was to allow smaller pathways to be considered in order to produce the complete pathway hierarchy in the sunburst plot.
 
   The resulting data were compiled into a hierarchical json file which was subsequently displayed as a sunburst plot.
 
-  The sunburst display also took the data from the json file and displayed the 50 pathways with the lowest fdr in a table to show where the most interesting data was.
+  The sunburst display also took the data from the json file and displayed the 40 pathways with the lowest fdr in a table to show where the most interesting data was.
 
   \begin{figure}[t]
     \centering
