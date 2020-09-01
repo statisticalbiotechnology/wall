@@ -60,22 +60,21 @@
 </style>
 </head><body>
 <div class="sunburst-and-table">
-<div class="hidden" id="tooltip">
-		//<p><span id="value">150</span>%</p>
-</div>
-<div id="table">
-<table>
-<thead>
-<tr>
-<th>Rank</th>
-<th>Pathway</th>
-<th>-log10(q-value)</th>
-</tr>
-</thead>
-<tbody id="tableBody">
-</tbody>
-</table>
-</div>
+	<div class="hidden" id="tooltip">
+			//<p><span id="value">150</span>%</p>
+	</div>
+	<div id="table">
+	<table>
+		<thead>
+		<tr>
+			<th>Rank</th>
+			<th>Pathway</th>
+			<th>-log10(p-value)</th>
+		</tr>
+		</thead>
+	<tbody id="tableBody"></tbody>
+	</table>
+	</div>
 </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
@@ -218,25 +217,36 @@
 				}
 				searchid(root.data);
 
+				console.clear();
+				//console.log(dictionary);
+
+				//console.log(Object.keys(dictionary).length);
+
 
 				var max_val = root.data.max_val;
 
 				var sortable = [];
 				for (var pathway in dictionary) {
+					//console.log(pathway);
 					sortable.push([pathway, dictionary[pathway]]);
+					//console.log(sortable);
 				}
 
-				if (max_val >= 1) {
-					sortable.sort(function(a, b){
+
+				const metabolism = sortable.filter(array => array[0] == "Metabolism")
+				console.log(metabolism)
+
+
+				console.log(dictionary);
+				console.log(sortable.length);
+				console.log(sortable);
+
+				sortable.sort(function(a, b){
 						return b[1] - a[1]
 					});
-				} else {
-					sortable.sort(function(a, b){
-						return a[1] - b[1]
-					});
-				}
 
 				var tableData = sortable.slice(0, 40);
+				console.log(tableData);
 
 				//add rank at the beginning of the array
 				for (var i = 0; i < tableData.length; i++) {
@@ -268,8 +278,8 @@
 
 				//jQuery("#table").load(obj.table).attr('id', 'table')
 				jQuery("#factbox").empty()
-				document.getElementById('factbox').innerHTML = "Maximum -log10(q-value) = " + color_threshold.toPrecision(5) + "</br>" +
-					"Colored pathways have -log10(qvalue) > "  + "</br>";
+				document.getElementById('factbox').innerHTML = "Maximum -log10(p-value) = " + color_threshold.toPrecision(5) + "</br>" +
+					"Colored pathways have -log10(p-value) > "  + "</br>";
 
 
 			})
@@ -316,7 +326,7 @@
 				.style("top", d3.event.pageY + "px")
 				.style("opacity", .9)
 				.style("position", "absolute")
-				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>-log10(q) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
+				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>-log10(p) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
 
 			d3.select("#tooltip").classed("hidden", false);
 		}

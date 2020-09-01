@@ -26,7 +26,6 @@ def generate_tree():
     G = nx.DiGraph()
     G.add_edges_from(names.values)
     roots = [n for n,d in G.in_degree() if d==0]
-    print(roots)
 
     roots_df = pd.DataFrame(columns = ['parentId', 'id'])
 
@@ -39,8 +38,6 @@ def generate_tree():
     return tree
 
 rel_df = generate_tree()
-print("rel_df")
-print(rel_df)
 
 def default(o):
      if isinstance(o, np.integer): return int(o)
@@ -53,8 +50,7 @@ def fill_missing_pathways(sub_rel_df, in_df, pathways, max_val, highest_rank):
         elif parent_pathway in in_df.index:
             pass
         else:
-            print(parent_pathway)
-            appendNode = pd.DataFrame([[0, len(reactome_ngenes.loc[parent_pathway, "genes"]), "Human", max_val, highest_rank]],
+            appendNode = pd.DataFrame([[0.0, len(reactome_ngenes.loc[parent_pathway, "genes"]), "Human", max_val, highest_rank]],
                                             columns = ["value", "ngenes", "Organism", "max_val", "rank"]).xs(0)
             appendNode.name = parent_pathway
             in_df = in_df.append(appendNode)
@@ -70,50 +66,30 @@ def sunburst(in_df, outname = 'sun_tree.json'):
     highest_rank = float(len(in_df.index)+1)
     topPaths = rel_df.loc[(rel_df['parentId'] == 'Human'), 'id']
     homoNgenes = np.sum(in_df.loc[[x in topPaths.tolist() for x in in_df.index],'ngenes'])
-    homoNode = pd.DataFrame([[0,homoNgenes,"Human", max_val, highest_rank]], columns = ["value", "ngenes", "Organism", "max_val", 'rank']).xs(0)
+    homoNode = pd.DataFrame([[0.0,homoNgenes,"Human", max_val, highest_rank]], columns = ["value", "ngenes", "Organism", "max_val", 'rank']).xs(0)
     homoNode.name = 'Human'
 
     in_df = in_df.append(homoNode)
-    print(in_df)
-    topDict = in_df.to_dict()
-
     pathways = in_df.index
     subset_vec = [x in pathways for x in rel_df.iloc[:,0]] and [x in pathways for x in rel_df.iloc[:,1]]
     sub_rel_df = rel_df[subset_vec]
-
-
     in_df, pathways, subset_vec, sub_rel_df = fill_missing_pathways(sub_rel_df, in_df, pathways, max_val, highest_rank)
     in_df, pathways, subset_vec, sub_rel_df = fill_missing_pathways(sub_rel_df, in_df, pathways, max_val, highest_rank)
+    topDict = in_df.to_dict()
 
-
-
-    #print("sub rel df 1")
-    #print(sub_rel_df)
     G = nx.DiGraph()
-    print(f"\nNumber of pathways: {len(pathways)}")
-    print(f"Number of pathways present: {len(sub_rel_df.values)}\n")
-    #print(sub_rel_df)
-    print(in_df)
-    print(in_df.loc["PKB-mediated events"])
-
 
     G.add_nodes_from(in_df.index.tolist())
     G.add_edges_from(sub_rel_df.values)
-
     tree = nx.algorithms.dag.dag_to_branching(G)
     secondDict = nx.get_node_attributes(tree,'source')
-    #print(secondDict)
 
     thirdDict = {'value':{}, 'ngenes':{}, 'max_val': {}, 'rank': {}}
     for key, value in secondDict.items():
-        if value in list(topDict["value"].keys()):
-            thirdDict['value'].update({key : topDict['value'][value]})
-            thirdDict['ngenes'].update({key : topDict['ngenes'][value]})
-            thirdDict['max_val'].update({key : topDict['max_val'][value]})
-            thirdDict['rank'].update({key : topDict['rank'][value]})
-        else:
-            #pass
-            print(value)
+        thirdDict['value'].update({key : topDict['value'][value]})
+        thirdDict['ngenes'].update({key : topDict['ngenes'][value]})
+        thirdDict['max_val'].update({key : topDict['max_val'][value]})
+        thirdDict['rank'].update({key : topDict['rank'][value]})
 
 
     nx.set_node_attributes(tree, thirdDict['value'], name = 'value')
@@ -124,7 +100,7 @@ def sunburst(in_df, outname = 'sun_tree.json'):
     out_json = json_graph.tree_data(tree, root)
 
     with open(outname, 'w') as outfile:
-        print(outname)
+        print(f"Creating {outname}")
         json.dump(out_json, outfile, default=default)
         outfile.close()
 
@@ -157,7 +133,6 @@ def make_the_json_files():
 
         else:
             pass
-            #print(f'{i} not found')
         length_dict[i] = nr_genes
 
     cluster_df['ngenes'] = cluster_df.index.map(length_dict)
