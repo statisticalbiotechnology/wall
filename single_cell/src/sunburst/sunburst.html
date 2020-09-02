@@ -142,16 +142,18 @@
 		var breadcrumb = d3.breadcrumb()
 			.container('svg').wrapWidth(width * 2 / 3) // any element or selection
 
+
 		var legend = d3.select('svg')
 			.append("g")
+			.attr("id", "legend")
 			.selectAll("g")
 			.data(Array.apply(null, {
-				length: 500
-			}).map(Number.call, Number).map(function(x) {
-				return x * 30 / 500
+				length: 300
+			})
+			.map(Number.call, Number).map(function(x) {
+				return x * 30 / 100
 			}))
 			.enter()
-			//.innerHTML += 'legend'
 			.append('g')
 			.attr('class', 'legend')
 			.attr('transform', function(d, i) {
@@ -166,6 +168,9 @@
 					.text('Legend')
 			});
 
+
+
+
 		var legendRectSize = 10
 		var legendSpacing = 0.001
 
@@ -174,6 +179,7 @@
 	function draw(color_start) {
 			source = d3.select("#json_sources").property('value')
 			//const obj = JSON.parse(source);
+			//var max_val;
 			svg.selectAll('path').remove()
 			d3.json(source, function(error, dataset) {
 				if (error) throw error;
@@ -216,7 +222,7 @@
 					obj.children.forEach(child => searchid(child))
 				}
 				searchid(root.data);
-				
+
 				var max_val = root.data.max_val;
 
 				var sortable = [];
@@ -262,13 +268,34 @@
 				jQuery("#factbox").empty()
 				document.getElementById('factbox').innerHTML = "Maximum -log10(p-value) = " + color_threshold.toPrecision(5) + "</br>" +
 					"Colored pathways have -log10(p-value) > "  + "</br>";
+
+
+				legend.append('rect')
+						.attr('width', legendRectSize)
+						.attr('height', legendRectSize)
+						.style('fill', color)
+						.style('stroke', color);
+
+				var first_legend_text = d3.select("svg")
+						.append("text");
+
+				var second_legend_text = d3.select("svg")
+						.append("text");
+
+				var textLabels = first_legend_text
+						.attr("x", function(d) { return 0 ;})
+						.attr("y", function(d) { return height - 5;})
+						.text("p = 1-E0");
+
+				var textlabel2 = second_legend_text
+						.attr("x", function(d) { return 275;})
+						.attr("y", function(d) { return height - 5;})
+						.text("p =" +  (Math.pow(10, -max_val).toPrecision(2)));
+
 			})
 
-			legend.append('rect')
-				.attr('width', legendRectSize)
-				.attr('height', legendRectSize)
-				.style('fill', color)
-				.style('stroke', color);
+
+
 		}
 
 
