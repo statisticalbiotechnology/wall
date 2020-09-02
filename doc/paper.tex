@@ -13,12 +13,13 @@
 \addbibresource{references.bib}
 \addbibresource{vancouver.bst}
 
+
 \usepackage[outdir=./img/]{epstopdf}
 \usepackage{epsfig}
 \usepackage{url}
 % Places figures at end of document, and do not print out the figures
 \usepackage[nomarkers,nolists,tablesfirst]{endfloat}
-\renewcommand{\includegraphics}[2][]{}
+%\renewcommand{\includegraphics}[2][]{}
 
 \usepackage{xr}
 \externaldocument{supplement}
@@ -90,14 +91,44 @@
 
 \section*{Results}
 
+  Results from the iDEA pathway analysis of the single cell data can be seen in \ref{fig:full_sunburst} with the color scale in \ref{fig:color_scale}. As the p-value decreases, the color changes from green to red. At firsst glance, you can already tell where the focal points of the study lie. If you consider the plot like a clock, around one o'clock, the pathway with the lowest p-value, metabolism of proteins \cite{reactome} lies. Translation, a child pathway of metabolism of proteins, cen be seen in orange right above. Around eight o'clock, the metabolism pathway can be found.
 
-  As can be seen in figure (((x))),
+  Also seen in the middle of \ref{fig:full_sunburst} is a box containing information on the pathway at hand. Perhaps not demonstrated perfectly in a static image, the box follows the computer mouse and displays information over which pathway the mouse hovers. The greatest advantage of this is to display the name of pathway in question, however, information on the number of genes and p-value can definitely come in handy, especially in cases where the pathway can't be found in the table.
+
+  Furthermore, one quick observation is that the iDEA pathway analysis method seem to prefer larger pathways as the larger pathways tended to be colored more orange, whilst smaller pathways tended to be more green.  
+
+
+  Since the reactome database contains around 2000 pathways, a way of displaying them all would have to find a way of fitting them all into a neat container. As can be seen in figure \ref{fig:full_sunburst}, this was done by sizing the cells by pathway size. The middle being
+
+
+
 
 
 \begin{figure}[htp]
 \begin{center}
-%\includegraphics[width=0.96\linewidth,clip]{./img/id-stats-feature-groups-subset}
-\caption{\label{fig:id-stats} {\bf Title.} Description.}
+\includegraphics[width=0.96\linewidth,clip]{./img/full_sunburst.png}
+\caption{\label{fig:full_sunburst} {\bf full.} Sunburst}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=0.96\linewidth,clip]{./img/table.png}
+\caption{\label{fig:table} {\bf full.} Sunburst}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=0.96\linewidth,clip]{./img/mop_specific.png}
+\caption{\label{fig:mop_specific} {\bf full.} Sunburst}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=0.96\linewidth,clip]{./img/color_scale.png}
+\caption{\label{fig:color_scale} {\bf full.} Sunburst}
 \end{center}
 \end{figure}
 
@@ -120,7 +151,7 @@
   \begin{itemize}
       \item A parent pathway with relatively medium q-value and several child-pathways where at least one of them has very low q-value is a good indicator that the parent pathway q-value might be affected by a change in the significant child pathway.
       \item A significant pathway with no children should be an interesting pathway to study as it has been broken down as much as possible and still poses a significant difference in activity compared to other clusters.
-      \item A significant parent pathway with children that all have $q > 0.001 $ need to be examined further as neither of the subprocesses have been deemed significant.
+      \item A significant parent pathway with insignificant child pathways need to be examined further as neither of the subprocesses have been deemed significant.
     \end{itemize}
 
 \section*{Acknowledgments}

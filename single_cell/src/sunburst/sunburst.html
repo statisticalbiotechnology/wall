@@ -216,37 +216,19 @@
 					obj.children.forEach(child => searchid(child))
 				}
 				searchid(root.data);
-
-				console.clear();
-				//console.log(dictionary);
-
-				//console.log(Object.keys(dictionary).length);
-
-
+				
 				var max_val = root.data.max_val;
 
 				var sortable = [];
 				for (var pathway in dictionary) {
-					//console.log(pathway);
 					sortable.push([pathway, dictionary[pathway]]);
-					//console.log(sortable);
 				}
-
-
-				const metabolism = sortable.filter(array => array[0] == "Metabolism")
-				console.log(metabolism)
-
-
-				console.log(dictionary);
-				console.log(sortable.length);
-				console.log(sortable);
 
 				sortable.sort(function(a, b){
 						return b[1] - a[1]
 					});
 
 				var tableData = sortable.slice(0, 40);
-				console.log(tableData);
 
 				//add rank at the beginning of the array
 				for (var i = 0; i < tableData.length; i++) {
@@ -280,8 +262,6 @@
 				jQuery("#factbox").empty()
 				document.getElementById('factbox').innerHTML = "Maximum -log10(p-value) = " + color_threshold.toPrecision(5) + "</br>" +
 					"Colored pathways have -log10(p-value) > "  + "</br>";
-
-
 			})
 
 			legend.append('rect')
@@ -289,10 +269,6 @@
 				.attr('height', legendRectSize)
 				.style('fill', color)
 				.style('stroke', color);
-
-
-
-
 		}
 
 
