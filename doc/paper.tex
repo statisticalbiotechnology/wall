@@ -6,8 +6,8 @@
 \usepackage{authblk}
 
 
-%\usepackage[superscript,biblabel]{cite}
-%\usepackage[super]{natbib}
+\usepackage[superscript,biblabel]{cite}
+\usepackage[super]{natbib}
 
 \usepackage[style=numeric,sorting=none]{biblatex}
 \addbibresource{references.bib}
@@ -29,6 +29,7 @@
 \usetikzlibrary{arrows}
 
 \setlength\parindent{0pt}
+
 
 \input{./title.tex}
 
@@ -58,25 +59,36 @@
 
 
 \section*{Methods}
-  Data from a single cell study on drug-induced hypersensitivity syndrome was analysed through iDEA \cite{idea}. iDEA requires differential expression data as input, which was obtained through the zingeR-DESeq2 method for R \cite{deseq2}. Subsequently, iDEA was run using gene sets from the reactome database. iDEA was run according to the tutorial outlined in the documentation with the only difference being the $min\_precent\_annot$ parameter being set to $5E-5$ instead of $2.5E-3$. This was to allow smaller pathways to be considered in order to produce the complete pathway hierarchy in the sunburst plot.
+  Skin cell scRNA-seq data from a single cell study on drug-induced hypersensitivity syndrome was analysed through iDEA \cite{idea}. iDEA requires differential expression data as input, which was obtained through the zingeR-DESeq2 method for R \cite{deseq2}. Subsequently, iDEA was run using gene sets from the reactome database. iDEA was run according to the tutorial outlined in the documentation with the only difference being the $min\_precent\_annot$ parameter being set to $5E-5$ instead of $2.5E-3$. This was to allow smaller pathways to be considered in order to produce the complete pathway hierarchy in the sunburst plot.
 
-  The resulting data were compiled into a hierarchical json file which was subsequently displayed as a sunburst plot.
+  The resulting data were compiled into a hierarchical json file containing pathway name, p-value, number of genes and rank. The JSON data was subsequently displayed as a sunburst plot. One methodological choice was to display the plots in html format rather than to use existing pythonic methods. This choice was mainly due to the javascript library d3.js (\url{https://d3js.org/}) allowing for great interactivity and the ability to draw the plots as SVG vectors.
 
-  The sunburst display also took the data from the json file and displayed the 40 pathways with the lowest fdr in a table to show where the most interesting data was.
+  The display also took the data from the json file and displayed the 40 pathways with the lowest p-value in a table to show where the most interesting data was. This was done as a complement to the sunburst plot, to allow for pattern identification and to aid in the search for specific pathways, in particular the less visible ones.
+
+  As outlined in the introduction, the sunburst plot is a visualization of a tree-sshaped network. The tree is simply rotated around the middle to maximize visibility. The size of the nodes are relative to the size of the pathway and in comparison to all other pathway at the specific hierarchical level.
+
+
+
+  When it comes to the color scale, seen in figure \ref{fig:color_scale} it scales from p=1 to p=0 from green to red. The scale is logarithmic in order to better discern pathways with high p-value from pathways with low p-value.
+
+  In order to reduce clutter and excessive information, the sunburst plot utilizes an information box, seen in the center of figures \ref{fig:full_sunburst} and \ref{fig:mop_specific}. The box contains the pathway name, number of genes, p-value and rank to give specific information about the pathway at hand.
 
   \begin{figure}[t]
     \centering
     \tikzstyle{start} = [rectangle, rounded corners, minimum width=3cm, text width=12cm, minimum height=1.7cm, text centered, draw=black, fill=red!10]
-    \tikzstyle{JSON} = [rectangle, rounded corners, minimum width=3cm, text width=12cm, minimum height=1.7cm, text centered, draw=black, fill=red!20]
-    \tikzstyle{sunburst} = [rectangle, rounded corners, minimum width=3cm, text width=12cm, minimum height=1.7cm, text centered, draw=black, fill=red!30]
+    \tikzstyle{iDEA} = [rectangle, rounded corners, minimum width=3cm, text width=12cm, minimum height=1.7cm, text centered, draw=black, fill=red!20]
+    \tikzstyle{JSON} = [rectangle, rounded corners, minimum width=3cm, text width=12cm, minimum height=1.7cm, text centered, draw=black, fill=red!30]
+    \tikzstyle{sunburst} = [rectangle, rounded corners, minimum width=3cm, text width=12cm, minimum height=1.7cm, text centered, draw=black, fill=red!40]
     \tikzstyle{arrow} = [thick, ->, >=stealth]
 
     \begin{tikzpicture}
-    \node (start) [start] {GSEA comparison between groups};
-    \node (JSON) [JSON, below of=Failures of null, yshift=-1.2cm] {Generate hiererchical data structure including pathway information for sunburst plotting};
+    \node (start) [start] {Differential expression analysis};
+    \node (iDEA) [iDEA, below of=start, yshift=-1.2cm]{Pathway analysis using the iDEA method};
+    \node (JSON) [JSON, below of=iDEA, yshift=-1.2cm] {Generate hierarchical data structure including pathway information for sunburst plotting};
     \node (sunburst) [sunburst, below of=JSON, yshift=-1.2cm] {Sunburst plotting};
 
-    \draw [arrow] (start) -- (JSON);
+    \draw [arrow] (start) -- (iDEA);
+    \draw [arrow] (iDEA) -- (JSON);
     \draw [arrow] (JSON) -- (sunburst);
 
     \end{tikzpicture}
@@ -85,20 +97,21 @@
 \end{figure}
 
 \subsection*{Datasets}
-  \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132802}
+  Datasets are available at \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE132802}
 \subsection*{Code availability}
   Code is available at \url{https://github.com/statisticalbiotechnology/porch}
 
 \section*{Results}
 
-  Results from the iDEA pathway analysis of the single cell data can be seen in \ref{fig:full_sunburst} with the color scale in \ref{fig:color_scale}. As the p-value decreases, the color changes from green to red. At firsst glance, you can already tell where the focal points of the study lie. If you consider the plot like a clock, around one o'clock, the pathway with the lowest p-value, metabolism of proteins \cite{reactome} lies. Translation, a child pathway of metabolism of proteins, cen be seen in orange right above. Around eight o'clock, the metabolism pathway can be found.
+  Results from the iDEA pathway analysis of the single cell data can be seen in figure \ref{fig:full_sunburst} with the color scale in figure \ref{fig:color_scale}. At first glance, you can already tell where the focal points of the study lie. If you consider the plot like a clock, around one o'clock, the pathway with the lowest p-value, metabolism of proteins \cite{reactome} lies. Translation, a child pathway of metabolism of proteins, can be seen in orange right above. Around eight o'clock, the metabolism pathway can be found.
 
-  Also seen in the middle of \ref{fig:full_sunburst} is a box containing information on the pathway at hand. Perhaps not demonstrated perfectly in a static image, the box follows the computer mouse and displays information over which pathway the mouse hovers. The greatest advantage of this is to display the name of pathway in question, however, information on the number of genes and p-value can definitely come in handy, especially in cases where the pathway can't be found in the table.
+  Also seen in the middle of \ref{fig:full_sunburst} is a box containing information on the pathway at hand. Perhaps not demonstrated perfectly in a static image, the box follows the computer mouse and displays information over which pathway the mouse hovers. The greatest advantage of this is to display the name of the pathway in question, however, information on the number of genes and p-value can definitely come in handy, especially in cases where the pathway can't be found in the table.
 
-  Furthermore, one quick observation is that the iDEA pathway analysis method seem to prefer larger pathways as the larger pathways tended to be colored more orange, whilst smaller pathways tended to be more green.  
+  Clicking a specific pathway can be used as a zooming tool. Seen in figure \ref{fig:mop_specific} is the sunburst specific for the metabolism of protein pathway. This plot has the same logic as the full sunburst, with every outer circle being one step further from the main pathway in question. Since the reactome database contains around 2000 pathways, a way of displaying them all would have to find a way of fitting them all into a neat container. The interactive step of being able to view specific pathways individually solves this, by producing a new canvas independent of the complete pathway hierarchy. To aid in navigation, a navigation bar of the pathway hierarchy can be used.
 
+   As can be seen in figure \ref{fig:full_sunburst}, this was done by sizing the cells by pathway size. The middle being
 
-  Since the reactome database contains around 2000 pathways, a way of displaying them all would have to find a way of fitting them all into a neat container. As can be seen in figure \ref{fig:full_sunburst}, this was done by sizing the cells by pathway size. The middle being
+  Furthermore, one quick observation is that the iDEA pathway analysis method seem to prefer larger pathways as the larger pathways tended to be colored more orange, whilst smaller pathways tended to be more green.
 
 
 
@@ -107,28 +120,28 @@
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.96\linewidth,clip]{./img/full_sunburst.png}
-\caption{\label{fig:full_sunburst} {\bf full.} Sunburst}
+\caption{\label{fig:full_sunburst} {\bf Sunburst plot.} Hierarchical representation of all cellular pathways colored by p-value}
 \end{center}
 \end{figure}
 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.96\linewidth,clip]{./img/table.png}
-\caption{\label{fig:table} {\bf full.} Sunburst}
+\caption{\label{fig:table} {\bf Pathway table.} Tabular representation of the 40 pathways with the lowest p-value}
 \end{center}
 \end{figure}
 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.96\linewidth,clip]{./img/mop_specific.png}
-\caption{\label{fig:mop_specific} {\bf full.} Sunburst}
+\caption{\label{fig:mop_specific} {\bf Pathway specific sunburst.} Sunburst plot drawn specifically for the metabolism of proteins pathway hierarchy}
 \end{center}
 \end{figure}
 
 \begin{figure}[htp]
 \begin{center}
 \includegraphics[width=0.96\linewidth,clip]{./img/color_scale.png}
-\caption{\label{fig:color_scale} {\bf full.} Sunburst}
+\caption{\label{fig:color_scale} {\bf Sunburst color scale.} The sunburst color scale annotated by which p-value they represent.}
 \end{center}
 \end{figure}
 
@@ -137,19 +150,18 @@
 
   Sunburst plotting as a complement to a tabular view gives a more holistic view of pathway activities in the cell.
 
-  One great feature of sunburst plots is the possibility to see parent-child pathway relationships. As seen in fig  ((((((image of "line" of parent child significant pathways)))))) parent pathway X and child pathway Y are both significantly different between groups whilst child pathway Z is not.
-
+  One great feature of sunburst plots is the possibility to see parent-child pathway relationships. As seen in figure \ref{fig:mop_specific}, child-pathways of the metabolism of proteins pathway have quite different p-values.
 
   Another advantage of sunburst plotting is the speed to which a primary conclusion can be made of where the focal points of the experiment lie. While tables might give a similar conclusion, a significant amount of time will have to be spent to reach it.
 
   Sunburst plotting together with the tabular analysis described above became an excellent combination of analyses as the table provides very specific information of the pathways and the sunburst plots provide a broader picture of the pathway relationships of cells.
 
-  One aspect where the advantage of using sunburst plotting became undeniable was when analysing parent child pathway relationships. As can be seen in figure X, the activity of Y (white) differs from the activity of Z (red). This thus becomes somewhat of a barcoding analysis where a straight line of parent child pathways with low q-value is quite convincing evidence against type I errors.
+  One aspect where the advantage of using sunburst plotting became undeniable was when analysing parent child pathway relationships. As can be seen in figure \ref{fig:mop_specific}, the expression of some pathways (green) differs from the activity of Z (orange). This thus becomes somewhat of a barcoding analysis where a straight line of parent child pathways with low p-value is quite convincing evidence against type I errors.
 
   Seeing as this is a relatively novel method of analysis, a few points of benchmarking and what the underlying biology might be have been developed.
 
   \begin{itemize}
-      \item A parent pathway with relatively medium q-value and several child-pathways where at least one of them has very low q-value is a good indicator that the parent pathway q-value might be affected by a change in the significant child pathway.
+      \item A parent pathway with relatively medium p-value and several child-pathways where at least one of them has very low p-value is a good indicator that the parent pathway p-value might be affected by a change in the significant child pathway.
       \item A significant pathway with no children should be an interesting pathway to study as it has been broken down as much as possible and still poses a significant difference in activity compared to other clusters.
       \item A significant parent pathway with insignificant child pathways need to be examined further as neither of the subprocesses have been deemed significant.
     \end{itemize}
