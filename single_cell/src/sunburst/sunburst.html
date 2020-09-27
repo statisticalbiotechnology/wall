@@ -83,6 +83,7 @@
 <select content-type="text/plain" id="json_sources" name="json_sources">
 <option selected="" value="">---Select data---</option>
 <option value="iDEA.json">iDEA</option>
+<option value="GSEA_adj_BRCA1.json">BRCA1</option>
 </select>​
 	<div class="hidden" id="factbox">
 </div>
@@ -116,11 +117,11 @@
 
 		var y = d3.scaleSqrt()
 			.range([0, radius]);
-
+/*
 		var color = d3.scaleLinear()
 			.domain([0, 0.01, 3, 20])
 			.range(['#000000','#aeeba9', '#ffffbf', '#fc8d59']);
-
+*/
 
 		var partition = d3.partition();
 
@@ -151,7 +152,7 @@
 				length: 300
 			})
 			.map(Number.call, Number).map(function(x) {
-				return x * 30 / 100
+				return x * 20 / 1000
 			}))
 			.enter()
 			.append('g')
@@ -167,8 +168,6 @@
 					.select('legend')
 					.text('Legend')
 			});
-
-
 
 
 		var legendRectSize = 10
@@ -190,10 +189,9 @@
 
 				var color_threshold = root.data.max_val;
 				var color_zero = root.data.min_val;
-
 				var color_start = document.getElementById("inputfield").value;
 
-
+				console.log(color_threshold)
 				color_start = d3.select("#inputfield").property("value")
 				var color = d3.scaleLinear()
 					.domain([0, 0.01, color_start, color_threshold])
@@ -282,15 +280,23 @@
 				var second_legend_text = d3.select("svg")
 						.append("text");
 
+				var legend_text = d3.select("svg")
+						.append("text");
+
 				var textLabels = first_legend_text
 						.attr("x", function(d) { return 0 ;})
 						.attr("y", function(d) { return height - 5;})
-						.text("p = 1-E0");
+						.text("1-E0");
+				var textLabels = legend_text
+						.attr("x", function(d) { return 140 ;})
+						.attr("y", function(d) { return height - 5;})
+						.text("p-value");
 
 				var textlabel2 = second_legend_text
-						.attr("x", function(d) { return 275;})
-						.attr("y", function(d) { return height - 5;})
-						.text("p =" +  (Math.pow(10, -max_val).toPrecision(2)));
+					//.empty()
+					.attr("x", function(d) { return 275;})
+					.attr("y", function(d) { return height - 5;})
+					.text(Math.pow(10, -max_val).toPrecision(2));
 
 			})
 
@@ -329,7 +335,7 @@
 				.style("top", d3.event.pageY + "px")
 				.style("opacity", .9)
 				.style("position", "absolute")
-				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>-log10(p) = " + d.data.value + "</br> rank: " + formatNumber(d.data.rank));
+				.html(d.data.source + "</br>" + formatNumber(d.data.ngenes) + " genes </br>-log10(p) = " + Math.pow(10, -d.data.value) + "</br> rank: " + formatNumber(d.data.rank));
 
 			d3.select("#tooltip").classed("hidden", false);
 		}
