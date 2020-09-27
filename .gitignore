@@ -144,3 +144,12 @@ doc/paper.synctex.gz
 doc/paper.fls
 doc/paper.fff
 metabric/data/rstudio-server-latest-amd64.deb
+*.csv
+*.h5
+single_cell/data/finished_data_files/annotation_data.RData
+single_cell/data/finished_data_files/concat_df.py
+single_cell/data/finished_data_files/de_results.py
+single_cell/data/finished_data_files/iDEA_for_terminal.R
+single_cell/data/finished_data_files/testing_df.py
+single_cell/data/lfc_df.csv
+single_cell/data/lfc_df.csv
