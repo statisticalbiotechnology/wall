@@ -47,13 +47,13 @@
 
   A common conundrum in biology is the observation that nothing occurs in isolation, for example, a ligand binding to a receptor does not only cause a conformational change in the receptor, but also leads to a plethora of secondary actions, all dependent on each other. To account for this potential Whac-a-mole when influencing a specific target it is a good idea to look at the target in its pathway context.
 
-  A common practice in pathway analysis is to tabularly present results. While this does outline the most interesting pathways a lot of information is lost to truncation. Furthermore, tabular presentations of pathway analysis seldomly characterize the hierarchical relationships of the pathways and even less so in a comprehensive manner.
+  A common practice in pathway analysis is to tabularly present results. While this does outline the most interesting pathways, a lot of information is lost to truncation. Furthermore, tabular presentations of pathway analysis seldomly characterize the hierarchical relationships of the pathways and even less so in a comprehensive manner.
 
-  EnrichmentMap \cite{enrichmentmap}, a network-based method for pathway visualization uses network nodes and edges to display pathway gene overlap. While effective, it could lead to difficulties in interpretation when it comes to larger pathways with whom many pathways share genes. Therefore, a new way of pathway visualization has been proposed, sunburst plotting. Sunburst plotting uses the same idea of network nodes and edges, but implemented with hierarchical data as opposed to pathway gene overlap.
+  EnrichmentMap \cite{enrichmentmap}, a network-based method for pathway visualization uses network nodes and edges to display pathway gene overlap. While effective, it could lead to difficulties in interpretation when it comes to larger pathways with whom many pathways share genes. Therefore, a new way of pathway visualization has been proposed, sunburst plotting. Sunburst plotting uses the same idea of network nodes and edges, but implemented in a hierarchical manner.
 
   Considering the pathway hierarchy as a tree, with the largest pathways at the bottom, and each subprocess building on top, a sunburst plot simply rotates the tree around the origo to maximize visibility. This directed network significantly lowers the complexity of the undirected network seen in EnrichmentMap. This is partly due to the conceding that a pathway can exist in multiple pathway hierarchies, and the sunburst implementation thus incorporates the pathway at each of its hierarchical positions. To show the differences in pathway activities, we suggest the use of colors based on p-values or q-values.
 
-  As an example, sunburst plotting with a color scale going from white to red as p-value decreases would in a comparison of samples that differ greatly in apoptosis see a red line in the apoptosis hierarchy.
+  As an example, sunburst plotting with a color scale going from green to red as p-value decreases would in a comparison of samples that differ greatly in apoptosis see a red line in the apoptosis hierarchy.
 
   Sunburst plotting complemented by a tabular view of the most interesting pathways gives a better understanding of the cell. It incorporates hierarchial relationships as well as the complete picture of the cell landscape.
 
@@ -63,15 +63,13 @@
 
   The resulting data were compiled into a hierarchical json file containing pathway name, p-value, number of genes and rank. The JSON data was subsequently displayed as a sunburst plot. One methodological choice was to display the plots in html format rather than to use existing pythonic methods. This choice was mainly due to the javascript library d3.js (\url{https://d3js.org/}) allowing for great interactivity and the ability to draw the plots as SVG vectors.
 
-  The display also took the data from the json file and displayed the 40 pathways with the lowest p-value in a table to show where the most interesting data was. This was done as a complement to the sunburst plot, to allow for pattern identification and to aid in the search for specific pathways, in particular the less visible ones.
+  The display also took the data from the json file and displayed the 40 pathways with the lowest p-value in a table to show where the most interesting areas were. This was done as a complement to the sunburst plot, to allow for pattern identification and to aid in the search for specific pathways, in particular the less visible ones.
 
-  As outlined in the introduction, the sunburst plot is a visualization of a tree-sshaped network. The tree is simply rotated around the middle to maximize visibility. The size of the nodes are relative to the size of the pathway and in comparison to all other pathway at the specific hierarchical level.
+  As outlined in the introduction, the sunburst plot is a visualization of a tree-shaped network. The tree is simply rotated around the middle to maximize visibility. The size of the nodes are relative to the size of the pathway and in comparison to all other pathway at the specific hierarchical level.
 
+  When it comes to the color scale, seen in figure \ref{fig:color_scale}, it scales from p=1 to p=0 from green to red. The scale is logarithmic in order to better discern pathways with high p-value from pathways with low p-value.
 
-
-  When it comes to the color scale, seen in figure \ref{fig:color_scale} it scales from p=1 to p=0 from green to red. The scale is logarithmic in order to better discern pathways with high p-value from pathways with low p-value.
-
-  In order to reduce clutter and excessive information, the sunburst plot utilizes an information box, seen in the center of figures \ref{fig:full_sunburst} and \ref{fig:mop_specific}. The box contains the pathway name, number of genes, p-value and rank to give specific information about the pathway at hand.
+  In order to reduce clutter and excessive information, the sunburst plot utilizes an information box, seen in the center of figures \ref{fig:full_sunburst} and \ref{fig:mop_specific}. The box contains the pathway name, number of genes, p-value and rank to give specific information about the pathway in question.
 
   \begin{figure}[t]
     \centering
@@ -109,9 +107,13 @@
 
   Clicking a specific pathway can be used as a zooming tool. Seen in figure \ref{fig:mop_specific} is the sunburst specific for the metabolism of protein pathway. This plot has the same logic as the full sunburst, with every outer circle being one step further from the main pathway in question. Since the reactome database contains around 2000 pathways, a way of displaying them all would have to find a way of fitting them all into a neat container. The interactive step of being able to view specific pathways individually solves this, by producing a new canvas independent of the complete pathway hierarchy. To aid in navigation, a navigation bar of the pathway hierarchy can be used.
 
-   As can be seen in figure \ref{fig:full_sunburst}, this was done by sizing the cells by pathway size. The middle being
+  As can be seen in figure \ref{fig:full_sunburst}, this was done by sizing the cells by pathway size. The middle being
 
   Furthermore, one quick observation is that the iDEA pathway analysis method seem to prefer larger pathways as the larger pathways tended to be colored more orange, whilst smaller pathways tended to be more green.
+
+  GSEA BRCA analysis.
+
+  The use of sunburst plots has also been demonstrated in cancer transcriptomics. The large metabric dataset for breast cancer was analysed through GSEA, comparing a number of different groups. An example comparing BRCA1 mut/WT samples can be seen figure \ref{fig:brca1}. Compared to the single cell example, GSEA gives clearer "lines" of parent/child pathways following the same pattern. This
 
 
 
@@ -142,6 +144,13 @@
 \begin{center}
 \includegraphics[width=0.96\linewidth,clip]{./img/color_scale.png}
 \caption{\label{fig:color_scale} {\bf Sunburst color scale.} The sunburst color scale annotated by which p-value they represent.}
+\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+\begin{center}
+\includegraphics[width=0.96\linewidth,clip]{./img/BRCA1.png}
+\caption{\label{fig:brca1} {\bf Metabric GSEA} A sunburst representation of GSEA comparing BRCA1 mut/WT.}
 \end{center}
 \end{figure}
 
